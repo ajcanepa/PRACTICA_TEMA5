@@ -54,12 +54,12 @@ x
 is.logical(x)
 as.numeric(x)
 
-#Funciones matemáticas tambien siguen la coercion
+#Funciones matemáticas también siguen la "coercion"
 sum(x)
 mean(x)
 
-# Forzar con as. a un caracter
+# Forzar con as. a un cáracter
 c(1, 1.5, "a")
 as.numeric(c(1, 1.5, "a"))
 
-#
+# Nuevo comentario en la línea 65
