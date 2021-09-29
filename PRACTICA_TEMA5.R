@@ -62,17 +62,18 @@ mean(x)
 c(1, 1.5, "a")
 as.numeric(c(1, 1.5, "a"))
 
-# Nuevo comentario en la línea 65
-
 
 # ** Nombres -----------------------------------------------------------------
 # Primera aproximación a entrega de nombres (de elementos)
 x <- c(a = 1, b = 2, c = 3)
+x
 class(x)
 names(x)
+attributes(x)
 
 # Segunda aproximación a entrega de nombres (de elementos)
 x <- c(1:3)
+x
 names(x) <- c("a", "b", "c")
 names(x)
 
@@ -85,6 +86,9 @@ x <- unname(x)
 x
 
 # ** Dimensiones ----------------------------------------------------------
+dim(x)
+length(x)
+
 x <- matrix(1:6, nrow = 3, ncol = 3)
 x
 
@@ -92,26 +96,27 @@ dim(x)
 
 
 # ** Indexaciòn Vectores --------------------------------------------------
-A <- c("a", "b", "c", "d", "e", "f", "g")
+A <- c("a", "b", "c", "d", "e", "f", "g", "h")
 A
 
 # Elementos dentro del vector A
-A[4]
+A[3]
 
 # Rango
 A[1:3]
 
 # Último elemento
 length(A)
+A[7]
 A[length(A)]
 
 # indexacion de vectores devuelve mismo vector
 A[1:3]
 typeof(A[1:3])
+
 # ** Factores -------------------------------------------------------------
 x <- factor(c("a", "b", "b", "a"))
 x
-
 typeof(x)
 attributes(x)
 
@@ -143,7 +148,7 @@ attributes(today)
 # Fechas desde caracter
 c("1970-02-01")
 class(c("1970-02-01"))
-Newdate <- as.Date(c("1970-02-01"))
+Newdate <- as.Date(c("1970/02/01"))
 Newdate
 class(Newdate)
 unclass(Newdate)
@@ -155,7 +160,7 @@ now_ct
 typeof(now_ct)
 attributes(now_ct)
 
-#tzone, permite cambiar la zona horaria muy fácilemente
+#tzone, permite cambiar la zona horaria muy fácilmente
 structure(now_ct)
 structure(now_ct, tzone = "Asia/Tokyo")
 structure(now_ct, tzone = "Australia/Lord_Howe")
@@ -174,6 +179,8 @@ one_week_2
 typeof(one_week_2)
 attributes(one_week_2)
 
+difftime(structure(now_ct), structure(now_ct), units = "week")
+
 
 # Matrices/Arrays ---------------------------------------------------------
 # Matrices guardan la información en 2 dimensiones
@@ -184,7 +191,6 @@ m
 str(m)
 typeof(m)
 class(m)
-
 
 # * Coercion --------------------------------------------------------------
 m
@@ -210,16 +216,23 @@ m2[2,]
 m2[,2]
 
 # Indexación por nombres
-names(m2)
+colnames(m2)
 colnames(m2) <- c("Impares", "Pares")
 colnames(m2)
 
 m2
 
 # Primera columna
-m2[,"Pares"]
+m2[,"Impares"]
 
+# Segunda columna
+m2[1:3,"Pares"]
 
+m2[c(1,3),"Pares"]
+
+# indexacion matrices cambia la clase
+str(m2[1:3,"Pares"])
+class(m2[1:3,"Pares"])
 
 # Table de datos (Dataframe) ----------------------------------------------
 # Probablemente el formato más usado. 
@@ -243,7 +256,5 @@ str(df2)
 
 
 # ** Concatenación/Combinación de dataframes -------------------------------
-
-
 #
 
