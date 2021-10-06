@@ -234,7 +234,7 @@ m2[c(1,3),"Pares"]
 str(m2[1:3,"Pares"])
 class(m2[1:3,"Pares"])
 
-# Table de datos (Dataframe) ----------------------------------------------
+# Tabla de datos (Dataframe) ----------------------------------------------
 # Probablemente el formato más usado. 
 #Análogo heterogéneo de las matrices.
 df1 <- data.frame(
@@ -252,9 +252,180 @@ df2 <- tibble(
   Numeros = 1:5, 
   Letras = letters[1:5])
 df2
+typeof(df2)
 str(df2)
 
 
 # ** Concatenación/Combinación de dataframes -------------------------------
 #
 
+# Ciclado en dataframes
+data.frame(x = 1:4, y = 'Spain')
+
+
+# *** Tibble v/s Dataframe ------------------------------------------------
+
+#data.frame
+data.frame(
+  x = 1:3,
+  y = x * 2
+)
+
+# tibble
+# library(dplyr) # debería estar cargado de antes
+tibble(
+  x = 1:3,
+  y = x*2
+)
+
+
+dplyr::starwars
+
+
+# ** Indexación de dataframes ---------------------------------------------
+df1
+df2
+
+# Indexación por nombre
+df1$Numeros
+str(df1$Numeros)
+
+df2$Letras
+str(df2$Letras)
+
+# Indexar por posición
+df1
+df1[1:2,2]
+df1[,1]
+
+# indexación por posición y nombre
+df1$Letras
+df1[, "Letras"]
+df1[1:3, "Letras"]
+
+df1[c(1,3,5), "Letras"]
+
+# Diff. tibble v/s data.farme
+# df1 = dataframe
+str(df1$Numeros)
+# df2 es un tibble
+str(df2$Numeros)
+
+str(df1$Nu)
+str(df2$Nu)
+
+
+# Listas ------------------------------------------------------------------
+# Análogos heterogéneos de los vectores
+# función `list()`
+
+l1 <- list(
+  Integrales = 1:3, 
+  Letra = "a", 
+  Logico = c(TRUE, FALSE, TRUE), 
+  Numeros = c(2.3, 5.9)
+)
+
+l1
+
+typeof(l1)
+str(l1)
+
+# Lazy-evaluation en listas
+lobstr::obj_size(mtcars)
+
+l2 <- list(mtcars, mtcars, mtcars, mtcars)
+lobstr::obj_size(l2)
+
+
+# ** Combinación de listas ------------------------------------------------
+# Listas --> vectores recursivos
+l4 <- list(list(1,2), c(3,4))
+l4
+
+l5 <- c(list(1,2), c(3,4))
+l5
+
+
+# **Coacción / Coercion de Listas -----------------------------------------
+# Para probar una lista usar `is.list()`.
+# Para coaccionar a una lista usar `as.list()`.
+list(1:3)
+
+typeof(list(1:3))
+
+seq(1:3)
+list(seq(1:3))
+typeof(seq(1:3))
+
+as.list(seq(1:3))
+
+typeof(as.list(seq(1:3)))
+
+
+# ** Indexación de Listas -------------------------------------------------
+# Al igual que las Matrices las listas se pueden indexar por posición (Dimensión) y por nombre
+l1
+
+# Por dimensión
+l1[[1]]
+l1[[1]][2]
+l1[[3]][2]
+str(l1[[1]])
+
+#Por nombre
+str(l1)
+
+l1$Letra
+
+#agrego una dimensión más
+l1[[5]] <- df2
+str(l1)
+l1[[5]]$Letras
+
+l1$Logico
+l1$Logico[2]
+
+# Muy poco usado
+l1[["Logico"]]
+
+# INTRO DPLYR -------------------------------------------------------------
+# paquete dplyr
+library(dplyr)
+
+#set de datos
+?starwars
+
+
+# * Verbos de tablas únicas -----------------------------------------------
+# operan sobre una única tabla de datos
+
+
+# *** Filter --------------------------------------------------------------
+# Filter modificará la primera dimensión de nuestros dataframes
+# modifica las filas
+
+# Filtrado de filas por columnas numéricas
+# Aquellos personajes que pesan más de 100 KG
+starwars
+
+dplyr::filter(.data = starwars, mass > 100)
+
+# Aquellos personajes que pesan menos de 50 KG
+filter(starwars, mass < 50)
+
+# Aquellos que pesan entre 50 y 100 kg
+dplyr::filter(.data = starwars, mass >= 50 & mass <= 100)
+
+filter(starwars, between(mass, 50, 100))
+
+# Filtra por variables categóricas
+# Aquellos personajes con un color de piel "claro"
+# todos los tipos de color de piel
+starwars
+
+levels(factor(starwars$skin_color))
+
+table(starwars$skin_color)
+
+filter(starwars, skin_color == "light")
