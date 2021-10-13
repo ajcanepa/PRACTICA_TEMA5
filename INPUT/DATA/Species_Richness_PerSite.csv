@@ -1,0 +1,49 @@
+"ID","Island","Latitude.South","Longitude.West","Station","distance","NewFactor","SpeciesRichness"
+1,"Santa Fé",-0.7856281,-90.0278254,"North","2","Santa Fé.North.2",39
+2,"Santa Fé",-0.76047501,-90.0047437,"North","5","Santa Fé.North.5",34
+3,"Santa Fé",-0.72141374,-89.9716008,"North","10","Santa Fé.North.10",33
+4,"Santa Fé",-0.8424445,-90.0976622,"South","2","Santa Fé.South.2",34
+5,"Santa Fé",-0.86345472,-90.1171928,"South","5","Santa Fé.South.5",23
+6,"Santa Fé",-0.89541394,-90.1479684,"South","10","Santa Fé.South.10",23
+7,"Santa Fé",-0.84481185,-90.0077029,"East","2","Santa Fé.East.2",28
+8,"Santa Fé",-0.855169,-89.9787029,"East","5","Santa Fé.East.5",26
+9,"Santa Fé",-0.86582207,-89.9301722,"East","10","Santa Fé.East.10",26
+10,"Santa Fé",-0.78444443,-90.0976622,"West","2","Santa Fé.West.2",27
+11,"Santa Fé",-0.77112809,-90.1302133,"West","5","Santa Fé.West.5",24
+12,"Santa Fé",-0.74982194,-90.1799276,"West","10","Santa Fé.West.10",25
+13,"Pinzón",-0.58795441,-90.7037037,"North","2","Pinzón.North.2",38
+14,"Pinzón",-0.58529114,-90.7362548,"North","5","Pinzón.North.5",45
+15,"Pinzón",-0.58174011,-90.7871528,"North","10","Pinzón.North.10",44
+16,"Pinzón",-0.64358712,-90.6800302,"South","2","Pinzón.South.2",53
+17,"Pinzón",-0.66933205,-90.7031119,"South","5","Pinzón.South.5",47
+18,"Pinzón",-0.69774025,-90.7362548,"South","10","Pinzón.South.10",43
+19,"Pinzón",-0.63648507,-90.6386016,"East","2","Pinzón.East.2",51
+20,"Pinzón",-0.6669647,-90.6285404,"East","5","Pinzón.East.5",41
+21,"Pinzón",-0.71194434,-90.6214383,"East","10","Pinzón.East.10",25
+22,"Pinzón",-0.61991363,-90.7037037,"West","2","Pinzón.West.2",40
+23,"Pinzón",-0.62671976,-90.7338874,"West","5","Pinzón.West.5",48
+24,"Pinzón",-0.63145446,-90.7800507,"West","10","Pinzón.West.10",42
+25,"Seymour",-0.37341334,-90.2651522,"North","2","Seymour.North.2",31
+26,"Seymour",-0.3426378,-90.2544991,"North","5","Seymour.North.5",34
+27,"Seymour",-0.29410713,-90.2462134,"North","10","Seymour.North.10",44
+28,"Seymour",-0.39708684,-90.3172339,"South","2","Seymour.South.2",43
+29,"Seymour",-0.37578069,-90.3432747,"South","5","Seymour.South.5",44
+30,"Seymour",-0.34855617,-90.3799687,"South","10","Seymour.South.10",38
+31,"Seymour",-0.40300521,-90.2604175,"East","2","Seymour.East.2",49
+32,"Seymour",-0.39116846,-90.2296419,"East","5","Seymour.East.5",53
+33,"Seymour",-0.36512762,-90.1870297,"East","10","Seymour.East.10",46
+34,"Seymour",-0.37459702,-90.2982951,"West","2","Seymour.West.2",32
+35,"Seymour",-0.3426378,-90.3065808,"West","5","Seymour.West.5",47
+36,"Seymour",-0.30712755,-90.3338053,"West","10","Seymour.West.10",47
+37,"Santa Cruz",-0.4755053,-90.3959483,"North","2","Santa Cruz.North.2",36
+38,"Santa Cruz",-0.43851546,-90.3977238,"North","5","Santa Cruz.North.5",48
+39,"Santa Cruz",-0.53439312,-90.6616833,"North","10","Santa Cruz.North.10",44
+40,"Santa Cruz",-0.80071996,-90.3645809,"South","2","Santa Cruz.South.2",35
+41,"Santa Cruz",-0.83741388,-90.3622135,"South","5","Santa Cruz.South.5",37
+42,"Santa Cruz",-0.38288274,-90.4166626,"South","10","Santa Cruz.South.10",37
+43,"Santa Cruz",-0.59831156,-90.1491521,"East","2","Santa Cruz.East.2",32
+44,"Santa Cruz",-0.58292379,-90.1124581,"East","5","Santa Cruz.East.5",45
+45,"Santa Cruz",-0.89778129,-90.3586625,"East","10","Santa Cruz.East.10",51
+46,"Santa Cruz",-0.56783193,-90.5581117,"West","2","Santa Cruz.West.2",37
+47,"Santa Cruz",-0.55096457,-90.5953975,"West","5","Santa Cruz.West.5",44
+48,"Santa Cruz",-0.55451559,-90.0497234,"West","10","Santa Cruz.West.10",45
