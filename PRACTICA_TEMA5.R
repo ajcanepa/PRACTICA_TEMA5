@@ -392,10 +392,12 @@ l1[["Logico"]]
 # Importación de Datos ----------------------------------------------------
 # * Importar *.xls y *.xlsx -----------------------------------------------
 library(readxl)
-Galapagos <- read_excel("INPUT/DATA/Galapagos_DB.xlsx", sheet = "DBR")
+Galapagos <- read_excel("INPUT/DATA/Galapagos_DB.xlsx", 
+                        sheet = "DBR")
 Galapagos
 str(Galapagos)
 summary(Galapagos)
+
 
 
 # * Importación desde CSV -------------------------------------------------
@@ -414,6 +416,9 @@ View(Acc_Car)
 #                         T.RED = readr::col_factor(levels = NULL)
 #                       ))
 
+Acc_Car
+str(Acc_Car)
+summary(Acc_Car)
 
 # * Importación desde la Web ----------------------------------------------
 # Agua consumo humano desde la red
@@ -424,6 +429,7 @@ Agua_Consumo
 summary(Agua_Consumo)
 
 Agua_Consumo$`Nº de zonas de abastecimiento`
+Agua_Consumo$`Análisis efectuados en las infraestructuras - Análisis completo`
 
 # INTRO DPLYR -------------------------------------------------------------
 # paquete dplyr
