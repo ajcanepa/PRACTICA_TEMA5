@@ -389,6 +389,42 @@ l1$Logico[2]
 # Muy poco usado
 l1[["Logico"]]
 
+# Importación de Datos ----------------------------------------------------
+# * Importar *.xls y *.xlsx -----------------------------------------------
+library(readxl)
+Galapagos <- read_excel("INPUT/DATA/Galapagos_DB.xlsx", sheet = "DBR")
+Galapagos
+str(Galapagos)
+summary(Galapagos)
+
+
+# * Importación desde CSV -------------------------------------------------
+library(readr)
+Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv", 
+                      delim = ";", escape_double = FALSE, trim_ws = TRUE)
+
+Acc_Car
+summary(Acc_Car)
+View(Acc_Car)
+
+# Modificando el tipo (clase) de cada Columna
+# Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv",
+#                       delim = ";", escape_double = FALSE, trim_ws = TRUE,
+#                       col_types = cols(
+#                         T.RED = readr::col_factor(levels = NULL)
+#                       ))
+
+
+# * Importación desde la Web ----------------------------------------------
+# Agua consumo humano desde la red
+Agua_Consumo <- read_delim("https://datosabiertos.jcyl.es/web/jcyl/risp/es/salud/calidad-aguas-consumo/1284839789043.csv",
+                           delim = ";")
+
+Agua_Consumo
+summary(Agua_Consumo)
+
+Agua_Consumo$`Nº de zonas de abastecimiento`
+
 # INTRO DPLYR -------------------------------------------------------------
 # paquete dplyr
 library(dplyr)
