@@ -495,7 +495,7 @@ slice_sample(.data = starwars, n = 4)
 slice_sample(.data = starwars, n = 4)
 
 # seleccionar (al azar) una determinada proporción (prop) de filas
-slice_sample(.data = starwars, prop = 0.1)
+slice_sample(.data = starwars, prop = 0.7)
 
 # Selección de filas según otra variable
 
@@ -562,19 +562,18 @@ rename(.data = starwars, altura = height, peso = mass, color_pelo = hair_color)
 rename_with(.data = starwars, toupper, ends_with("color"))
 
 
-
 # *** Mutate --------------------------------------------------------------
 # Crea nuevas columnas a partir de columnas previas
 
 # columna nueva con la interacción de factores
 mutate(.data = df2, alfanum = interaction(Numeros, Letras, sep = ":"))
+mutate(.data = df2, Saludo = "Hola")
 
 # columna nueva con la altura en metros (no en centímetros)
 mutate(.data = starwars, height_m = height / 100)
 
 # columna nueva y selección de nueva columna de altura en metros (no en centímetros)
 transmute(.data = starwars, height_m = height / 100)
-
 
 # *** Relocate ------------------------------------------------------------
 # Similar a select y sirve para mover columnas
@@ -658,37 +657,12 @@ starwars %>%
     height_m = height / 100,
     BMI = mass / (height_m^2)
   ) %>%
-  select(BMI, everything())
-
-
-## Pregunta 1
-# BMI promedio por especies
-# starwars %>%
-#   mutate(
-#     height_m = height / 100,
-#     BMI = mass / (height_m^2)
-#   ) %>%
-#   select(BMI, everything()) %>% 
-#   group_by(species) %>%
-#   summarise(
-#     Av_BMI = mean(BMI, na.rm = TRUE))
-
-## Pregunta 2
-# Especie con el BMI más alto
-# starwars %>%
-#   mutate(
-#     height_m = height / 100,
-#     BMI = mass / (height_m^2)
-#   ) %>%
-#   select(BMI, everything()) %>% 
-#   group_by(species) %>% 
-#   summarise(
-#     Av_BMI = mean(BMI, na.rm = TRUE)) %>% 
-#   slice_max(order_by = Av_BMI)
+select(BMI, everything())
 
 # More on BMI
 # https://www.calculator.net/bmi-calculator.html?ctype=metric&cage=43&csex=m&cheightfeet=5&cheightinch=10&cpound=160&cheightmeter=173&ckg=82&printit=0&x=76&y=13
 
+# HASTA AQUI Miercoles 20
 
 # *** Operaciones por columnas -------------------------------------------
 # Repetir la misma operación por columnas
