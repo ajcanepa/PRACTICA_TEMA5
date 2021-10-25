@@ -449,6 +449,7 @@ library(dplyr)
 
 # Filtrado de filas por columnas numéricas
 # Aquellos personajes que pesan más de 100 KG
+data(starwars)
 starwars
 
 dplyr::filter(.data = starwars, mass > 100)
@@ -522,7 +523,7 @@ arrange(.data = starwars, height)
 arrange(.data = starwars, desc(height))
 
 # ordena los personajes de Starwars por más de una variable
-arrange(.data = starwars, desc(height), height)
+arrange(.data = starwars, desc(height), mass)
 
 
 # *** Summarise -----------------------------------------------------------
@@ -541,10 +542,10 @@ summarise(.data = starwars, Alt_prom = mean(height, na.rm = TRUE), Alt_desv = sd
 select(.data = starwars, hair_color, skin_color, eye_color)
 
 # selecciona un rango de columnas
-select(.data = starwars, hair_color:eye_color)
+select(.data = starwars, hair_color:birth_year)
 
 # selecciona aquellas columnas que NO están en un rango
-select(.data = starwars, !(hair_color:eye_color))
+select(.data = starwars, !(hair_color:birth_year))
 
 # selecciona aquellas columnas que coinciden con un criterio (terminan con el caracter "color")
 select(.data = starwars, ends_with("color"))
@@ -619,7 +620,7 @@ summarise(.data = a2, Alt_prom = mean(height, na.rm = TRUE), Alt_desv = sd(heigh
 # Concatenamos funciones de una manera sencilla de leer (de arriba a abajo)
 
 # Pipe con Select
-starwars %>% 
+starwars %>%
   select(.data = ., name, species)
 
 # Argumento data puede estar ausente, pero en un pipe se asume "(.)"
@@ -657,13 +658,13 @@ starwars %>%
     height_m = height / 100,
     BMI = mass / (height_m^2)
   ) %>%
-select(BMI, everything())
+select(BMI, everything()) %>% 
+  slice_max(., order_by = BMI, n = 3)
 
 # More on BMI
 # https://www.calculator.net/bmi-calculator.html?ctype=metric&cage=43&csex=m&cheightfeet=5&cheightinch=10&cpound=160&cheightmeter=173&ckg=82&printit=0&x=76&y=13
 
-# HASTA AQUI Miercoles 20
-
+# HASTA AQUI LUNES 25 Oct
 # *** Operaciones por columnas -------------------------------------------
 # Repetir la misma operación por columnas
 starwars
