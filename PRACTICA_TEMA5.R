@@ -664,23 +664,22 @@ select(BMI, everything()) %>%
 # More on BMI
 # https://www.calculator.net/bmi-calculator.html?ctype=metric&cage=43&csex=m&cheightfeet=5&cheightinch=10&cpound=160&cheightmeter=173&ckg=82&printit=0&x=76&y=13
 
-# HASTA AQUI LUNES 25 Oct
 # *** Operaciones por columnas -------------------------------------------
 # Repetir la misma operación por columnas
+library(tidyverse)
 starwars
 
 # Promedio de altura, peso y año nacimiento por especies
 
-# Aproximación manual (no muy clever)
+# Aproximación manual (no muy clever si son muchas)
 starwars %>%
   group_by(species) %>%
-  #filter(n() > 1) %>% 
+  filter(n() > 1) %>% 
   summarise(
     Av_height = mean(height, na.rm = TRUE),
     Av_mass = mean(mass, na.rm = TRUE),
     Av_birth_year = mean(birth_year, na.rm = TRUE)
   )
-
 
 # Aproximación usando across. Se pueden usar las funciones de select
 
@@ -693,9 +692,10 @@ starwars %>%
 # Selección variables por tipo
 starwars %>%
   group_by(species) %>%
+  filter(n() > 1) %>%
   summarise(across(where(is.numeric), ~ mean(.x, na.rm = TRUE)))
 
-# ¿Cuántos sexos, géneros y origenes hay para cada especie?
+# ¿Cuántos sexos, géneros y orígenes hay para cada especie?
 ?starwars
 
 starwars %>% 
@@ -751,7 +751,7 @@ starwars %>%
   drop_na() %>% 
   pivot_longer(data = ., names_to = "Variable", values_to = "Valores", cols = c(height:birth_year))
 
-# Guardamos un objeto para siguiente seccion
+# Guardamos un objeto para siguiente sección
 Long_Starwars <-
   starwars %>% 
   group_by(homeworld) %>% 
@@ -793,6 +793,8 @@ Mean_Galapagos <- read_csv(file = "INPUT/DATA/Galapagos_summary.csv", col_types 
 ))
 
 Mean_Galapagos
+levels(Mean_Galapagos$Island)
+levels(Mean_Galapagos$Station)
 
 # Loading the "Species_Richness_PerSite.csv" file
 Species <- read_csv("INPUT/DATA/Species_Richness_PerSite.csv", col_types = cols(
@@ -818,6 +820,11 @@ summary(Species)
 levels(Mean_Galapagos$Island)
 levels(Species$Island)
 
+# Si los niveles no son iguales, forzamos los niveles de una tabla a ser igual que los de otra
+# Species <-
+#   Species %>% 
+#   mutate(Island = factor(Island, levels = c("Pinzón", "Santa Cruz","Santa Fé", "Seymour" )))
+
 levels(Mean_Galapagos$Station)
 levels(Species$Station)
 
@@ -831,7 +838,7 @@ levels(Species$distance)
 left_join(x = Mean_Galapagos, y = Species)
 
 # Igual, pero correctamente escrito
-left_join(x = Mean_Galapagos, y = Species, c("Island", "Station", "distance"))
+left_join(x = Mean_Galapagos, y = Species, by = c("Island", "Station", "distance"))
 
 # Indicación parcial, ver que pasa con los no señalados
 left_join(x = Mean_Galapagos, y = Species, by = c("Island"))
@@ -844,8 +851,8 @@ left_join(x = Mean_Galapagos, y = Species, by = c("Island"))
 # Detalle en: https://datosabiertos.jcyl.es/web/jcyl/binarios/582/267/%C3%8Dndices_de_accidentalidad.pdf?blobheader=application%2Fpdf%3Bcharset%3DUTF-8&blobnocache=true
 # Índice de Peligrosidad “IP” / Índice de Mortalidad “IM” / Índice de Accidentalidad Total “IAT” / Índice de Lesividad “IL” / Índice de Gravedad “IG”
 # library(readr)
-# Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv", 
-#                       delim = ";", escape_double = FALSE, trim_ws = TRUE)
+ Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv", 
+                       delim = ";", escape_double = FALSE, trim_ws = TRUE)
 
 Acc_Car
 str(Acc_Car)
@@ -859,8 +866,8 @@ Acc_Car %>%
 # Anchura de carretras
 # https://datosabiertos.jcyl.es/web/jcyl/set/es/urbanismo-infraestructuras/anchura-carreteras/1284967627462
 # library(readr)
-# Ancho_Car <- read_delim("INPUT/DATA/anchura-de-carreteras.csv", 
-#                         delim = ";", escape_double = FALSE, trim_ws = TRUE)
+Ancho_Car <- read_delim("INPUT/DATA/anchura-de-carreteras.csv", 
+                         delim = ";", escape_double = FALSE, trim_ws = TRUE)
 
 Ancho_Car
 str(Ancho_Car)
