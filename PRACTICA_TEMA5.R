@@ -960,6 +960,7 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) +
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(colour = cyl))
 
+# HASTA AQUI MIERCOLES 03 Noviembre
 # Agregamos una línea de ajuste
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_point() +
