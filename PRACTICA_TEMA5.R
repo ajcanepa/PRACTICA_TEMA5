@@ -783,7 +783,8 @@ Long_Starwars %>%
 
 # *** Carga de datos ------------------------------------------------------
 # Loading the "Galapagos_summary.csv" file
-Mean_Galapagos <- read_csv(file = "INPUT/DATA/Galapagos_summary.csv", col_types = cols(
+Mean_Galapagos <- read_csv(file = "INPUT/DATA/Galapagos_summary.csv", 
+                           col_types = cols(
   Island = readr::col_factor(levels = NULL),
   Station = readr::col_factor(levels = NULL),
   distance = readr::col_factor(levels = NULL),
@@ -960,7 +961,6 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) +
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(colour = cyl))
 
-# HASTA AQUI MIERCOLES 03 Noviembre
 # Agregamos una línea de ajuste
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_point() +
