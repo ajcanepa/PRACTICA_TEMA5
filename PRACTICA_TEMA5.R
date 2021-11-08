@@ -932,10 +932,12 @@ library(tidyverse)
 # Cargamos los datos
 data("mpg")
 
+# reseña del set de datos
 ?mpg
 
 str(mpg)
 
+# ayuda de la funciòn principal de ggplot2
 ?ggplot
 
 # Definición de las tres mínimas variables en un gráfico
