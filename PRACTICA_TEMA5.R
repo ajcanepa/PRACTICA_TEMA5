@@ -937,7 +937,7 @@ data("mpg")
 
 str(mpg)
 
-# ayuda de la funciòn principal de ggplot2
+# ayuda de la función principal de ggplot2
 ?ggplot
 
 # Definición de las tres mínimas variables en un gráfico
