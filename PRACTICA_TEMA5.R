@@ -953,7 +953,7 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) +
 
 # Controlando el color -- Fijo
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
-  geom_point(colour = "blue")
+  geom_point(colour = "darkgreen")
 
 # Controlando el color -- Dependiente de otra variable
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
@@ -999,7 +999,7 @@ ggplot(data = diamonds, aes(x = cut)) +
 
 # Modificando el "relleno" de las cajas
 ggplot(data = diamonds, aes(x = cut)) +
-  geom_bar(aes(fill = clarity))
+  geom_bar(aes(fill = clarity), colour ="black")
 
 # Para hacer comparaciones "intra-clase" de la variable de relleno
 ggplot(data = diamonds, aes(x = cut)) +
@@ -1062,7 +1062,7 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) +
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(colour = factor(cyl))) +
   facet_wrap(class ~ drv)
-
+# facet_grid(class ~ drv) # Muestra la grilla con toda la combinación
 
 # * Etiquetas --------------------------------------------------------
 # Permiten mejorar los "nombres" de ejes, títulos, subtítulos, etc.
