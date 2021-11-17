@@ -1155,7 +1155,7 @@ ggplot(mpg, aes(hwy, displ)) +
 ggplot(mpg, aes(hwy, displ)) +
   geom_point() +
   stat_smooth() +
-  coord_cartesian(xlim = c(19, 24), expand = FALSE)
+  coord_cartesian(xlim = c(19, 24), expand = TRUE)
 
 
 # * Temas ------------------------------------------------------------
@@ -1167,7 +1167,7 @@ ggplot(mpg, aes(hwy, displ)) +
 ggplot(mpg, aes(hwy, displ)) +
   geom_point() +
   stat_smooth() +
-  theme_bw()
+  theme_light()
 
 ggplot(mpg, aes(hwy, displ)) +
   geom_point() +
@@ -1189,7 +1189,7 @@ ggplot(mpg, aes(hwy, displ)) +
   stat_smooth() +
   theme_void()
 
-
+?theme
 # * Guardando los gráficos. ------------------------------------------
 # Hasta ahora no hemos creado ningún objeto y es lo que deberemos hacer
 Final_plot <-
@@ -1206,12 +1206,12 @@ Final_plot <-
 
 # Al imprimir el objeto (ejecutar su nombre) se "dibuja" el gráfico 
 Final_plot
-
+x11(Final_plot)
 # Usamos la siguiente instrucción para guardar el gráfico
 ggsave(
   filename = "Car_yield_highway.png",
   plot = Final_plot ,
-  path = paste(getwd(), "/Figures", sep = ""),
+  path = paste(getwd(), "/OUTPUT/Figures", sep = ""),
   scale = 0.5,
   width = 40,
   height = 20,
