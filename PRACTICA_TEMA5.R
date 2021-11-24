@@ -1219,7 +1219,368 @@ ggsave(
   dpi = 320
 )
 
+# Datos Semi-Estructurados ------------------------------------
+# * Importación desde CSV -------------------------------------------------
+# Accidentalidad por Carreteras
+# https://analisis.datosabiertos.jcyl.es/explore/dataset/accidentalidad-por-carreteras/export/?sort=ano
+# Detalle en: https://datosabiertos.jcyl.es/web/jcyl/binarios/582/267/%C3%8Dndices_de_accidentalidad.pdf?blobheader=application%2Fpdf%3Bcharset%3DUTF-8&blobnocache=true
+# Índice de Peligrosidad “IP” / Índice de Mortalidad “IM” / Índice de Accidentalidad Total “IAT” / Índice de Lesividad “IL” / Índice de Gravedad “IG”
+library(readr)
+Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv", 
+                      delim = ";", escape_double = FALSE, trim_ws = TRUE)
 
+Acc_Car
+
+str(Acc_Car)
+summary(Acc_Car)
+#View(Acc_Car)
+
+# * Desde JSON ------------------------------------------------------------
+# Teoría json
+# https://cran.r-project.org/web/packages/tidyjson/vignettes/visualizing-json.html
+# https://www.json.org/json-en.html
+library(tidyverse)
+library(rjson)
+
+Acc_Car_Json <- fromJSON(file = "INPUT/DATA/accidentalidad-por-carreteras.json")
+
+Acc_Car_Json
+head(Acc_Car_Json)
+
+
+# ** Uso de tidyjson ------------------------------------------------------
+# devtools::install_github("colearendt/tidyjson")
+#https://github.com/colearendt/tidyjson
+library(tidyjson)
+
+data("worldbank")
+
+head(worldbank)
+
+# Usamos `spread_all()` para formatear los datos
+worldbank %>% 
+  spread_all()
+
+# Aproximación Tidy para los accidentes en carretera
+head(Acc_Car_Json)
+
+Acc_Car_Json %>%
+  spread_all()
+
+# Guardamos el objeto
+Acc_Car_TJson <- spread_all(Acc_Car_Json)
+
+# comparando
+Acc_Car_TJson
+lobstr::obj_size(Acc_Car_TJson)
+
+Acc_Car
+lobstr::obj_size(Acc_Car)
+
+# Revisando que no existan arrays --> sino: https://github.com/colearendt/tidyjson#examples
+Acc_Car_Json %>% gather_object %>% json_types %>% count(name, type)
+
+
+# * Desde XML -------------------------------------------------------------
+# https://megapteraphile.wordpress.com/2020/03/29/converting-xml-to-tibble-in-r/
+library(tidyverse)
+library(XML)
+library(xml2)
+
+# Directo desde la web
+file_url <- "https://www.w3schools.com/xml/simple.xml"
+Data <- read_xml(file_url)
+
+#Desde ficheros propios
+#Data <- read_xml(x = "INPUT/DATA/simple.xml")
+
+# `data` es un xml_document que contiene el contenido del documento xml, incluidas las etiquetas y el texto.
+str(Data) # No mucha info porque no es tabular
+Data
+
+# la función `xmlParse()` del paquete XML, permite reconocer la gramática de xml y extraerla en formato xml.
+Data_mxl <- xmlParse(Data)
+Data_mxl
+
+
+# ** De xml a data.frame --------------------------------------------------
+# Usamos la función `xmlToDataFrame()` del paquete `XML`. 
+DF_xml <- xmlToDataFrame(doc = Data_mxl, stringsAsFactors = FALSE)
+DF_xml
+str(DF_xml)
+
+# Limpiamos y definimos correctamente las clases
+
+DF_xml %>% 
+  as_tibble() %>%
+  transmute(
+    name = factor(name),
+    price_dollars = parse_number(price),
+    description = description,
+    calories = as.numeric(calories)
+  )
+
+# Creamos un objeto
+Tibble_xml <- 
+  DF_xml %>% 
+  as_tibble() %>%
+  transmute(
+    name = factor(name),
+    price_dollars = parse_number(price),
+    description = description,
+    calories = as.numeric(calories)
+  )
+
+Tibble_xml
+
+# Graficamos
+
+Tibble_xml %>% 
+  ggplot(data = ., mapping = aes(x = reorder(name, -price_dollars), y = price_dollars)) +
+  geom_bar(stat = "identity", aes(fill = calories)) +
+  scale_fill_gradient(low = "peachpuff", high = "red", space = "Lab", na.value = "grey50", guide = "colourbar",  aesthetics = "fill") +
+  labs(x = "", y = "Precio (U.S. $)", fill = "Calorías") +
+  scale_y_continuous(expand = expansion(mult = c(0, .1))) +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 60, vjust = 1, hjust = 1))
+
+# Consultas RDF usando Tidyverse ------------------------------------------
+# Paquete `rdflib`: Tools to Manipulate and Query Semantic Data // En https://cran.r-project.org/web/packages/rdflib/
+
+# * Carga de Paquetes -----------------------------------------------------
+library(rdflib)
+library(dplyr)
+library(tidyr)
+library(tibble)
+library(jsonld)
+
+
+# * Set de datos ----------------------------------------------------------
+# Trabajaremos con el set de datos `mtcars` en el que construiremos un triple
+
+data(mtcars)
+mtcars
+
+# Creando los triples a partir de `mtcars`
+mtcars %>% 
+  rownames_to_column("Model") %>% 
+  gather(attribute,measurement, -Model) %>% 
+  head()
+
+# Creamos el objeto car_triples
+car_triples <- 
+  mtcars %>% 
+  rownames_to_column("Model") %>% 
+  gather(attribute,measurement, -Model)
+
+str(car_triples)
+
+# No es un Tidy-dataset, porque:
+# Primera columna `Model` --> *subject*
+# Segunda columna `attribute` --> propiedad a ser medida ó *predicate*
+# Tercera columna `measurement` --> valor medido ú *object*
+# Call it key-property-value or subject-predicate-object
+
+
+# * Uso de Identificadores URI/URL ----------------------------------------
+# Transformamos la variable `Model` a un nivel mayor de abstracción, a un ID
+car_triples <- 
+  mtcars %>% 
+  rownames_to_column("Model") %>% 
+  rowid_to_column("subject") %>% 
+  gather(predicate, object, -subject)
+
+head(car_triples)
+str(car_triples)
+
+# Qué pasa si tenemos la misma tranformación con otro dataset? --> ejemplo `iris`
+# Problema porque el subject (ID) no es único
+
+data(iris)
+str(iris)
+
+# Creamos el objeto iris_triples
+iris_triples <- 
+  iris %>%
+  rowid_to_column("subject") %>%
+  gather(key = predicate, value = object, -subject)
+
+head(iris_triples)
+
+
+# ** Subject URI ----------------------------------------------------------
+# Para evitar problemas en la WWW, referenciamos no con un ID, sino con una URI
+# Así el ID 1 --> http://example.com/iris#1
+
+# Reemplazamos el objeto
+iris_triples <- iris %>%
+  rowid_to_column("subject") %>%
+  mutate(subject = paste0("http://example.com/iris#", subject)) %>%
+  gather(key = predicate, value = object, -subject)
+
+head(iris_triples)
+
+
+# ** Predicate URI -------------------------------------------------------
+# Mismo concepto que aplica para sujetis, también aplica para predicados
+
+iris_triples <- 
+  iris %>%
+  rowid_to_column("subject") %>%
+  mutate(subject = paste0("http://example.com/iris#", subject)) %>%
+  gather(key = predicate, value = object, -subject) %>%
+  mutate(predicate = paste0("http://example.com/iris#", predicate))
+
+head(iris_triples)
+
+# ** Datatype URIs --------------------------------------------------------
+# Todo parece bien, salvo que nuestro objeto (que deberían ser doubles) son character por una coercion
+str(iris_triples)
+
+# Para representar doubles en xml escquema y/o en RDF necesitamos ver https://www.w3.org/TR/rdf11-concepts/#section-Datatypes
+# String --> http://www.w3.org/2001/XMLSchema#string
+# Integer --> http://www.w3.org/2001/XMLSchema#integer
+# Double debería ser "5.1"^^http://www.w3.org/2001/XMLSchema#double
+
+
+# * Triples en el paquete rdflib ------------------------------------------
+# Hasta ahora los triples eran "dataframes" acomodados
+# el paquete `rdflib` agrega un objeto de clase `rdf`.
+
+# ** Objeto rdf (en memoria) ----------------------------------------------
+rdf1 <- rdf()
+
+# Agregamos datos al modelo RDF (gráfico RDF) con rdf_add
+# Necesitamos crear una URI base --> http://example.com/iris#
+
+base <- "http://example.com/iris#"
+
+rdf1 %>% 
+  rdf_add(subject = paste0(base, "obs1"), 
+          predicate = paste0(base, "Sepal.Length"), 
+          object = 5.1)
+
+rdf1
+
+str(rdf1)
+
+
+# ** Prefijos para las URIs (CURIE) ---------------------------------------
+# Los namespace (en XML) pueden teenr un prefijo seguido de ":"
+# Entonces si definimos a iris: como el equivalente a http://example.com/iris#
+# Tendríamos iris:Sepal.Length, iris:Sepal.With
+
+# ** URI v/s URL ----------------------------------------------------------
+# URL --> uniform resource locator, aka web address
+# URI --> uniform resource identifier --> puede ser una URL y más cosas (DOI, ISBN, etc.)
+
+
+# ** Serialización --------------------------------------------------------
+# El formato que hemos visto se denomina N-Quads
+# Podemos serializar un objeto con la función `rdf_serialize()`
+rdf1
+?rdf_serialize()
+
+# Ejemplo
+doc <- system.file("extdata/example.rdf", package = "redland")
+rdf1 <- rdf_parse(doc, format = "rdfxml") 
+rdf1
+
+# XML-based schema
+options(rdf_print_format = "rdfxml")
+rdf1
+
+# TURTLE
+options(rdf_print_format = "turtle")
+rdf1
+
+# JSON-LD
+# “the thing in the curly braces,” (i.e. the JSON “object”)
+options(rdf_print_format = "jsonld")
+rdf1
+
+# @id --> property
+# @context --> define datatypes, use multiple namespaces, and permit different names in the JSON keys from that found in the URLs.
+
+# Agrenado un @context
+rdf_serialize(rdf1, "example.json", "jsonld") %>% 
+  jsonld_compact(context = '{"@vocab": "http://purl.org/dc/elements/1.1/"}')
+
+
+# ** De tablas a Gráficos -------------------------------------------------
+# No todos los set d edatos pueden almacenarse en forma tabular (tidy)
+# ej:
+ex <- system.file("extdata/person.json", package = "rdflib")
+cat(readLines(ex), sep = "\n")
+
+# Serialización a N-Quads
+options(rdf_print_format = "nquads")
+rdf2 <- rdf_parse(ex, "jsonld")
+rdf2
+
+# El `adress` se ha entregado como un nodo en blanco `_:b0`
+
+# Esto mismo se conoce como una estructura "aplanada" (flattend)
+jsonld_flatten(ex, context = "http://schema.org")
+
+# Atención en la estructura típica de un JSON, anidada con los {} indicando un objeto raíz (superior)
+
+
+# Podríamos regresar a la estructura anterior, entregando un marco que especifique qué tipo de archivo es el root
+jsonld_flatten(ex) %>%
+  jsonld_frame('{"@type": "http://schema.org/Person"}') %>%
+  jsonld_compact(context = "http://schema.org")
+
+# Las diferencias entre las 2 representaciones (nested/flattened) es solamente estética!
+
+
+
+# ** Más ejemplos para crear RDFs -----------------------------------------
+x1 <- as_rdf(iris, NULL, "iris:")
+x1
+
+x2 <- as_rdf(cars, NULL, "mtcars:")
+x2
+
+# Objeto grande RDF
+rdf3 <- c(x1,x2)
+rdf3
+class(rdf3)
+str(rdf3)
+
+# * Volviendo a las Tablas -----------------------------------------------
+
+
+# ** Consulta Usando SPARQL -----------------------------------------------
+# generamos una consulta en SPARQL, definiendo un motor de búsqueda
+sparql <-
+  'SELECT  ?Species ?Sepal_Length ?Sepal_Width ?Petal_Length  ?Petal_Width
+WHERE {
+ ?s <iris:Species>  ?Species .
+ ?s <iris:Sepal.Width>  ?Sepal_Width .
+ ?s <iris:Sepal.Length>  ?Sepal_Length . 
+ ?s <iris:Petal.Length>  ?Petal_Length .
+ ?s <iris:Petal.Width>  ?Petal_Width 
+}'
+
+# Creamos un objeto que sea una consulta (siguiendo el motor de búsqueda), sobre un objeto RDF ya creado
+# rdf3
+
+iris2 <- rdf_query(rdf3, sparql)
+
+iris2
+
+
+
+# ** Consulta Usando tidy_schema del paquete rdflib -----------------------
+# Cargamos la función
+source(system.file("examples/tidy_schema.R", package = "rdflib"))
+View(tidy_schema) # revisar el SPARQL interno
+
+sparql_tidy <- tidy_schema("Species",  "Sepal.Length", "Sepal.Width", prefix = "iris")
+
+iris3 <- rdf_query(rdf3, sparql_tidy)
+iris3
 
 # Referencias -------------------------------------------------------------
 # https://adv-r.hadley.nz/index.html
