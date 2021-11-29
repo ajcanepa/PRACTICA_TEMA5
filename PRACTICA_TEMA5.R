@@ -1061,8 +1061,8 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) +
 # Podemos tener 5 variables en un gráfico!
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(colour = factor(cyl))) +
-  facet_wrap(class ~ drv)
-# facet_grid(class ~ drv) # Muestra la grilla con toda la combinación
+ facet_wrap(class ~ drv)
+#facet_grid(class ~ drv) # Muestra la grilla con toda la combinación
 
 # * Etiquetas --------------------------------------------------------
 # Permiten mejorar los "nombres" de ejes, títulos, subtítulos, etc.
@@ -1136,7 +1136,7 @@ ggplot(mpg, aes(hwy, displ)) +
   geom_point() +
   lims(x = c(0, 50), y = c(0, 8))
 
-# Cuidado con recortar, porque hay capas que dependen de la cantidad depuntos
+# Cuidado con recortar, porque hay capas que dependen de la cantidad de puntos
 ggplot(mpg, aes(hwy, displ)) +
   geom_point() +
   stat_smooth()
@@ -1278,7 +1278,10 @@ Acc_Car
 lobstr::obj_size(Acc_Car)
 
 # Revisando que no existan arrays --> sino: https://github.com/colearendt/tidyjson#examples
-Acc_Car_Json %>% gather_object %>% json_types %>% count(name, type)
+Acc_Car_Json %>% 
+  gather_object %>% 
+  json_types %>% 
+  count(name, type)
 
 
 # * Desde XML -------------------------------------------------------------
