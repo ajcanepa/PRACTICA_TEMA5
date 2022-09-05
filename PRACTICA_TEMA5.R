@@ -17,7 +17,7 @@ class(y)
 typeof(y)
 
 # Vector operación matemática
-z <- 1L+1L
+z <- 1L + 1L
 z
 class(z)
 typeof(z)
