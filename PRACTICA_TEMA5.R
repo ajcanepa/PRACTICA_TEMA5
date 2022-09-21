@@ -1591,5 +1591,3 @@ iris3
 # https://r4ds.had.co.nz/
 # https://dplyr.tidyverse.org/
 # https://ggplot2.tidyverse.org/index.html
-
-# Este es un comentario nuevo
