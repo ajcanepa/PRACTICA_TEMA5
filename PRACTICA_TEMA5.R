@@ -45,6 +45,9 @@ is.na(x)
 c(1,2,3)
 typeof(c(1,2,3))
 
+c(1,2,'Pablo')
+typeof(c(1,2,'Pablo'))
+
 c(TRUE,FALSE,FALSE, 1L, 2, "Tubby")
 typeof(c(TRUE,FALSE,FALSE, 1L, 2, "Tubby"))
 
@@ -68,6 +71,7 @@ as.numeric(c(1, 1.5, "a"))
 x <- c(a = 1, b = 2, c = 3)
 x
 class(x)
+typeof(x)
 names(x)
 attributes(x)
 
@@ -180,6 +184,8 @@ typeof(one_week_2)
 attributes(one_week_2)
 
 difftime(structure(now_ct), structure(now_ct), units = "week")
+
+difftime(structure(now_ct), structure(Sys.Date()), units = "hours")
 
 
 # Matrices/Arrays ---------------------------------------------------------
@@ -314,6 +320,9 @@ str(df2$Numeros)
 str(df1$Nu)
 str(df2$Nu)
 
+###
+# HASTA AQUI Miercoles 28 #
+###
 
 # Listas ------------------------------------------------------------------
 # Análogos heterogéneos de los vectores
