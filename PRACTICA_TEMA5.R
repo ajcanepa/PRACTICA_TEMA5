@@ -3,15 +3,18 @@
 # * Vectores atómicos -----------------------------------------------------
 
 # Crear un objeto
-x <- 3
+x <- 3  
 
 # Imprimir (en consola) un objeto
 print(x)
+# Para pedir ayuda de una función en línea se usa el ?
+?print
+
 x
 class(x)
 typeof(x)
 
-#Vector numérico íntegro
+#Vector numérico entero
 y <- 3L
 class(y)
 typeof(y)
@@ -34,18 +37,19 @@ typeof(chr_var)
 x <- c(1,5,8,10)
 mean(x)
 
-x <- c(1,5, NA,10)
+x <- c(1, 5, NA, 10)
+mean(x)
+
 mean(x, na.rm = TRUE)
 
 is.na(x)
-
 
 # ** Coacción (Coercion) --------------------------------------------------
 # Regla para coercion: character → double → integer → logical
 c(1,2,3)
 typeof(c(1,2,3))
 
-c(1,2,'Pablo')
+c(1,2,"Pablo")
 typeof(c(1,2,'Pablo'))
 
 c(TRUE,FALSE,FALSE, 1L, 2, "Tubby")
@@ -93,13 +97,13 @@ x
 dim(x)
 length(x)
 
-x <- matrix(1:6, nrow = 3, ncol = 3)
+x <- matrix(1:6, nrow = 3, ncol = 4)
 x
 
 dim(x)
 
 
-# ** Indexaciòn Vectores --------------------------------------------------
+# ** Indexación Vectores --------------------------------------------------
 A <- c("a", "b", "c", "d", "e", "f", "g", "h")
 A
 
@@ -111,7 +115,7 @@ A[1:3]
 
 # Último elemento
 length(A)
-A[7]
+A[8]
 A[length(A)]
 
 # indexacion de vectores devuelve mismo vector
@@ -128,6 +132,7 @@ attributes(x)
 sex_char <- c("m", "m", "m")
 sex_char
 typeof(sex_char)
+table(sex_char)
 
 sex_factor <- factor(sex_char, levels = c("m", "f"), labels = c("Macho", "Hembra"))
 sex_factor
@@ -236,7 +241,10 @@ m2[1:3,"Pares"]
 
 m2[c(1,3),"Pares"]
 
-# indexacion matrices cambia la clase
+# indexacion matrices sí cambia la clase
+class(m2)
+typeof(m2)
+
 str(m2[1:3,"Pares"])
 class(m2[1:3,"Pares"])
 
@@ -284,6 +292,7 @@ tibble(
   y = x*2
 )
 
+# HASTA AQUI Lunes 3 Octubre # 
 
 dplyr::starwars
 
