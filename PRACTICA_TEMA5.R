@@ -329,16 +329,14 @@ str(df2$Numeros)
 str(df1$Nu)
 str(df2$Nu)
 
-###
-# HASTA AQUI Miercoles 28 #
-###
+
 
 # Listas ------------------------------------------------------------------
 # Análogos heterogéneos de los vectores
 # función `list()`
 
 l1 <- list(
-  Integrales = 1:3, 
+  Enteros = 1:3, 
   Letra = "a", 
   Logico = c(TRUE, FALSE, TRUE), 
   Numeros = c(2.3, 5.9)
@@ -380,11 +378,14 @@ as.list(seq(1:3))
 
 typeof(as.list(seq(1:3)))
 
+list(c(seq(1:3), "hola"))
+
+typeof(list(c(seq(1:3), "hola")))
 
 # ** Indexación de Listas -------------------------------------------------
-# Al igual que las Matrices las listas se pueden indexar por posición (Dimensión) y por nombre
+# Al igual que las Matrices las listas se pueden indexar por posición (Dimensión) y/o por nombre, o por ambas.
 l1
-
+l1[[3]][3]
 # Por dimensión
 l1[[1]]
 l1[[1]][2]
@@ -394,11 +395,15 @@ str(l1[[1]])
 #Por nombre
 str(l1)
 
+l1$Logico[3]
 l1$Letra
 
 #agrego una dimensión más
 l1[[5]] <- df2
 str(l1)
+
+l1[[5]]$Letras[3]
+
 l1[[5]]$Letras
 
 l1$Logico
@@ -415,8 +420,7 @@ Galapagos <- read_excel("INPUT/DATA/Galapagos_DB.xlsx",
 Galapagos
 str(Galapagos)
 summary(Galapagos)
-
-
+View(Galapagos)
 
 # * Importación desde CSV -------------------------------------------------
 library(readr)
@@ -427,12 +431,14 @@ Acc_Car
 summary(Acc_Car)
 View(Acc_Car)
 
+table(Acc_Car$T.RED)
+
 # Modificando el tipo (clase) de cada Columna
-# Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv",
-#                       delim = ";", escape_double = FALSE, trim_ws = TRUE,
-#                       col_types = cols(
-#                         T.RED = readr::col_factor(levels = NULL)
-#                       ))
+Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv",
+                      delim = ";", escape_double = FALSE, trim_ws = TRUE,
+                      col_types = cols(
+                        T.RED = readr::col_factor(levels = NULL)
+                      ))
 
 Acc_Car
 str(Acc_Car)
@@ -448,7 +454,12 @@ summary(Agua_Consumo)
 
 Agua_Consumo$`Nº de zonas de abastecimiento`
 Agua_Consumo$`Análisis efectuados en las infraestructuras - Análisis completo`
-º
+Agua_Consumo$`Nº boletines analíticos de calidad de aguas de consumo humano por su calificación - Apta para el consumo con no conformidad`
+
+###
+# HASTA AQUI Miercoles 05 Oct #
+###
+
 # INTRO DPLYR -------------------------------------------------------------
 # paquete dplyr
 library(dplyr)
