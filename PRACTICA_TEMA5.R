@@ -456,17 +456,13 @@ Agua_Consumo$`Nº de zonas de abastecimiento`
 Agua_Consumo$`Análisis efectuados en las infraestructuras - Análisis completo`
 Agua_Consumo$`Nº boletines analíticos de calidad de aguas de consumo humano por su calificación - Apta para el consumo con no conformidad`
 
-###
-# HASTA AQUI Miercoles 05 Oct #
-###
-
 # INTRO DPLYR -------------------------------------------------------------
 # paquete dplyr
-library(dplyr)
+library("dplyr")
 
 #set de datos
 ?starwars
-
+data("starwars")
 
 # * Verbos de tablas únicas -----------------------------------------------
 # operan sobre una única tabla de datos
@@ -500,7 +496,7 @@ levels(factor(starwars$skin_color))
 
 table(starwars$skin_color)
 
-filter(starwars, skin_color == "light")
+filter(starwars, skin_color == "blue, grey")
 
 # *** Slice ---------------------------------------------------------------
 # Selección de filas según la ubicación
@@ -600,10 +596,10 @@ mutate(.data = df2, alfanum = interaction(Numeros, Letras, sep = ":"))
 mutate(.data = df2, Saludo = "Hola")
 
 # columna nueva con la altura en metros (no en centímetros)
-mutate(.data = starwars, height_m = height / 100)
+mutate(.data = starwars, Altura_m = height / 100)
 
 # columna nueva y selección de nueva columna de altura en metros (no en centímetros)
-transmute(.data = starwars, height_m = height / 100)
+transmute(.data = starwars, Altura_m = height / 100)
 
 # *** Relocate ------------------------------------------------------------
 # Similar a select y sirve para mover columnas
@@ -612,7 +608,9 @@ transmute(.data = starwars, height_m = height / 100)
 starwars
 relocate(.data = starwars, sex:homeworld, .before = height)
 
-
+###
+# HASTA AQUI Miercoles 05 Oct #
+###
 
 # ** Operaciones combinadas -----------------------------------------------
 # Usaremos dos funciones %>% y group_by
