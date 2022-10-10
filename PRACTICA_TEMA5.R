@@ -456,6 +456,10 @@ Agua_Consumo$`Nº de zonas de abastecimiento`
 Agua_Consumo$`Análisis efectuados en las infraestructuras - Análisis completo`
 Agua_Consumo$`Nº boletines analíticos de calidad de aguas de consumo humano por su calificación - Apta para el consumo con no conformidad`
 
+###
+# HASTA AQUI Miercoles 05 Oct #
+###
+
 # INTRO DPLYR -------------------------------------------------------------
 # paquete dplyr
 library("dplyr")
@@ -609,7 +613,7 @@ starwars
 relocate(.data = starwars, sex:homeworld, .before = height)
 
 ###
-# HASTA AQUI Miercoles 05 Oct #
+# HASTA AQUI Lunes 10 Oct #
 ###
 
 # ** Operaciones combinadas -----------------------------------------------
