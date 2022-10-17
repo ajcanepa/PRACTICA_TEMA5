@@ -102,6 +102,11 @@ x
 
 dim(x)
 
+x <- matrix(letters[1:6], nrow = 3, ncol = 4)
+x
+
+dim(x)
+
 
 # ** Indexación Vectores --------------------------------------------------
 A <- c("a", "b", "c", "d", "e", "f", "g", "h")
