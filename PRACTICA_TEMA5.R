@@ -297,8 +297,6 @@ tibble(
   y = x*2
 )
 
-# HASTA AQUI Lunes 3 Octubre # 
-
 dplyr::starwars
 
 
@@ -325,7 +323,7 @@ df1[1:3, "Letras"]
 
 df1[c(1,3,5), "Letras"]
 
-# Diff. tibble v/s data.farme
+# Diff. tibble v/s data.frame
 # df1 = dataframe
 str(df1$Numeros)
 # df2 es un tibble
@@ -404,8 +402,14 @@ l1$Logico[3]
 l1$Letra
 
 #agrego una dimensión más
+# Sin entregar el nombre
 l1[[5]] <- df2
 str(l1)
+
+# A través de entregar el nombre
+l1$DataFrame <- df1
+
+l1
 
 l1[[5]]$Letras[3]
 
@@ -617,10 +621,6 @@ transmute(.data = starwars, Altura_m = height / 100)
 starwars
 relocate(.data = starwars, sex:homeworld, .before = height)
 
-###
-# HASTA AQUI Lunes 10 Oct #
-###
-
 # ** Operaciones combinadas -----------------------------------------------
 # Usaremos dos funciones %>% y group_by
 
@@ -699,6 +699,10 @@ select(BMI, everything()) %>%
 
 # More on BMI
 # https://www.calculator.net/bmi-calculator.html?ctype=metric&cage=43&csex=m&cheightfeet=5&cheightinch=10&cpound=160&cheightmeter=173&ckg=82&printit=0&x=76&y=13
+
+###
+# HASTA AQUI Lunes 17 Octubre #
+###
 
 # *** Operaciones por columnas -------------------------------------------
 # Repetir la misma operación por columnas
