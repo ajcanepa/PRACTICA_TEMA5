@@ -465,9 +465,6 @@ Agua_Consumo$`Nº de zonas de abastecimiento`
 Agua_Consumo$`Análisis efectuados en las infraestructuras - Análisis completo`
 Agua_Consumo$`Nº boletines analíticos de calidad de aguas de consumo humano por su calificación - Apta para el consumo con no conformidad`
 
-###
-# HASTA AQUI Miercoles 05 Oct #
-###
 
 # INTRO DPLYR -------------------------------------------------------------
 # paquete dplyr
@@ -650,6 +647,9 @@ attributes(a2)
 
 summarise(.data = a2, Alt_prom = mean(height, na.rm = TRUE), Alt_desv = sd(height, na.rm = TRUE))
 
+###
+# HASTA AQUI Miercoles 19 Oct #
+###
 
 # *** Pipes ---------------------------------------------------------------
 # Máximo poder a R
