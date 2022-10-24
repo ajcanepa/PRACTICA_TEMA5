@@ -700,10 +700,6 @@ select(BMI, everything()) %>%
 # More on BMI
 # https://www.calculator.net/bmi-calculator.html?ctype=metric&cage=43&csex=m&cheightfeet=5&cheightinch=10&cpound=160&cheightmeter=173&ckg=82&printit=0&x=76&y=13
 
-###
-# HASTA AQUI Lunes 17 Octubre #
-###
-
 # *** Operaciones por columnas -------------------------------------------
 # Repetir la misma operación por columnas
 library(tidyverse)
@@ -714,7 +710,7 @@ starwars
 # Aproximación manual (no muy clever si son muchas)
 starwars %>%
   group_by(species) %>%
-  filter(n() > 1) %>% 
+  filter(n() > 1) %>% # para evitar NA en standar deviation
   summarise(
     Av_height = mean(height, na.rm = TRUE),
     Av_mass = mean(mass, na.rm = TRUE),
@@ -748,9 +744,10 @@ starwars %>%
   group_by(homeworld) %>% 
   filter(n() > 1) %>% 
   summarise(across(where(is.numeric), ~ mean(.x, na.rm = TRUE))) %>% 
-  arrange(desc(birth_year))
+  arrange(desc(birth_year)) 
 
 # Para quitar la fila con el NA
+library(tidyr)
 starwars %>% 
   group_by(homeworld) %>% 
   filter(n() > 1) %>% 
@@ -812,7 +809,7 @@ pivot_wider(data = Long_Starwars, names_from = "Variable", values_from = "Valore
 Long_Starwars %>% 
   pivot_wider(data = ., names_from = "Variable", values_from = "Valores")
 
-# Tambien funciona
+# También funciona sin comillas en los atributos
 Long_Starwars %>% 
   pivot_wider(data = ., names_from = Variable, values_from = Valores)
 
@@ -823,6 +820,7 @@ Long_Starwars %>%
 
 # *** Carga de datos ------------------------------------------------------
 # Loading the "Galapagos_summary.csv" file
+library(readr)
 Mean_Galapagos <- read_csv(file = "INPUT/DATA/Galapagos_summary.csv", 
                            col_types = cols(
   Island = readr::col_factor(levels = NULL),
@@ -850,7 +848,7 @@ Species <- read_csv("INPUT/DATA/Species_Richness_PerSite.csv", col_types = cols(
 ))
 
 Species
-
+View(Species)
 
 # *** Inspección de los datos ---------------------------------------------
 # Vista general
@@ -879,11 +877,10 @@ levels(Species$distance)
 left_join(x = Mean_Galapagos, y = Species)
 
 # Igual, pero correctamente escrito
-left_join(x = Mean_Galapagos, y = Species, by = c("Island", "Station", "distance"))
+left_join(x = Mean_Galapagos, y = Species, by = c("Island", "Station", "distance")) 
 
 # Indicación parcial, ver que pasa con los no señalados
 left_join(x = Mean_Galapagos, y = Species, by = c("Island"))
-
 
 
 # *** full_join -----------------------------------------------------------
@@ -959,6 +956,9 @@ Accidentes_total %>%
   theme_classic()
 
 
+###
+# HASTA AQUI Lunes 24 Octubre #
+###
 
 # Introducción  ggplot2 ---------------------------------------------------
 #library(ggplot2)
