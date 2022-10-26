@@ -809,10 +809,9 @@ pivot_wider(data = Long_Starwars, names_from = "Variable", values_from = "Valore
 Long_Starwars %>% 
   pivot_wider(data = ., names_from = "Variable", values_from = "Valores")
 
-# También funciona sin comillas en los atributos
-Long_Starwars %>% 
-  pivot_wider(data = ., names_from = Variable, values_from = Valores)
-
+# También funciona sin comillas en los atributos aunque no es recomendable.
+# Long_Starwars %>%
+#   pivot_wider(data = ., names_from = Variable, values_from = Valores)
 
 # ** Verbos de dos tablas -------------------------------------------------
 #library(readr)
@@ -957,7 +956,7 @@ Accidentes_total %>%
 
 
 ###
-# HASTA AQUI Lunes 24 Octubre #
+# HASTA AQUI Lunes 24 Octubre # y Miércoles 26 Octubre #
 ###
 
 # Introducción  ggplot2 ---------------------------------------------------
