@@ -956,7 +956,7 @@ Accidentes_total %>%
 
 
 ###
-# HASTA AQUI Lunes 24 Octubre # y Miércoles 26 Octubre #
+# HASTA AQUI Lunes 24 Octubre 
 ###
 
 # Introducción  ggplot2 ---------------------------------------------------
@@ -977,6 +977,7 @@ data("mpg")
 str(mpg)
 
 # ayuda de la función principal de ggplot2
+?qplot
 ?ggplot
 
 # Definición de las tres mínimas variables en un gráfico
@@ -998,7 +999,7 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) +
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(colour = factor(cyl)))
 
-# Qué tipo de colores se obtienen con una variable continua? --> Gradiente!
+# Qué tipo de colores se obtienen con una variable continua? 
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(colour = cyl))
 
@@ -1010,8 +1011,8 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) +
 # Podemos comparar diferentes modelos de ajustes
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_point() +
-  geom_smooth(method = "loess", colour = "blue") +
-  geom_smooth(method = "lm", colour = "red")
+  geom_smooth(method = "loess", colour = "blue", se = TRUE) +
+  geom_smooth(method = "lm", colour = "red", se = TRUE)
 
 # Podemos ajustar modelos dependientes de cada nivel de la variable categórica
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
@@ -1038,7 +1039,7 @@ ggplot(data = diamonds, aes(x = cut)) +
 
 # Modificando el "relleno" de las cajas
 ggplot(data = diamonds, aes(x = cut)) +
-  geom_bar(aes(fill = clarity), colour ="black")
+  geom_bar(aes(fill = clarity), colour = "black")
 
 # Para hacer comparaciones "intra-clase" de la variable de relleno
 ggplot(data = diamonds, aes(x = cut)) +
@@ -1047,6 +1048,10 @@ ggplot(data = diamonds, aes(x = cut)) +
 # Para hacer comparaciones entre niveles del eje X considerando la tercera variable
 ggplot(data = diamonds, aes(x = cut)) +
   geom_bar(aes(fill = clarity), position = "dodge")
+
+###
+# HASTA AQUI MIERCOLES 02 Noviembre
+###
 
 # ** Gráficos de Coordenadas polares (Coxcomb) ----------------------------
 
