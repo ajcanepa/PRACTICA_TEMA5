@@ -993,7 +993,7 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) +
 
 # Controlando el color -- Fijo
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
-  geom_point(colour = "darkgreen")
+  geom_point(colour = "palevioletred2")
 
 # Controlando el color -- Dependiente de otra variable
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
@@ -1012,7 +1012,7 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) +
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_point() +
   geom_smooth(method = "loess", colour = "blue", se = TRUE) +
-  geom_smooth(method = "lm", colour = "red", se = TRUE)
+  geom_smooth(method = "lm", formula = y~poly(x,1), colour = "red", se = TRUE)
 
 # Podemos ajustar modelos dependientes de cada nivel de la variable categórica
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
@@ -1048,6 +1048,11 @@ ggplot(data = diamonds, aes(x = cut)) +
 # Para hacer comparaciones entre niveles del eje X considerando la tercera variable
 ggplot(data = diamonds, aes(x = cut)) +
   geom_bar(aes(fill = clarity), position = "dodge")
+
+# Usando 2 variables (no de la manera correcta, aún)
+ggplot(data = diamonds, aes(x = cut, y = carat)) +
+  geom_bar(stat = "identity")
+
 
 ###
 # HASTA AQUI MIERCOLES 02 Noviembre
@@ -1089,6 +1094,9 @@ ggplot(data = diamonds) +
   labs(x = NULL, y = NULL) +
   coord_polar()
 
+##
+# HASTA AQUI Lunes 07 de Noviembre
+##
 
 # * Facetas  ---------------------------------------------------------
 # Permiten dividir el gráfico según niveles de una variable discreta
