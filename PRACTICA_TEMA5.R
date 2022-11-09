@@ -647,9 +647,6 @@ attributes(a2)
 
 summarise(.data = a2, Alt_prom = mean(height, na.rm = TRUE), Alt_desv = sd(height, na.rm = TRUE))
 
-###
-# HASTA AQUI Miercoles 19 Oct #
-###
 
 # *** Pipes ---------------------------------------------------------------
 # Máximo poder a R
@@ -1054,10 +1051,6 @@ ggplot(data = diamonds, aes(x = cut, y = carat)) +
   geom_bar(stat = "identity")
 
 
-###
-# HASTA AQUI MIERCOLES 02 Noviembre
-###
-
 # ** Gráficos de Coordenadas polares (Coxcomb) ----------------------------
 
 # Preparación del gráfico
@@ -1113,8 +1106,8 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) +
 # Podemos tener 5 variables en un gráfico!
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(colour = factor(cyl))) +
- facet_wrap(class ~ drv)
-#facet_grid(class ~ drv) # Muestra la grilla con toda la combinación
+ #facet_wrap(class ~ drv)
+facet_grid(class ~ drv, scales = "free", margins = TRUE) # Muestra la grilla con toda la combinación
 
 # * Etiquetas --------------------------------------------------------
 # Permiten mejorar los "nombres" de ejes, títulos, subtítulos, etc.
@@ -1224,7 +1217,7 @@ ggplot(mpg, aes(hwy, displ)) +
 ggplot(mpg, aes(hwy, displ)) +
   geom_point() +
   stat_smooth() +
-  theme_dark()
+  theme_void()
 
 ggplot(mpg, aes(hwy, displ)) +
   geom_point() +
@@ -1258,18 +1251,24 @@ Final_plot <-
 
 # Al imprimir el objeto (ejecutar su nombre) se "dibuja" el gráfico 
 Final_plot
+print(Final_plot)
 x11(Final_plot)
 # Usamos la siguiente instrucción para guardar el gráfico
 ggsave(
   filename = "Car_yield_highway.png",
   plot = Final_plot ,
-  path = paste(getwd(), "/OUTPUT/Figures", sep = ""),
+  #path = paste(getwd(), "/OUTPUT/Figures", sep = ""), # ruta absoluta
+  path = "OUTPUT/Figures", # ruta relativa
   scale = 0.5,
   width = 40,
   height = 20,
   units = "cm",
   dpi = 320
 )
+
+###
+# HASTA AQUI Miercoles 09
+###
 
 # Datos Semi-Estructurados ------------------------------------
 # * Importación desde CSV -------------------------------------------------
