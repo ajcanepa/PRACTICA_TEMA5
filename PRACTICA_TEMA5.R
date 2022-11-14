@@ -952,10 +952,6 @@ Accidentes_total %>%
   theme_classic()
 
 
-###
-# HASTA AQUI Lunes 24 Octubre 
-###
-
 # Introducción  ggplot2 ---------------------------------------------------
 #library(ggplot2)
 library(tidyverse)
@@ -1101,7 +1097,7 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) +
 # como la variable `drv` tiene solo 3 niveles, podemos dividir el gráfico de acorde a ellas
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(colour = factor(cyl))) +
-  facet_wrap( ~ drv, nrow = 1)
+  facet_wrap(facets = vars(drv), nrow = 1)
 
 # Podemos tener 5 variables en un gráfico!
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
@@ -1179,7 +1175,7 @@ ggplot(mpg, aes(displ, hwy)) +
 # Ajustando los límites en una sola función ("recortando")
 ggplot(mpg, aes(hwy, displ)) +
   geom_point() +
-  lims(x = c(0, 50), y = c(0, 8))
+  lims(x = c(20, 30), y = c(2, 4))
 
 # Cuidado con recortar, porque hay capas que dependen de la cantidad de puntos
 ggplot(mpg, aes(hwy, displ)) +
@@ -1212,7 +1208,7 @@ ggplot(mpg, aes(hwy, displ)) +
 ggplot(mpg, aes(hwy, displ)) +
   geom_point() +
   stat_smooth() +
-  theme_light()
+  theme_classic()
 
 ggplot(mpg, aes(hwy, displ)) +
   geom_point() +
@@ -1255,7 +1251,7 @@ print(Final_plot)
 x11(Final_plot)
 # Usamos la siguiente instrucción para guardar el gráfico
 ggsave(
-  filename = "Car_yield_highway.png",
+  filename = "Car_yield_highway.jpeg",
   plot = Final_plot ,
   #path = paste(getwd(), "/OUTPUT/Figures", sep = ""), # ruta absoluta
   path = "OUTPUT/Figures", # ruta relativa
@@ -1267,7 +1263,7 @@ ggsave(
 )
 
 ###
-# HASTA AQUI Miercoles 09
+# HASTA AQUI Miercoles 09 y lunes 14
 ###
 
 # Datos Semi-Estructurados ------------------------------------
