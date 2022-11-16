@@ -1083,10 +1083,6 @@ ggplot(data = diamonds) +
   labs(x = NULL, y = NULL) +
   coord_polar()
 
-##
-# HASTA AQUI Lunes 07 de Noviembre
-##
-
 # * Facetas  ---------------------------------------------------------
 # Permiten dividir el gráfico según niveles de una variable discreta
 
@@ -1263,7 +1259,7 @@ ggsave(
 )
 
 ###
-# HASTA AQUI Miercoles 09 y lunes 14
+# HASTA AQUI lunes 14 de Noviembre
 ###
 
 # Datos Semi-Estructurados ------------------------------------
@@ -1294,7 +1290,6 @@ Acc_Car_Json <- fromJSON(file = "INPUT/DATA/accidentalidad-por-carreteras.json")
 Acc_Car_Json
 head(Acc_Car_Json)
 
-
 # ** Uso de tidyjson ------------------------------------------------------
 # devtools::install_github("colearendt/tidyjson")
 #https://github.com/colearendt/tidyjson
@@ -1303,16 +1298,19 @@ library(tidyjson)
 data("worldbank")
 
 head(worldbank)
+View(worldbank)
 
 # Usamos `spread_all()` para formatear los datos
 worldbank %>% 
-  spread_all()
+  spread_all() %>% 
+  View()
 
 # Aproximación Tidy para los accidentes en carretera
 head(Acc_Car_Json)
 
 Acc_Car_Json %>%
-  spread_all()
+  spread_all() %>% 
+  View()
 
 # Guardamos el objeto
 Acc_Car_TJson <- spread_all(Acc_Car_Json)
@@ -1330,6 +1328,23 @@ Acc_Car_Json %>%
   json_types %>% 
   count(name, type)
 
+# ¿Qué pasa con el conjunto de datos WorldBank?
+worldbank %>% 
+  spread_all()
+
+# Funciona el spread_all? ¿hay arrays?
+worldbank %>% 
+  spread_all() %>% 
+  gather_object %>% 
+  json_types %>% 
+  count(name, type)
+
+# Observamos que uno de los elemetos sigue siendo un array. Para ingresar dentro de ese array, tenemos que:
+worldbank %>%
+  enter_object(majorsector_percent) %>%
+  gather_array %>%
+  spread_all %>%
+  select(-document.id, -array.index)
 
 # * Desde XML -------------------------------------------------------------
 # https://megapteraphile.wordpress.com/2020/03/29/converting-xml-to-tibble-in-r/
@@ -1352,6 +1367,7 @@ Data
 Data_mxl <- xmlParse(Data)
 Data_mxl
 
+attributes(Data_mxl)
 
 # ** De xml a data.frame --------------------------------------------------
 # Usamos la función `xmlToDataFrame()` del paquete `XML`. 
@@ -1370,7 +1386,7 @@ DF_xml %>%
     calories = as.numeric(calories)
   )
 
-# Creamos un objeto
+# Creamos un objeto (intermedio)
 Tibble_xml <- 
   DF_xml %>% 
   as_tibble() %>%
@@ -1384,6 +1400,9 @@ Tibble_xml <-
 Tibble_xml
 
 # Graficamos
+# Tibble_xml %>% 
+#   ggplot(data = ., mapping = aes(x = name, y = price_dollars)) +
+#   geom_bar(stat = "identity", aes(fill = calories))
 
 Tibble_xml %>% 
   ggplot(data = ., mapping = aes(x = reorder(name, -price_dollars), y = price_dollars)) +
@@ -1393,6 +1412,28 @@ Tibble_xml %>%
   scale_y_continuous(expand = expansion(mult = c(0, .1))) +
   theme_classic() +
   theme(axis.text.x = element_text(angle = 60, vjust = 1, hjust = 1))
+
+
+# Sin necesidad de crear el objeto
+DF_xml %>% 
+  as_tibble() %>%
+  transmute(
+    name = factor(name),
+    price_dollars = parse_number(price),
+    description = description,
+    calories = as.numeric(calories)
+  ) %>% 
+  ggplot(data = ., mapping = aes(x = reorder(name, -price_dollars), y = price_dollars)) +
+  geom_bar(stat = "identity", aes(fill = calories)) +
+  scale_fill_gradient(low = "peachpuff", high = "red", space = "Lab", na.value = "grey50", guide = "colourbar",  aesthetics = "fill") +
+  labs(x = "", y = "Precio (U.S. $)", fill = "Calorías") +
+  scale_y_continuous(expand = expansion(mult = c(0, .1))) +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 60, vjust = 1, hjust = 1))
+
+###
+# HASTA AQUI Miercoles 16 Noviembre
+###
 
 # Consultas RDF usando Tidyverse ------------------------------------------
 # Paquete `rdflib`: Tools to Manipulate and Query Semantic Data // En https://cran.r-project.org/web/packages/rdflib/
@@ -1631,6 +1672,38 @@ sparql_tidy <- tidy_schema("Species",  "Sepal.Length", "Sepal.Width", prefix = "
 
 iris3 <- rdf_query(rdf3, sparql_tidy)
 iris3
+
+
+# ** Consulta Usando dbpedia ----------------------------------------------
+library(SPARQL)
+library(tidyverse)
+
+# Mirar el Query Editor online
+endpoint <- "https://dbpedia.org/sparql"
+
+query_example <- "SELECT * WHERE {
+?athlete rdfs:label 'Cristiano Ronaldo'@en
+}"
+
+query_example <- "SELECT * WHERE {
+?athlete rdfs:label 'Cristiano Ronaldo'@en ;
+  dbo:number  ?number .
+}"
+
+query_example <- "SELECT * WHERE {
+?athlete rdfs:label 'Cristiano Ronaldo'@en ;
+  dbo:number  ?number ;
+  dbo:birthPlace  ?place .
+}"
+
+QD <- SPARQL(url = endpoint, query = query_example)
+
+str(QD)
+
+DF <- as_tibble(QD$results)
+DF
+
+
 
 # Referencias -------------------------------------------------------------
 # https://adv-r.hadley.nz/index.html
