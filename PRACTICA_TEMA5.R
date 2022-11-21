@@ -1661,8 +1661,6 @@ iris2 <- rdf_query(rdf3, sparql)
 
 iris2
 
-
-
 # ** Consulta Usando tidy_schema del paquete rdflib -----------------------
 # Cargamos la función
 source(system.file("examples/tidy_schema.R", package = "rdflib"))
@@ -1681,15 +1679,32 @@ library(tidyverse)
 # Mirar el Query Editor online
 endpoint <- "https://dbpedia.org/sparql"
 
+# Query 1
 query_example <- "SELECT * WHERE {
 ?athlete rdfs:label 'Cristiano Ronaldo'@en
 }"
 
+QD <- SPARQL(url = endpoint, query = query_example)
+
+str(QD)
+
+DF <- as_tibble(QD$results)
+DF
+
+# Query 2
 query_example <- "SELECT * WHERE {
 ?athlete rdfs:label 'Cristiano Ronaldo'@en ;
   dbo:number  ?number .
 }"
 
+QD <- SPARQL(url = endpoint, query = query_example)
+
+str(QD)
+
+DF <- as_tibble(QD$results)
+DF
+
+# Query 3
 query_example <- "SELECT * WHERE {
 ?athlete rdfs:label 'Cristiano Ronaldo'@en ;
   dbo:number  ?number ;
@@ -1702,8 +1717,6 @@ str(QD)
 
 DF <- as_tibble(QD$results)
 DF
-
-
 
 # Referencias -------------------------------------------------------------
 # https://adv-r.hadley.nz/index.html
