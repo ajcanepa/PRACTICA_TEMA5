@@ -1258,10 +1258,6 @@ ggsave(
   dpi = 320
 )
 
-###
-# HASTA AQUI lunes 14 de Noviembre
-###
-
 # Datos Semi-Estructurados ------------------------------------
 # * Importación desde CSV -------------------------------------------------
 # Accidentalidad por Carreteras
@@ -1330,7 +1326,8 @@ Acc_Car_Json %>%
 
 # ¿Qué pasa con el conjunto de datos WorldBank?
 worldbank %>% 
-  spread_all()
+  spread_all() %>% 
+  View()
 
 # Funciona el spread_all? ¿hay arrays?
 worldbank %>% 
@@ -1345,6 +1342,10 @@ worldbank %>%
   gather_array %>%
   spread_all %>%
   select(-document.id, -array.index)
+
+###
+# HASTA AQUI lunes 21 de Noviembre
+###
 
 # * Desde XML -------------------------------------------------------------
 # https://megapteraphile.wordpress.com/2020/03/29/converting-xml-to-tibble-in-r/
