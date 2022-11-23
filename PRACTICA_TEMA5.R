@@ -1433,7 +1433,7 @@ DF_xml %>%
   theme(axis.text.x = element_text(angle = 60, vjust = 1, hjust = 1))
 
 ###
-# HASTA AQUI Miercoles 16 Noviembre
+# HASTA AQUI Miercoles 23 Noviembre
 ###
 
 # Consultas RDF usando Tidyverse ------------------------------------------
