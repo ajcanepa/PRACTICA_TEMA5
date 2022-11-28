@@ -1343,10 +1343,6 @@ worldbank %>%
   spread_all %>%
   select(-document.id, -array.index)
 
-###
-# HASTA AQUI lunes 21 de Noviembre
-###
-
 # * Desde XML -------------------------------------------------------------
 # https://megapteraphile.wordpress.com/2020/03/29/converting-xml-to-tibble-in-r/
 library(tidyverse)
@@ -1505,7 +1501,8 @@ head(iris_triples)
 # Así el ID 1 --> http://example.com/iris#1
 
 # Reemplazamos el objeto
-iris_triples <- iris %>%
+iris_triples <- 
+  iris %>%
   rowid_to_column("subject") %>%
   mutate(subject = paste0("http://example.com/iris#", subject)) %>%
   gather(key = predicate, value = object, -subject)
@@ -1521,7 +1518,8 @@ iris_triples <-
   rowid_to_column("subject") %>%
   mutate(subject = paste0("http://example.com/iris#", subject)) %>%
   gather(key = predicate, value = object, -subject) %>%
-  mutate(predicate = paste0("http://example.com/iris#", predicate))
+  mutate(predicate = paste0("http://example.com/iris#", predicate)) %>% 
+  mutate(object = as.numeric(object))
 
 head(iris_triples)
 
@@ -1566,7 +1564,6 @@ str(rdf1)
 # URL --> uniform resource locator, aka web address
 # URI --> uniform resource identifier --> puede ser una URL y más cosas (DOI, ISBN, etc.)
 
-
 # ** Serialización --------------------------------------------------------
 # El formato que hemos visto se denomina N-Quads
 # Podemos serializar un objeto con la función `rdf_serialize()`
@@ -1594,13 +1591,13 @@ rdf1
 # @id --> property
 # @context --> define datatypes, use multiple namespaces, and permit different names in the JSON keys from that found in the URLs.
 
-# Agrenado un @context
+# Agregando un @context
 rdf_serialize(rdf1, "example.json", "jsonld") %>% 
   jsonld_compact(context = '{"@vocab": "http://purl.org/dc/elements/1.1/"}')
 
 
 # ** De tablas a Gráficos -------------------------------------------------
-# No todos los set d edatos pueden almacenarse en forma tabular (tidy)
+# No todos los set de datos pueden almacenarse en forma tabular (tidy)
 # ej:
 ex <- system.file("extdata/person.json", package = "rdflib")
 cat(readLines(ex), sep = "\n")
@@ -1642,6 +1639,9 @@ str(rdf3)
 
 # * Volviendo a las Tablas -----------------------------------------------
 
+###
+# HASTA AQUI Lunes 28 Noviembre
+###
 
 # ** Consulta Usando SPARQL -----------------------------------------------
 # generamos una consulta en SPARQL, definiendo un motor de búsqueda
