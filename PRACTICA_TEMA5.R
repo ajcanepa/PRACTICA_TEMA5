@@ -1428,10 +1428,6 @@ DF_xml %>%
   theme_classic() +
   theme(axis.text.x = element_text(angle = 60, vjust = 1, hjust = 1))
 
-###
-# HASTA AQUI Miercoles 23 Noviembre
-###
-
 # Consultas RDF usando Tidyverse ------------------------------------------
 # Paquete `rdflib`: Tools to Manipulate and Query Semantic Data // En https://cran.r-project.org/web/packages/rdflib/
 
@@ -1448,6 +1444,7 @@ library(jsonld)
 
 data(mtcars)
 mtcars
+colnames(mtcars)
 
 # Creando los triples a partir de `mtcars`
 mtcars %>% 
@@ -1522,6 +1519,7 @@ iris_triples <-
   mutate(object = as.numeric(object))
 
 head(iris_triples)
+str(iris_triples)
 
 # ** Datatype URIs --------------------------------------------------------
 # Todo parece bien, salvo que nuestro objeto (que deberían ser doubles) son character por una coercion
@@ -1553,7 +1551,6 @@ rdf1 %>%
 rdf1
 
 str(rdf1)
-
 
 # ** Prefijos para las URIs (CURIE) ---------------------------------------
 # Los namespace (en XML) pueden teenr un prefijo seguido de ":"
@@ -1604,6 +1601,7 @@ cat(readLines(ex), sep = "\n")
 
 # Serialización a N-Quads
 options(rdf_print_format = "nquads")
+ex
 rdf2 <- rdf_parse(ex, "jsonld")
 rdf2
 
@@ -1645,6 +1643,9 @@ str(rdf3)
 
 # ** Consulta Usando SPARQL -----------------------------------------------
 # generamos una consulta en SPARQL, definiendo un motor de búsqueda
+library(SPARQL)
+library(tidyverse)
+
 sparql <-
   'SELECT  ?Species ?Sepal_Length ?Sepal_Width ?Petal_Length  ?Petal_Width
 WHERE {
@@ -1717,7 +1718,7 @@ QD <- SPARQL(url = endpoint, query = query_example)
 str(QD)
 
 DF <- as_tibble(QD$results)
-DF
+DF$place
 
 # Referencias -------------------------------------------------------------
 # https://adv-r.hadley.nz/index.html
