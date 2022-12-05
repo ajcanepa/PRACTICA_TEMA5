@@ -1637,14 +1637,12 @@ str(rdf3)
 
 # * Volviendo a las Tablas -----------------------------------------------
 
-###
-# HASTA AQUI Lunes 28 Noviembre
-###
 
 # ** Consulta Usando SPARQL -----------------------------------------------
 # generamos una consulta en SPARQL, definiendo un motor de búsqueda
 library(SPARQL)
 library(tidyverse)
+library(rdflib)
 
 sparql <-
   'SELECT  ?Species ?Sepal_Length ?Sepal_Width ?Petal_Length  ?Petal_Width
