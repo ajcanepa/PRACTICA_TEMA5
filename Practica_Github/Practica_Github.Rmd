@@ -1,0 +1,189 @@
+---
+title:    | 
+ | Fuentes de datos biomédicas 
+ | y web semántica #8230
+ | Gº Ingeniería de la Salud
+ 
+author:    | 
+ | **Antonio Canepa, Ph.D.**
+ | *[email](mailto:ajcanepa@ubu.es)* // [twitter](https://twitter.com/OMDataScience)
+
+date: "5º Semestre / Curso 2023-2024"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_depth: 6
+    toc_float: yes
+  pdf_document:
+    toc: yes
+---
+```{r, echo=FALSE, out.width="20%"}
+htmltools::img(src = knitr::image_uri(f = "INPUT/IMAGES/Logo_Curso_Fuente_Datos_Biomedicas_Web_Semantica.png"), 
+               alt = 'logo', 
+               style = 'position:absolute; top:0; right:0; padding:10px;')
+```
+
+<style>
+body {
+text-align: justify}
+</style>
+
+```{r echo=FALSE, purl=FALSE}
+# Paquetes para mejorar el aspecto de los html
+# install.packages("devtools")
+# devtools::install_github("hadley/emo")
+library(emo) # Insert emoticons en el html. Nombres desde https://emoji.muan.co/ // https://github.com/hadley/emo
+```
+
+# Práctica GitHub
+Realizaremos un pequeño ejercicio para mostrar la utilidad de Github en el control de versiones, incluso sin estar vinculado a un repositorio web.
+
+Para ello deberéis descargar los siguientes ficheros: `Analysis.R` y `Datos.txt`.
+
+De tal manera que en vuestro directorio de trabajo (una carpeta determinada a seleccionare por tí) sólo hayan estos dos archivos.
+
+Ahora, tendremos que abrir la línea de comandos de nuestro sistema operativo; *i.e.* nuestra __terminal__ ó __terminal de comandos__.
+
+En linux, esta terminal luciría así:
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal de comandos en Linux'}
+knitr::include_graphics("INPUT/IMAGES/Terminal_screen_linux.png")
+```
+
+Si os dáis cuenta, el directorio de trabajo (donde está "leyendo" el sistema operativo) es diferente a donde tenemos la carpeta, para conocerlo podremos ejecutar lo siguiente:
+
+*   `pwd` --> En linux(Mac)
+*   `cd` --> En Windows
+
+Y se vería ('*más o menos*') así:
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal de comandos mostrando el directorio de trabajo'}
+knitr::include_graphics("INPUT/IMAGES/pwd_Linux.png")
+```
+
+A continuación deberemos acceder a la carpeta donde tenemos los archivos (para desarrollar esta práctica), y para ello podremos seguir dos aproximaciones:
+
+1.    Abrir la terminal desde la carpeta que contiene los ficheros `Analysis.R` y `Datos.txt`:
+  1.1   Estando en `Linux`, en el navegador de ficheros en la carpeta correspondiente, podremos darle al botón del lado derecho y seleccionar "__*abrir en la terminal*__ (*open in terminal*)".
+  1.2   Estando en `Windows`, en el navegador de ficheros en la carpeta correspondiente, podremos darle al botón del lado derecho y seleccionar "__*abrir ventana de comandos aquí*__ (*open git bash here*)".
+  1.3   Estando en `Mac/iOs`, no e stan sencillo y las opciones serían: *i)* arrastrar la carpeta a la Terminal, y se completará la ruta de forma automática o *ii)* buscar en google "*cómo abrir la terminal en una carpeta en mac*"
+
+2.    Abrir la terminal y navegar hasta la carpeta que contiene los ficheros `Analysis.R` y `Datos.txt`:
+  2.1   Este será la aproximación en el curso ya que el comando (en los tres sistemas operativos) es `cd`, de *change directory*. En este caso cada uno de vosotros tendrá una ruta diferente, ya que tenemos una estructura de ficheros diferente.
+  En mi caso la ruta luce como:
+```{bash, engine.opts='-l', eval = FALSE}
+cd Desktop/Practica_github/
+```
+
+Para corroborar que estamos en el lugar correcto, una manera de saberlo es nuevamente utilizar `pwd/cd` o bien listar el contenido de la carpeta usando los comandos `ls -l` (para Linux/Mac) o `dir` (Windows), tal que podréis ver algo como:
+
+```{bash, engine.opts='-l', eval = FALSE}
+ls -l
+```
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal de comandos mostrando el contenido de una carpeta'}
+knitr::include_graphics("INPUT/IMAGES/ls_l.png")
+```
+
+Bien, ahora que ya estamos en el lugar que corresponde y con los ficheros que corresponden, vamos a jugar un poco con los comandos básicos de Git.
+
+## Comandos básicos de `Git`
+
+### Inicializar `Git`
+Si estamos en una carpeta que no está sincronizada con `git`, deberemos *advertirle* a `git` que esta carpeta deberá ser *vigilada* por él, esto es __inicializar__.
+
+```{bash, engine.opts='-l', eval = FALSE}
+git init
+```
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal de comandos mostrando la inicialización de un directorio cualquiera'}
+knitr::include_graphics("INPUT/IMAGES/Git_init.png")
+```
+
+### Verificar el status
+Verificamos el status usando el siguiente comando
+
+```{bash, engine.opts='-l', eval = FALSE}
+git status
+```
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal de comandos mostrando el estado del directorio'}
+knitr::include_graphics("INPUT/IMAGES/Git_status.png")
+```
+
+Vemos que hay archivos que no están siendo *vigilados/rastreados*. Para ello necesitaríamos incluirlos en el repositorio usando el comando `git add <<nombre_fichero1, nombre_fichero2, etc.>>` 
+
+### Rastreo de ficheros/archivos 
+Tal como se habló el primer día, sincronizaremos __TODO__ nuestro directorio, por lo que reemplazaremos los nombres de todos los archivos po el __*comodín*__ '__.__ (punto)' que significa *TODOS*, ejecutando:
+
+```{bash, engine.opts='-l', eval = FALSE}
+git add .
+```
+
+Si volvemos a ejecutar `git status`, obtenemos lo siguiente:
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal de comandos mostrando el estado del directorio'}
+knitr::include_graphics("INPUT/IMAGES/Git_add_status.png")
+```
+
+### Registro de cambios `commits` 
+Ahora vemos que no hay archivos en color rojo o __*Untracked files*__. Ahora sí están siendo seguidos, pero los cambios no tienen un `commit` asociado y por eso nos advierte (coloreándolos en otro color, verde en este caso) que estos cambios han de ser *commited*.
+
+Ejecutamos entonces lo siguiente:
+
+```{bash, engine.opts='-l', eval = FALSE}
+git commit -m "inicio del proyecto"
+```
+
+obteniendo la siguiente respuesta (lo que se ha ejecutado)
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal de comandos mostrando el estado del directorio'}
+knitr::include_graphics("INPUT/IMAGES/Git_commit.png")
+```
+
+y ahora nuevamente....sí ¡has adivinado! --> ejecutamos `git status`.
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal de comandos mostrando el estado del directorio'}
+knitr::include_graphics("INPUT/IMAGES/Git_commit_status.png")
+```
+
+Finalmente obtenemos el mensaje que __sí queremos ver siempre__ que dice:
+
+`On branch master`
+
+`nothing to commit, working tree clean`
+
+
+## Modificación de ficheros/archivos
+Para demostrar la utilidad de `git`, vamos a realizar algunos pasos y su corespondiente rastreo.
+
+### Modificar archivos
+Vamos a abrir el fichero `Analysis.R` y vamos a modificarlo agregando un comentario en la primera línea.
+
+Por lo que pasaremos de este archivo
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Script original'}
+knitr::include_graphics("INPUT/IMAGES/Analysis_old_R.png")
+```
+
+a este otro
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Script con la modificación. Haz de hacerla tú.'}
+knitr::include_graphics("INPUT/IMAGES/Analysis_new_R.png")
+```
+
+Ahora si volvemos a ejecutar `git status` obtenemos lo siguiente:
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal mostrando los cambios realizados y los pasos necesarios a seguir.'}
+knitr::include_graphics("INPUT/IMAGES/Git_modify_status.png")
+```
+
+Como ya sabrás, necesitaremos __rastrear__ los cambios con `git add .` y registrar esos cambios con `git commit -m "texto"`.
+
+```{bash, engine.opts='-l', eval = FALSE}
+git add .
+git commit -m "nuevo comentario en Analysis.R"
+```
+
+Obteniendo el siguiente mensaje:
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal mostrando los cambios realizados.'}
+knitr::include_graphics("INPUT/IMAGES/Git_add_commit_Analysis_R.png")
+```
