@@ -15,6 +15,7 @@ output:
     toc: yes
     toc_depth: 6
     toc_float: yes
+    number_sections: true
   pdf_document:
     toc: yes
 ---
@@ -87,9 +88,11 @@ knitr::include_graphics("INPUT/IMAGES/ls_l.png")
 
 Bien, ahora que ya estamos en el lugar que corresponde y con los ficheros que corresponden, vamos a jugar un poco con los comandos básicos de Git.
 
-## Comandos básicos de `Git`
+<br>
 
-### Inicializar `Git`
+# Comandos básicos de `Git`
+
+## Inicializar `Git`
 Si estamos en una carpeta que no está sincronizada con `git`, deberemos *advertirle* a `git` que esta carpeta deberá ser *vigilada* por él, esto es __inicializar__.
 
 ```{bash, engine.opts='-l', eval = FALSE}
@@ -187,3 +190,166 @@ Obteniendo el siguiente mensaje:
 ```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal mostrando los cambios realizados.'}
 knitr::include_graphics("INPUT/IMAGES/Git_add_commit_Analysis_R.png")
 ```
+
+<br>
+
+### Borrar archivos
+
+Puede suceder que accidentalmente borremos/eliminemos un archivo. Veremos que gracias a `git` tenemos la capacidad de "*volver sobre nuestros pasos*" y reparar el "error" de haber borrado ese archivo.
+
+Como al momento de borrar un archivo, es posible que hayamos (o no) hecho un `commit`, tendremos dos situaciones de recuperación.
+
+<br>
+
+#### Borrado de archivo sin commit.
+
+Esta es la situación más fácil, ya que al no haber echo el `commit` solo necesitaremos el equivalente a un __*deshacer*__ (undo). En git, el comando para esto es `git stash`. Lo mostraremos a continuación.
+
+Visualizamos nuevamente el contenido de nuestra carpeta usando los comandos `ls` o `dir` (dependiendo del sistema operativo).
+
+```{bash, engine.opts='-l', eval = FALSE}
+ls -l
+```
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal mostrando el contenido de nuestra carpeta'}
+knitr::include_graphics("INPUT/IMAGES/ls_stash_pre.png")
+```
+
+Vemos que en nuestra carpeta se lista el archivo `Analysis.R`; vamos a eliminarlo y listar los archivos después de su eliminación para ver si ha tenido efecto. En *Linux/Mac* el comando para borar archivos es `rm <nombre archivo>` y en *Windows* es `del "nombre archivo"`.
+
+```{bash, engine.opts='-l', eval = FALSE}
+rm Analysis.R
+ls -l
+```
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal mostrando el contenido de nuestra carpeta'}
+knitr::include_graphics("INPUT/IMAGES/ls_stash_after_deletion.png")
+```
+
+Vemos que el archivo `Analysis.R` ¡ha desaparecido!
+
+Sin embargo, este cambio no está __*commited*__, por lo que dar un paso atrás es muy sencillo. Ejecutaremos el código  `git stash` y listaremos (nuevamente) los archivos disponibles para ver si ha tenido efecto.
+
+```{bash, engine.opts='-l', eval = FALSE}
+git stash
+```
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal mostrando el contenido de nuestra carpeta'}
+knitr::include_graphics("INPUT/IMAGES/ls_after_stash.png")
+```
+
+Como véis, hemos recibido un mensaje en la terminal y __hemos recuperado nuestro archivo__.
+
+<br>
+
+#### Borrado de archivo con commit.
+
+Esta situación es un poco más complicada, pero quizás es la más habitual de suceder. Lo que haremos será borar el archivo, listar el contenido de la carpeta y mirar el status de la carpeta.
+
+```{bash, engine.opts='-l', eval = FALSE}
+rm Analysis.R
+ls -l
+git status
+```
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal mostrando el estado de nuestra carpeta'}
+knitr::include_graphics("INPUT/IMAGES/rm_ls_status_pre_commit.png")
+```
+
+Procederemos entonces a "__rastrear__" e __identificar__ estos cambios con los siguientes comandos:
+
+```{bash, engine.opts='-l', eval = FALSE}
+git add .
+git commit -m "Removed Analysis.R"
+git stauts
+```
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal mostrando el estado de nuestra carpeta'}
+knitr::include_graphics("INPUT/IMAGES/rm_ls_status_post_commit.png")
+```
+
+Nuestro archivo `Analysis.R` ya no está, pero __peor aún__ estos cambios han sido __rastreados__ (`git add`) y además identificado (`git commit`). Ahora mismo el comando `git stash` no tendría ninguna utilidad.
+
+Como se ha comentado, el hecho de rastrear y de identificar los cambios (__*control de versionbes*__) aunque parezca engorroso es ¡*fantástico*!; ya que podremos controlar/observar los cambios que hemos realizado en nuestra carpeta y restaurar lo perdido.
+
+Para esto necesitaremos *mirar* los cambios producidos y para eso ejecutamos
+
+```{bash, engine.opts='-l', eval = FALSE}
+git log
+```
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal mostrando el historial de cambios'}
+knitr::include_graphics("INPUT/IMAGES/git_log.png")
+```
+
+En este historial de cambios vemos los cambios más actuales "*más arriba*" o más cerca del comando `git log`. Lo importante es reconocer el __*Commit Unique Identifier*__ o *Identificador único de commits*. 
+
+Este código alfanumérico se encuentra en la parte superior justo a la derecha de la palabra *commit*. En nuestro caso el commit que eliminó el archivo tiene el siguiente __*CUI*__:
+
+*   __CUI__: `b9f153e1d344cb2d9c4c03ab3589299d0100e972`.
+
+Para __revertir__ los cambios realizados usaremos el comando `git revert <CUI>`. Como véis en la sintaxis necesitamos el valor de ese CUI, pero si bien podemos copiar/pegar todo el código, con los primeros 10 dígitos valdría. ¿Quieres probarlo?
+
+
+```{bash, engine.opts='-l', eval = FALSE}
+git revert b9f153e1d344cb2d9c4c03ab3589299d0100e972
+```
+
+Al ejecutar `git revert <CUI>`, se nos abre una ventana de edición del commit, ya que debremos agregar un mensaje a esta decisión de revertir el commit, y ha de tener un commit ;) . 
+
+Siempre es muy importante leer los mensajes que aparecen en pantalla.
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal mostrando la ventana de edición del commit'}
+knitr::include_graphics("INPUT/IMAGES/git_revert_message_pre.png")
+```
+
+Lo que deberemos hacer ahora es escribir un mensaje (parte de él ya estaba escrito) y salir de esa pantalla. Para salir (u otras acciones), abajo de la pantalla tenemos el listado de comandos. el símbolo `^` significa `Ctrl` en windows/linux y `Command` en Mac.
+
+Dejamos el mensaje de la siguiente manera:
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal mostrando la ventana de edición del commit'}
+knitr::include_graphics("INPUT/IMAGES/git_revert_message_edicion.png")
+```
+
+Y al momento de ejecutar `Ctrl + x`, salimos de la pantalla con la siguiente información en la terminal:
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal mostrando el efecto de revert'}
+knitr::include_graphics("INPUT/IMAGES/git_revert_message_post.png")
+```
+
+Para consluir podemos revisar los archivos contenidos en nuestra carpeta y cmprobar que ha tenido efecto.
+
+```{bash, engine.opts='-l', eval = FALSE}
+ls -l
+git status
+```
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center", fig.cap = 'Terminal mostrando el contenido de la carpeta y que está todo OK'}
+knitr::include_graphics("INPUT/IMAGES/git_final.png")
+```
+
+¡__Hemos terminado__!
+
+***
+
+<br>
+
+# Licencia
+__Autor__: Antonio Canepa Oneto
+
+__Área__: Lenguajes y Sistemas Informáticos
+
+__Departamento__: Ingeniería Informática
+
+__Escuela Politécnica Superior, Universidad de Burgos (`r format(Sys.time(), '%Y')`)__
+
+<br>
+
+```{r, echo=FALSE, out.width="20%", fig.align='center', fig.cap= '', purl=FALSE}
+knitr::include_graphics("INPUT/IMAGES/Creative_Commons.png")
+```
+
+Esta obra está bajo una licencia Creative Commons *Reconocimiento-NoComercial-CompartirIgual 3.0 Unported*.
+No se permite un uso comercial de esta obra ni de las posibles obras derivadas, la distribución de las cuales se
+debe hacer con una licencia igual a la que regula esta obra original.
+Licencia disponible en [http://creativecommons.org/licenses/by-nc-sa/3.0/](http://creativecommons.org/licenses/by-nc-sa/3.0/) 
