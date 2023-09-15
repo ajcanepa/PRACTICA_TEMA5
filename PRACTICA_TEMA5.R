@@ -1681,7 +1681,7 @@ endpoint <- "https://dbpedia.org/sparql"
 
 # Query 1
 query_example <- "SELECT * WHERE {
-?athlete rdfs:label 'Cristiano Ronaldo'@en
+?athlete rdfs:label 'Alexia Putellas'@en
 }"
 
 QD <- SPARQL(url = endpoint, query = query_example)
@@ -1693,7 +1693,7 @@ DF
 
 # Query 2
 query_example <- "SELECT * WHERE {
-?athlete rdfs:label 'Cristiano Ronaldo'@en ;
+?athlete rdfs:label 'Alexia Putellas'@en ;
   dbo:number  ?number .
 }"
 
@@ -1706,7 +1706,7 @@ DF
 
 # Query 3
 query_example <- "SELECT * WHERE {
-?athlete rdfs:label 'Cristiano Ronaldo'@en ;
+?athlete rdfs:label 'Alexia Putellas'@en ;
   dbo:number  ?number ;
   dbo:birthPlace  ?place .
 }"
@@ -1717,6 +1717,43 @@ str(QD)
 
 DF <- as_tibble(QD$results)
 DF$place
+
+
+
+# ** Consulta Usando Wikidata ---------------------------------------------
+# https://github.com/wikimedia/WikidataQueryServiceR
+install.packages("WikidataQueryServiceR")
+
+library(WikidataQueryServiceR)
+
+?WDQS 
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples
+
+# Ejemplo: obtención de los géneros de una película determinada. En este ejemplo, buscamos una "instancia de" (P31) "película" (Q11424) que tenga la etiqueta "La cabaña en el bosque" (Q45394), obtenemos sus géneros (P136) y, a continuación, utilizamos el servicio de etiquetas WDQS para devolver las etiquetas de género.
+
+pelis <- query_wikidata('SELECT DISTINCT
+  ?genre ?genreLabel
+WHERE {
+  ?film wdt:P31 wd:Q11424.
+  ?film rdfs:label "The Cabin in the Woods"@en.
+  ?film wdt:P136 ?genre.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}')
+
+pelis
+str(pelis)
+
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples
+# Esta consulta busca todos los artículos cuyo valor de instancia de (P31) es gato doméstico (Q146). Utiliza el servicio wikibase:label para devolver las etiquetas en su idioma por defecto o en inglés.
+
+gatos <- query_wikidata('SELECT 
+                        ?item ?itemLabel
+                        WHERE {
+                        ?item wdt:P31 wd:Q146. # Must be of a cat
+                        SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE], en". } # Helps get the label in your language, if not, then en language
+                      }')
+
+gatos
 
 # Referencias -------------------------------------------------------------
 # https://adv-r.hadley.nz/index.html
