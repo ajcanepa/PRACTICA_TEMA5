@@ -1356,6 +1356,9 @@ worldbank %>%
   group_by(region, sector) %>%
   summarize(funding = mean(percent, na.rm = TRUE))
 
+# EJERCICIO
+# Gráfica de barras con las áreas geográficas en el eje X, el proimedio de inversiones en el Y y con colores para cada sector de inversión (quitando "Other")
+
 # * Desde XML -------------------------------------------------------------
 # https://megapteraphile.wordpress.com/2020/03/29/converting-xml-to-tibble-in-r/
 library(tidyverse)
