@@ -1325,9 +1325,10 @@ Acc_Car_Json %>%
   count(name, type)
 
 # ¿Qué pasa con el conjunto de datos WorldBank?
-worldbank %>% 
-  spread_all() %>% 
-  View()
+# worldbank %>% 
+#   spread_all() %>% 
+#   View()
+worldbank %>% spread_all %>% glimpse
 
 # Funciona el spread_all? ¿hay arrays?
 worldbank %>% 
@@ -1342,6 +1343,18 @@ worldbank %>%
   gather_array %>%
   spread_all %>%
   select(-document.id, -array.index)
+
+# Si buscamos la inversión promedio para las diferentes zonas macroeconómicas
+# Revisar el pipeline paso a paso
+worldbank %>%
+  spread_all %>% 
+  select(region = regionname, funding = totalamt) %>%
+  enter_object(majorsector_percent) %>% 
+  gather_array() %>% 
+  spread_all() %>% 
+  rename(sector = Name, percent = Percent) %>%
+  group_by(region, sector) %>%
+  summarize(funding = mean(percent, na.rm = TRUE))
 
 # * Desde XML -------------------------------------------------------------
 # https://megapteraphile.wordpress.com/2020/03/29/converting-xml-to-tibble-in-r/
