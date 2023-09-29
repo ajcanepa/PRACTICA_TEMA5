@@ -4,6 +4,7 @@
 install.packages("RNeXML", deps = TRUE)
 install.packages("phytools", deps = TRUE)
 install.packages("xslt", deps = TRUE)
+install.packages("rdflib", dependencies = TRUE)
 
 
 # https://docs.ropensci.org/RNeXML/articles/sparql
@@ -14,13 +15,13 @@ library("RNeXML")
 
 
 # Leemos un archivo de ejemplo que contiene anotaciones de metadatos semánticos que describen las unidades taxonómicas (OTU) utilizadas en el árbol.
-nexml <- nexml_read(system.file("examples/primates.xml", package="RNeXML"))
+nexml <- nexml_read(system.file("examples/primates.xml", package = "RNeXML"))
 
 nexml
 
 # Comenzamos extrayendo el grafo RDF del NeXML
 
-rdf <- get_rdf(system.file("examples/primates.xml", package="RNeXML"))
+rdf <- get_rdf(system.file("examples/primates.xml", package = "RNeXML"))
 
 tmp <- tempfile()  # so we must write the XML out first
 
@@ -101,9 +102,9 @@ tree <- read.newick(text = newick)
 collapsed <- collapse.singles(tree)
 
 plot(collapsed, 
-     type='cladogram', 
-     show.tip.label=FALSE, 
-     show.node.label=TRUE, 
-     cex=0.75, 
-     edge.color='grey60', 
-     label.offset=-9)
+     type = 'cladogram', 
+     show.tip.label = FALSE, 
+     show.node.label = TRUE, 
+     cex = 0.75, 
+     edge.color = 'grey60', 
+     label.offset = -9)
