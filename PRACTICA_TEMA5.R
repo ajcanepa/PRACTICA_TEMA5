@@ -31,7 +31,7 @@ int_var <- c(1L, 6L, 10L)
 dbl_var <- c(1, 2.5, 4.5)
 chr_var <- c("these are", "some strings")
 
-typeof(lgl_var)
+typeof(chr_var)
 
 # ** Valores Ausentes -----------------------------------------------------
 x <- c(1,5,8,10)
@@ -71,6 +71,8 @@ mean(x)
 c(1, 1.5, "A")
 as.numeric(c(1, 1.5, "A"))
 
+x <- c(1, 1.5, "A")
+typeof(x)
 
 # ** Nombres -----------------------------------------------------------------
 # Primera aproximación a entrega de nombres (de elementos)
@@ -78,8 +80,9 @@ x <- c(a = 1, b = 2, c = 3)
 x
 class(x)
 typeof(x)
-names(x)
 attributes(x)
+names(x)
+
 
 # Segunda aproximación a entrega de nombres (de elementos)
 x <- c(1:5)
@@ -105,15 +108,20 @@ dim(x)
 length(x)
 
 # MATRICES
-x <- matrix(1:6, nrow = 3, ncol = 4)
+x <- matrix(1:12, nrow = 3, ncol = 4)
 x
 
 dim(x)
+class(x)
+typeof(x)
 
 x <- matrix(letters[1:6], nrow = 3, ncol = 4)
 x
 
 dim(x)
+class(x)
+typeof(x)
+
 
 # DATAFRAMES
 df1 <- data.frame(
@@ -123,6 +131,8 @@ df1 <- data.frame(
 df1
 
 dim(df1)
+class(df1)
+typeof(df1)
 attributes(df1)
 
 # LISTAS
@@ -136,6 +146,7 @@ l1 <- list(
 l1
 
 dim(l1)
+typeof(l1)
 length(l1)
 attributes(l1)
 str(l1)
