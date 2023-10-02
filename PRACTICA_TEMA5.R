@@ -3,7 +3,7 @@
 # * Vectores atómicos -----------------------------------------------------
 
 # Crear un objeto
-x <- 3  
+x <- 3
 
 # Imprimir (en consola) un objeto
 print(x)
@@ -31,7 +31,7 @@ int_var <- c(1L, 6L, 10L)
 dbl_var <- c(1, 2.5, 4.5)
 chr_var <- c("these are", "some strings")
 
-typeof(chr_var)
+typeof(lgl_var)
 
 # ** Valores Ausentes -----------------------------------------------------
 x <- c(1,5,8,10)
@@ -53,6 +53,7 @@ c(1,2,"Pablo")
 typeof(c(1,2,'Pablo'))
 
 c(TRUE,FALSE,FALSE, 1L, 2, "Tubby")
+typeof(c(TRUE,FALSE,FALSE, 1L, 2.5, "Tubby"))
 typeof(c(TRUE,FALSE,FALSE, 1L, 2, "Tubby"))
 
 # Regla de coercion --> útil
@@ -60,14 +61,15 @@ x <- c(FALSE, FALSE, TRUE)
 x
 is.logical(x)
 as.numeric(x)
+typeof(x)
 
 #Funciones matemáticas también siguen la "coercion"
 sum(x)
 mean(x)
 
 # Forzar con as. a un cáracter
-c(1, 1.5, "a")
-as.numeric(c(1, 1.5, "a"))
+c(1, 1.5, "A")
+as.numeric(c(1, 1.5, "A"))
 
 
 # ** Nombres -----------------------------------------------------------------
@@ -80,8 +82,10 @@ names(x)
 attributes(x)
 
 # Segunda aproximación a entrega de nombres (de elementos)
-x <- c(1:3)
+x <- c(1:5)
 x
+attributes(x)
+
 names(x) <- c("a", "b", "c")
 names(x)
 
@@ -94,9 +98,13 @@ x <- unname(x)
 x
 
 # ** Dimensiones ----------------------------------------------------------
+# VECTORES
+x <- c(1:5)
+
 dim(x)
 length(x)
 
+# MATRICES
 x <- matrix(1:6, nrow = 3, ncol = 4)
 x
 
@@ -107,6 +115,30 @@ x
 
 dim(x)
 
+# DATAFRAMES
+df1 <- data.frame(
+  Numeros = 1:5, 
+  Letras = letters[1:5])
+
+df1
+
+dim(df1)
+attributes(df1)
+
+# LISTAS
+l1 <- list(
+  Enteros = 1:3, 
+  Letra = "a", 
+  Logico = c(TRUE, FALSE, TRUE), 
+  Numeros = c(2.3, 5.9)
+)
+
+l1
+
+dim(l1)
+length(l1)
+attributes(l1)
+str(l1)
 
 # ** Indexación Vectores --------------------------------------------------
 A <- c("a", "b", "c", "d", "e", "f", "g", "h")
