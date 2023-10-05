@@ -35,6 +35,7 @@ cleanAbs <- cleanAbstracts(abstracts)
 
 # Gráficas de Nube de Palabras --------------------------------------------
 # Gráfico base
+# x11()
 plotWordCloud(cleanAbs,min.freq = 2, scale = c(2, 0.3))
 
 # Sin rotar las palabras
