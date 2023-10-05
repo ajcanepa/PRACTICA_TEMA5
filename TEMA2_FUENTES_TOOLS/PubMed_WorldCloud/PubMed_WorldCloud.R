@@ -1,6 +1,6 @@
 # Instalación y Carga de Paquetes -----------------------------------------
-library(devtools)
-install_github("felixfan/PubMedWordcloud") # from GitHub
+# library(devtools)
+# install_github("felixfan/PubMedWordcloud") # from GitHub
 
 library(PubMedWordcloud)  
 
