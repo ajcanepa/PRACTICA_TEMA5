@@ -88,6 +88,87 @@ tr2
 
 
 # Trabajando con los Tracks -----------------------------------------------
+# Todos los tracks de Mayo (month == 5)
+tr3 <- tr2  %>% filter(month == 5)
+tr3
 
+# Las clases se heredan 
+class(tr3)
 
+# Transformación de coordenadas
+# Transformaremos el sistema de coordenadas de referencia (CRS) de tr2 en coordenadas geográficas (EPSG:4326).
+transform_coords(tr2, 4326)
 
+# Longitud de los trayectos en el transectos (en metros)
+tr2 <- 
+  tr2  %>%
+  mutate(sl_ = step_lengths(tr2))
+
+summary(tr2$sl_) # NA porque es el último transecto y no tuvo punto final (inconcluso)
+
+# Manipulación tasa de muestreo
+summarize_sampling_rate(tr2)
+
+# Nos quedaremos con aquellas tracks de 6 horas de duración (+- unos 20minutos)
+tr3 <-
+  tr2  %>% 
+  track_resample(rate = hours(6), tolerance = minutes(20))
+
+tr3
+summary(tr3)
+table(tr3$id)
+table(tr3$burst_)
+
+# Una ráfaga es una secuencia de traslados con frecuencias de muestreo iguales
+tr3 %>% 
+  ggplot(., aes(x = burst_)) +
+  geom_bar()
+
+# Analisis de multiples objetos -------------------------------------------
+data("amt_fisher")
+amt_fisher
+class(amt_fisher)
+table(amt_fisher$name)
+table(amt_fisher$id)
+
+# creación de un track
+trk <- 
+  amt_fisher %>% 
+  make_track(x_, y_, t_, id = id)
+
+trk
+
+# Crearemos un tibble donde un atributo será una lista
+trk1 <- 
+  trk %>% 
+  nest(data = -"id")
+
+trk1
+
+# Ahora vamos a remuestrear cada pista a 30 minutos con una tolerancia de 5 minutos y crear pasos para cada sujeto.
+# Para el primer sujeto haríamos lo siguiente:
+
+# Obtener los datos del primer animal 
+x <- trk1$data[[1]]
+
+# Aplica el re-muetsreo
+x  %>% 
+  track_resample(rate = minutes(30), tolerance = minutes(5))  %>% 
+  steps_by_burst()
+
+# Aplicamos exactamente la misma lógica a todos los sujetos.
+# Podemos hacerlo utilizando map y guardar los resultados en una nueva columna utilizando mutate.
+trk2 <-
+  trk1  %>%  
+  mutate(steps = map(data, function(x) 
+    x  %>%  track_resample(rate = minutes(30), tolerance = minutes(5))  %>%  steps_by_burst()))
+
+trk2
+
+# Por último, podemos seleccionar id y pasos, anidar el nuevo data_frame y crear un gráfico de las distribuciones de longitud de paso.
+trk2  %>% 
+  select(id, steps) %>% 
+  unnest(cols = steps) %>%  
+  ggplot(aes(sl_, fill = factor(id))) + geom_density(alpha = 0.4) +
+  labs(fill = "Subjects", x = "Steps length") +
+  theme_bw()
