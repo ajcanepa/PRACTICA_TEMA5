@@ -40,6 +40,7 @@ data("sh")
 head(sh)
 
 # # check if all observations are complete
+summary(sh)
 all(complete.cases(sh)) # no action required
 
 
@@ -138,6 +139,7 @@ trk <-
 
 trk
 
+table(trk$id)
 # Crearemos un tibble donde un atributo será una lista
 trk1 <- 
   trk %>% 
