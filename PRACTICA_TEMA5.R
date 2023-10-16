@@ -282,19 +282,21 @@ colnames(m2)
 m2
 
 # Primera columna
+m2[,1]
 m2[,"Impares"]
 
 # Segunda columna
 m2[1:3,"Pares"]
 
-m2[c(1,3),"Pares"]
+m2[c(1,2,4),"Pares"]
 
-# indexacion matrices sí cambia la clase
+# indexación matrices no cambia la clase
 class(m2)
 typeof(m2)
 
 str(m2[1:3,"Pares"])
 class(m2[1:3,"Pares"])
+typeof(m2[1:3,"Pares"])
 
 # Tabla de datos (Dataframe) ----------------------------------------------
 # Probablemente el formato más usado. 
@@ -341,7 +343,6 @@ tibble(
 )
 
 dplyr::starwars
-
 
 # ** Indexación de dataframes ---------------------------------------------
 df1
@@ -451,7 +452,7 @@ str(l1)
 
 # A través de entregar el nombre
 l1$DataFrame <- df1
-
+str(l1)
 l1
 
 l1[[5]]$Letras[3]
