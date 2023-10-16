@@ -475,6 +475,7 @@ str(Galapagos)
 summary(Galapagos)
 View(Galapagos)
 
+# HASTA AQUI CLASE 16 OCTUBRE #
 # * Importación desde CSV -------------------------------------------------
 library(readr)
 Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv", 
