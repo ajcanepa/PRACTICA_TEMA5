@@ -1367,6 +1367,7 @@ lobstr::obj_size(Acc_Car_TJson)
 Acc_Car
 lobstr::obj_size(Acc_Car)
 
+# HASTA AQUI LUNES 23 #
 # Revisando que no existan arrays --> sino: https://github.com/colearendt/tidyjson#examples
 Acc_Car_Json %>% 
   gather_object %>% 
