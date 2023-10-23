@@ -473,7 +473,7 @@ Galapagos <- read_excel("INPUT/DATA/Galapagos_DB.xlsx",
 Galapagos
 str(Galapagos)
 summary(Galapagos)
-View(Galapagos)
+# View(Galapagos) # Just in case
 
 # HASTA AQUI CLASE 16 OCTUBRE #
 # * Importación desde CSV -------------------------------------------------
@@ -506,6 +506,7 @@ Agua_Consumo <- read_delim("https://datosabiertos.jcyl.es/web/jcyl/risp/es/salud
 Agua_Consumo
 summary(Agua_Consumo)
 
+Agua_Consumo$`Nº infraestructuras - Depósitos`
 Agua_Consumo$`Nº de zonas de abastecimiento`
 Agua_Consumo$`Análisis efectuados en las infraestructuras - Análisis completo`
 Agua_Consumo$`Nº boletines analíticos de calidad de aguas de consumo humano por su calificación - Apta para el consumo con no conformidad`
@@ -1342,12 +1343,15 @@ head(worldbank)
 View(worldbank)
 
 # Usamos `spread_all()` para formatear los datos
+spread_all(worldbank)
+
 worldbank %>% 
   spread_all() %>% 
   View()
 
 # Aproximación Tidy para los accidentes en carretera
 head(Acc_Car_Json)
+spread_all(Acc_Car_Json)
 
 Acc_Car_Json %>%
   spread_all() %>% 
@@ -1402,7 +1406,7 @@ worldbank %>%
   summarize(funding = mean(percent, na.rm = TRUE))
 
 # EJERCICIO
-# Gráfica de barras con las áreas geográficas en el eje X, el proimedio de inversiones en el Y y con colores para cada sector de inversión (quitando "Other")
+# Gráfica de barras con las áreas geográficas en el eje X, el promedio de inversiones en el Y y con colores para cada sector de inversión (quitando "Other")
 
 # * Desde XML -------------------------------------------------------------
 # https://megapteraphile.wordpress.com/2020/03/29/converting-xml-to-tibble-in-r/
