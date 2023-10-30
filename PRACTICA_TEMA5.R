@@ -517,13 +517,13 @@ Agua_Consumo$`Nº boletines analíticos de calidad de aguas de consumo humano po
 library("dplyr")
 
 #set de datos
-?starwars
 data("starwars")
+?starwars
 
 # * Verbos de tablas únicas -----------------------------------------------
 # operan sobre una única tabla de datos
 
-
+# Hasta Aqui Lunes 30 Octubre
 # *** Filter --------------------------------------------------------------
 # Filter modificará la primera dimensión de nuestros dataframes
 # modifica las filas
@@ -1347,7 +1347,7 @@ spread_all(worldbank)
 
 worldbank %>% 
   spread_all() %>% 
-  View()
+  #View()
 
 # Aproximación Tidy para los accidentes en carretera
 head(Acc_Car_Json)
@@ -1369,6 +1369,8 @@ lobstr::obj_size(Acc_Car)
 
 # HASTA AQUI LUNES 23 #
 # Revisando que no existan arrays --> sino: https://github.com/colearendt/tidyjson#examples
+spread_all(Acc_Car_Json)
+
 Acc_Car_Json %>% 
   gather_object %>% 
   json_types %>% 
@@ -1378,7 +1380,7 @@ Acc_Car_Json %>%
 # worldbank %>% 
 #   spread_all() %>% 
 #   View()
-worldbank %>% spread_all %>% glimpse
+worldbank %>% spread_all %>% glimpse() #str equivalent
 
 # Funciona el spread_all? ¿hay arrays?
 worldbank %>% 
