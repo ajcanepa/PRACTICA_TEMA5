@@ -554,6 +554,7 @@ table(starwars$skin_color)
 
 filter(starwars, skin_color == "blue, grey")
 
+# HASTA Aqui Lunes 30 - 102 #
 # *** Slice ---------------------------------------------------------------
 # Selección de filas según la ubicación
 
@@ -1347,7 +1348,7 @@ spread_all(worldbank)
 
 worldbank %>% 
   spread_all() %>% 
-  #View()
+  View()
 
 # Aproximación Tidy para los accidentes en carretera
 head(Acc_Car_Json)
@@ -1369,7 +1370,7 @@ lobstr::obj_size(Acc_Car)
 
 # HASTA AQUI LUNES 23 #
 # Revisando que no existan arrays --> sino: https://github.com/colearendt/tidyjson#examples
-spread_all(Acc_Car_Json)
+spread_all(Acc_Car_Json) %>% View()
 
 Acc_Car_Json %>% 
   gather_object %>% 
