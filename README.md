@@ -14,13 +14,11 @@ Deberéis fijaros en:
 *  __i)__ como luce el repositorio,
 *  __ii)__ cómo luce el readme o "*landing page*",
 *  __iii)__ cómo luce la estructura de archivos y carpetas dentro del repositorio y
-*  __iv)__ descargar y abrir (por fuera de github) el documento __*.html__ que han desarrollado para ver bien cómo han resuelto ellos, este seminario.
+*  __iv)__ descargar y abrir (por fuera de github) el documento __*.html__ que han desarrollado para ver bien cómo han resuelto este seminario.
 
 ***
 
 #### Hall of Fame - Seminarios
-
-<br>
 
 ##### Edición 2022-2023
 *  [Suicidios, desigualdad económica e inaccesibilidad a servicios sanitarios](https://github.com/Mps1013/SeminarioFuentes)
