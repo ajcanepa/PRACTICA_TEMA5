@@ -4,6 +4,7 @@ Repositorio en el que se desarrollará el código de las prácticas de la asigna
 
 Más información en la [página del curso](https://ubuvirtual.ubu.es/course/view.php?id=14468).
 
+***
 
 ## Seminarios
 A modo de ejemplo, os dejo unos enlaces a algunos seminarios previos que han sido bien (o muy bien) evaluados. 
@@ -15,7 +16,19 @@ Deberéis fijaros en:
 *  __iii)__ cómo luce la estructura de archivos y carpetas dentro del repositorio y
 *  __iv)__ descargar y abrir (por fuera de github) el documento __*.html__ que han desarrollado para ver bien cómo han resuelto ellos, este seminario.
 
+***
+
 #### Hall of Fame - Seminarios
+
+<br>
+
+##### Edición 2022-2023
+*  [Suicidios, desigualdad económica e inaccesibilidad a servicios sanitarios](https://github.com/Mps1013/SeminarioFuentes)
+*  [Relación entre Paro y Suicidio](https://github.com/paulamart/SeminarioFuentes)
+
+
+
+##### Edición 2021-2022
 *  [Actividad Fisica, Zonas Verdes y Salud Mental](https://github.com/VeraGD/Actividad_Fisica)
 *  [Cambio climático y enfermedades cardiovasculares](https://github.com/SamuelLozanoJuarez/Cambio_climatico_y_ECV)
 *  [Suicidio, clima y desarrollo global](https://github.com/imb1006/Suicidio-clima-y-desarrollo-global)
