@@ -54,6 +54,9 @@ Deberéis fijaros en:
 *  [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
 *  [R Graphics Cookbook](https://r-graphics.org/)
 *  [The bookdown package](https://bookdown.org/)
+*  [Shiny](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html)
+*  [Mastering Shiny](https://mastering-shiny.org/)
+
 
 ### Comunidades
 *  [R Consortium](https://www.r-consortium.org/)
