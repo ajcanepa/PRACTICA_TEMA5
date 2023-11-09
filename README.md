@@ -41,7 +41,7 @@ Deberéis fijaros en:
 *  [ROpenScience](https://ropensci.org/)
 *  [ROpenSpain](https://ropenspain.es/)
 
-### Libros 
+### Libros Generales
 *  [R for Data Science](https://r4ds.had.co.nz/)
 *  [R Para Ciencia de Datos](https://es.r4ds.hadley.nz/)
 *  [Advanced R](https://adv-r.hadley.nz/)
