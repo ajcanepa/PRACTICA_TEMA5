@@ -2,7 +2,7 @@
 
 Repositorio en el que se desarrollará el código de las prácticas de la asignatura "Fuentes de Datos Biomédicos y Web Semánticas", del grado de [Ingeniería de la Salud](https://www.ubu.es/grado-en-ingenieria-de-la-salud), de la [Universidad de Burgos](https://www.ubu.es).
 
-Más información en la [página del curso](https://ubuvirtual.ubu.es/course/view.php?id=14468).
+Más información en la [página del curso](https://ubuvirtual.ubu.es/course/view.php?id=14468) y a lo largo de las secciones de este `README`.
 
 ***
 
@@ -31,3 +31,32 @@ Deberéis fijaros en:
 *  [Cambio climático y enfermedades cardiovasculares](https://github.com/SamuelLozanoJuarez/Cambio_climatico_y_ECV)
 *  [Suicidio, clima y desarrollo global](https://github.com/imb1006/Suicidio-clima-y-desarrollo-global)
 *  [Inaccesibilidad-sanitaria-y-efectos-en-salud](https://github.com/albamiguel/Inaccesibilidad-sanitaria-y-efectos-en-salud)
+
+***
+## Recursos para `R` y `Tidyverse`
+
+### Repositorios 
+*  [The Comprehensive R Archive Network](https://cran.r-project.org/)
+*  [Bioconductor](https://www.bioconductor.org/)
+*  [ROpenScience](https://ropensci.org/)
+*  [ROpenSpain](https://ropenspain.es/)
+
+### Libros 
+*  [R for Data Science](https://r4ds.had.co.nz/)
+*  [R Para Ciencia de Datos](https://es.r4ds.hadley.nz/)
+*  [Advanced R](https://adv-r.hadley.nz/)
+*  [fasteR: Fast Lane to Learning R!](https://github.com/matloff/fasteR)
+*  [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+*  [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
+*  [Big Book of R](https://www.bigbookofr.com/)
+*  [R Graphics Cookbook](https://r-graphics.org/)
+*  [The bookdown package](https://bookdown.org/)
+*  [The tidyverse style guide](https://style.tidyverse.org/index.html)
+
+### Machine Learning & R
+*  [The caret Package](https://topepo.github.io/caret/index.html)
+*  [Tidy Modeling with R](https://www.tmwr.org/)
+*  [Building Reproducible Analytical Pipelines](https://rap4mads.eu/)
+*  [Applied Machine Learning Using mlr3 in R](https://mlr3book.mlr-org.com/)
+
+***
