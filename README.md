@@ -53,6 +53,13 @@ Deberéis fijaros en:
 *  [The bookdown package](https://bookdown.org/)
 *  [The tidyverse style guide](https://style.tidyverse.org/index.html)
 
+### Statistics and Meta-Analysis & Health
+*  [An Introduction to Statistical Learning](https://www.statlearning.com/)
+*  [Doing Meta-Analysis with R](https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/)
+*  [Modern Statistics with R](https://www.modernstatisticswithr.com/)
+*  [The Epidemiologist R Handbook](https://epirhandbook.com/en/)
+*  [R for Epidemiology](https://www.r4epi.com/)
+
 ### Machine Learning & R
 *  [The caret Package](https://topepo.github.io/caret/index.html)
 *  [Tidy Modeling with R](https://www.tmwr.org/)
