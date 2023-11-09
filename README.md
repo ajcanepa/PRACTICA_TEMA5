@@ -50,13 +50,21 @@ Deberéis fijaros en:
 *  [The tidyverse style guide](https://style.tidyverse.org/index.html)
 
 ### Communicación
+##### Gráficos
+*  [The R Graph Gallery](https://r-graph-gallery.com/)
+*  [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/)
+*  [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/)
+
+##### Documentos
 *  [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
 *  [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
 *  [R Graphics Cookbook](https://r-graphics.org/)
 *  [The bookdown package](https://bookdown.org/)
+
+##### Aplicaciones (APPs)
 *  [Shiny](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html)
 *  [Mastering Shiny](https://mastering-shiny.org/)
-
+*  [shinydashboard](https://rstudio.github.io/shinydashboard/index.html)
 
 ### Comunidades
 *  [R Consortium](https://www.r-consortium.org/)
