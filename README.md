@@ -41,24 +41,40 @@ Deberéis fijaros en:
 *  [ROpenScience](https://ropensci.org/)
 *  [ROpenSpain](https://ropenspain.es/)
 
-### Libros Generales
+### Programación
 *  [R for Data Science](https://r4ds.had.co.nz/)
 *  [R Para Ciencia de Datos](https://es.r4ds.hadley.nz/)
 *  [Advanced R](https://adv-r.hadley.nz/)
 *  [fasteR: Fast Lane to Learning R!](https://github.com/matloff/fasteR)
-*  [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
-*  [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
 *  [Big Book of R](https://www.bigbookofr.com/)
-*  [R Graphics Cookbook](https://r-graphics.org/)
-*  [The bookdown package](https://bookdown.org/)
 *  [The tidyverse style guide](https://style.tidyverse.org/index.html)
 
-### Statistics and Meta-Analysis & Health
+### Communicación
+*  [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+*  [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
+*  [R Graphics Cookbook](https://r-graphics.org/)
+*  [The bookdown package](https://bookdown.org/)
+
+### Comunidades
+*  [R Consortium](https://www.r-consortium.org/)
+*  [R Ladies](https://rladies.org/)
+*  [R-Ladies Madrid (X)](https://twitter.com/RLadiesMAD)
+*  [R-Ladies Barcelona (X)](https://twitter.com/RLadiesBCN)
+*  [R-Ladies Bilbao (X)](https://twitter.com/RLadiesBIO)
+*  [Comunidad R-Hispano](http://r-es.org/)
+
+
+### Estadística y meta-análisis
 *  [An Introduction to Statistical Learning](https://www.statlearning.com/)
 *  [Doing Meta-Analysis with R](https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/)
 *  [Modern Statistics with R](https://www.modernstatisticswithr.com/)
+
+### Ómicas y Salud
 *  [The Epidemiologist R Handbook](https://epirhandbook.com/en/)
 *  [R for Epidemiology](https://www.r4epi.com/)
+*  [R for Health Data Science](https://argoshare.is.ed.ac.uk/healthyr_book/)
+*  [Sequence Analysis in R and Bioconductor](https://girke.bioinformatics.ucr.edu/GEN242/tutorials/rsequences/rsequences/)
+*  [Little Book of R for Bioinformatics](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/)
 
 ### Machine Learning & R
 *  [The caret Package](https://topepo.github.io/caret/index.html)
