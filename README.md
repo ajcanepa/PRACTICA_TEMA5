@@ -18,7 +18,7 @@ Deberéis fijaros en:
 
 ***
 
-#### Hall of Fame - Seminarios
+### Hall of Fame - Seminarios
 
 ##### Edición 2022-2023
 *  [Suicidios, desigualdad económica e inaccesibilidad a servicios sanitarios](https://github.com/Mps1013/SeminarioFuentes)
