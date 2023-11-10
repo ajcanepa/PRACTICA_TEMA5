@@ -42,7 +42,7 @@ Deberéis fijaros en:
 *  [ROpenSpain](https://ropenspain.es/)
 
 ### Programación
-*  [R for Data Science](https://r4ds.had.co.nz/)
+*  [R for Data Science](https://r4ds.hadley.nz/)
 *  [R Para Ciencia de Datos](https://es.r4ds.hadley.nz/)
 *  [Advanced R](https://adv-r.hadley.nz/)
 *  [fasteR: Fast Lane to Learning R!](https://github.com/matloff/fasteR)
