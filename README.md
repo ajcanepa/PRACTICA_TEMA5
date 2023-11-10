@@ -98,4 +98,11 @@ Deberéis fijaros en:
 *  [R-Bloggers](https://www.r-bloggers.com/)
 *  [Revolutions](https://blog.revolutionanalytics.com/)
 
+### Publicaciones científicas sobre este lenguaje
+*  [R generation](https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2018.01169.x)
+*  [Expansion and evolution of the R programming language](https://royalsocietypublishing.org/doi/10.1098/rsos.221550)
+*  [The Evolution of the R Software Ecosystem](https://ieeexplore.ieee.org/document/6498472)
+*  [Evolution of the R software ecosystem](https://www.sciencedirect.com/science/article/pii/S0164121217301371)
+*  [Programming tools: Adventures with R](https://www.nature.com/articles/517109a)
+
 ***
