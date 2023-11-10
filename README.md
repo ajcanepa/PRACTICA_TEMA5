@@ -44,6 +44,7 @@ Deberéis fijaros en:
 ### Programación
 *  [R for Data Science](https://r4ds.hadley.nz/)
 *  [R Para Ciencia de Datos](https://es.r4ds.hadley.nz/)
+*  [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
 *  [Advanced R](https://adv-r.hadley.nz/)
 *  [fasteR: Fast Lane to Learning R!](https://github.com/matloff/fasteR)
 *  [Big Book of R](https://www.bigbookofr.com/)
@@ -66,15 +67,6 @@ Deberéis fijaros en:
 *  [Mastering Shiny](https://mastering-shiny.org/)
 *  [shinydashboard](https://rstudio.github.io/shinydashboard/index.html)
 
-### Comunidades
-*  [R Consortium](https://www.r-consortium.org/)
-*  [R Ladies](https://rladies.org/)
-*  [R-Ladies Madrid (X)](https://twitter.com/RLadiesMAD)
-*  [R-Ladies Barcelona (X)](https://twitter.com/RLadiesBCN)
-*  [R-Ladies Bilbao (X)](https://twitter.com/RLadiesBIO)
-*  [Comunidad R-Hispano](http://r-es.org/)
-
-
 ### Estadística y meta-análisis
 *  [An Introduction to Statistical Learning](https://www.statlearning.com/)
 *  [Doing Meta-Analysis with R](https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/)
@@ -92,5 +84,18 @@ Deberéis fijaros en:
 *  [Tidy Modeling with R](https://www.tmwr.org/)
 *  [Building Reproducible Analytical Pipelines](https://rap4mads.eu/)
 *  [Applied Machine Learning Using mlr3 in R](https://mlr3book.mlr-org.com/)
+
+### Comunidades
+*  [R Consortium](https://www.r-consortium.org/)
+*  [R Ladies](https://rladies.org/)
+*  [R-Ladies Madrid (X)](https://twitter.com/RLadiesMAD)
+*  [R-Ladies Barcelona (X)](https://twitter.com/RLadiesBCN)
+*  [R-Ladies Bilbao (X)](https://twitter.com/RLadiesBIO)
+*  [Comunidad R-Hispano](http://r-es.org/)
+
+### Noticias 
+*  [R-Project](https://www.r-project.org/)
+*  [R-Bloggers](https://www.r-bloggers.com/)
+*  [Revolutions](https://blog.revolutionanalytics.com/)
 
 ***
