@@ -475,7 +475,7 @@ str(Galapagos)
 summary(Galapagos)
 # View(Galapagos) # Just in case
 
-# HASTA AQUI CLASE 16 OCTUBRE #
+
 # * Importación desde CSV -------------------------------------------------
 library(readr)
 Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv", 
@@ -523,7 +523,7 @@ data("starwars")
 # * Verbos de tablas únicas -----------------------------------------------
 # operan sobre una única tabla de datos
 
-# Hasta Aqui Lunes 30 Octubre
+
 # *** Filter --------------------------------------------------------------
 # Filter modificará la primera dimensión de nuestros dataframes
 # modifica las filas
@@ -554,7 +554,6 @@ table(starwars$skin_color)
 
 filter(starwars, skin_color == "blue, grey")
 
-# HASTA Aqui Lunes 30 - 102 #
 # *** Slice ---------------------------------------------------------------
 # Selección de filas según la ubicación
 
@@ -694,18 +693,23 @@ attributes(a2)
 
 summarise(.data = a2, Alt_prom = mean(height, na.rm = TRUE), Alt_desv = sd(height, na.rm = TRUE))
 
+mean(a2$height, na.rm=TRUE)
 
 # *** Pipes ---------------------------------------------------------------
 # Máximo poder a R
 # Concatenamos funciones de una manera sencilla de leer (de arriba a abajo)
 
 # Pipe con Select
-starwars %>%
+starwars %>% 
   select(.data = ., name, species)
+
+  
 
 # Argumento data puede estar ausente, pero en un pipe se asume "(.)"
 starwars %>% 
-  select(name, species)
+  select(name, species) %>% 
+  filter(mass > 77)
+
 
 # Pipe con filter
 starwars %>% 
@@ -744,6 +748,7 @@ select(BMI, everything()) %>%
 # More on BMI
 # https://www.calculator.net/bmi-calculator.html?ctype=metric&cage=43&csex=m&cheightfeet=5&cheightinch=10&cpound=160&cheightmeter=173&ckg=82&printit=0&x=76&y=13
 
+# HASTA AQUI Lunes 13 Noviembre #
 # *** Operaciones por columnas -------------------------------------------
 # Repetir la misma operación por columnas
 library(tidyverse)
@@ -1368,7 +1373,7 @@ lobstr::obj_size(Acc_Car_TJson)
 Acc_Car
 lobstr::obj_size(Acc_Car)
 
-# HASTA AQUI LUNES 23 #
+
 # Revisando que no existan arrays --> sino: https://github.com/colearendt/tidyjson#examples
 spread_all(Acc_Car_Json) %>% View()
 
