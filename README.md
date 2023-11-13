@@ -18,7 +18,7 @@ Deberéis fijaros en:
 
 ***
 
-#### Hall of Fame - Seminarios
+### Hall of Fame - Seminarios
 
 ##### Edición 2022-2023
 *  [Suicidios, desigualdad económica e inaccesibilidad a servicios sanitarios](https://github.com/Mps1013/SeminarioFuentes)
@@ -42,30 +42,30 @@ Deberéis fijaros en:
 *  [ROpenSpain](https://ropenspain.es/)
 
 ### Programación
-*  [R for Data Science](https://r4ds.had.co.nz/)
+*  [R for Data Science](https://r4ds.hadley.nz/)
 *  [R Para Ciencia de Datos](https://es.r4ds.hadley.nz/)
+*  [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
 *  [Advanced R](https://adv-r.hadley.nz/)
 *  [fasteR: Fast Lane to Learning R!](https://github.com/matloff/fasteR)
 *  [Big Book of R](https://www.bigbookofr.com/)
 *  [The tidyverse style guide](https://style.tidyverse.org/index.html)
 
 ### Communicación
+##### Gráficos
+*  [The R Graph Gallery](https://r-graph-gallery.com/)
+*  [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/)
+*  [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/)
+
+##### Documentos
 *  [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
 *  [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
 *  [R Graphics Cookbook](https://r-graphics.org/)
 *  [The bookdown package](https://bookdown.org/)
+
+##### Aplicaciones (APPs)
 *  [Shiny](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html)
 *  [Mastering Shiny](https://mastering-shiny.org/)
-
-
-### Comunidades
-*  [R Consortium](https://www.r-consortium.org/)
-*  [R Ladies](https://rladies.org/)
-*  [R-Ladies Madrid (X)](https://twitter.com/RLadiesMAD)
-*  [R-Ladies Barcelona (X)](https://twitter.com/RLadiesBCN)
-*  [R-Ladies Bilbao (X)](https://twitter.com/RLadiesBIO)
-*  [Comunidad R-Hispano](http://r-es.org/)
-
+*  [shinydashboard](https://rstudio.github.io/shinydashboard/index.html)
 
 ### Estadística y meta-análisis
 *  [An Introduction to Statistical Learning](https://www.statlearning.com/)
@@ -84,5 +84,25 @@ Deberéis fijaros en:
 *  [Tidy Modeling with R](https://www.tmwr.org/)
 *  [Building Reproducible Analytical Pipelines](https://rap4mads.eu/)
 *  [Applied Machine Learning Using mlr3 in R](https://mlr3book.mlr-org.com/)
+
+### Comunidades
+*  [R Consortium](https://www.r-consortium.org/)
+*  [R Ladies](https://rladies.org/)
+*  [R-Ladies Madrid (X)](https://twitter.com/RLadiesMAD)
+*  [R-Ladies Barcelona (X)](https://twitter.com/RLadiesBCN)
+*  [R-Ladies Bilbao (X)](https://twitter.com/RLadiesBIO)
+*  [Comunidad R-Hispano](http://r-es.org/)
+
+### Noticias 
+*  [R-Project](https://www.r-project.org/)
+*  [R-Bloggers](https://www.r-bloggers.com/)
+*  [Revolutions](https://blog.revolutionanalytics.com/)
+
+### Publicaciones científicas sobre este lenguaje
+*  [R generation](https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2018.01169.x)
+*  [Expansion and evolution of the R programming language](https://royalsocietypublishing.org/doi/10.1098/rsos.221550)
+*  [The Evolution of the R Software Ecosystem](https://ieeexplore.ieee.org/document/6498472)
+*  [Evolution of the R software ecosystem](https://www.sciencedirect.com/science/article/pii/S0164121217301371)
+*  [Programming tools: Adventures with R](https://www.nature.com/articles/517109a)
 
 ***
