@@ -1747,6 +1747,8 @@ iris3
 
 
 # ** Consulta Usando dbpedia ----------------------------------------------
+#install.packages("https://cran.r-project.org/src/contrib/Archive/SPARQL/SPARQL_1.16.tar.gz", repo=NULL, type="source")
+
 library(SPARQL)
 library(tidyverse)
 
