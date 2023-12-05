@@ -475,7 +475,7 @@ str(Galapagos)
 summary(Galapagos)
 # View(Galapagos) # Just in case
 
-# HASTA AQUI CLASE 16 OCTUBRE #
+
 # * Importación desde CSV -------------------------------------------------
 library(readr)
 Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv", 
@@ -523,7 +523,7 @@ data("starwars")
 # * Verbos de tablas únicas -----------------------------------------------
 # operan sobre una única tabla de datos
 
-# Hasta Aqui Lunes 30 Octubre
+
 # *** Filter --------------------------------------------------------------
 # Filter modificará la primera dimensión de nuestros dataframes
 # modifica las filas
@@ -554,7 +554,6 @@ table(starwars$skin_color)
 
 filter(starwars, skin_color == "blue, grey")
 
-# HASTA Aqui Lunes 30 - 102 #
 # *** Slice ---------------------------------------------------------------
 # Selección de filas según la ubicación
 
@@ -694,18 +693,23 @@ attributes(a2)
 
 summarise(.data = a2, Alt_prom = mean(height, na.rm = TRUE), Alt_desv = sd(height, na.rm = TRUE))
 
+mean(a2$height, na.rm=TRUE)
 
 # *** Pipes ---------------------------------------------------------------
 # Máximo poder a R
 # Concatenamos funciones de una manera sencilla de leer (de arriba a abajo)
 
 # Pipe con Select
-starwars %>%
+starwars %>% 
   select(.data = ., name, species)
+
+  
 
 # Argumento data puede estar ausente, pero en un pipe se asume "(.)"
 starwars %>% 
-  select(name, species)
+  select(name, species) %>% 
+  filter(mass > 77)
+
 
 # Pipe con filter
 starwars %>% 
@@ -754,7 +758,7 @@ starwars
 # Aproximación manual (no muy clever si son muchas)
 starwars %>%
   group_by(species) %>%
-  filter(n() > 1) %>% # para evitar NA en standar deviation
+  #filter(n() > 1) %>% # para evitar NA en standar deviation
   summarise(
     Av_height = mean(height, na.rm = TRUE),
     Av_mass = mean(mass, na.rm = TRUE),
@@ -766,13 +770,13 @@ starwars %>%
 # Selección variables a mano
 starwars %>%
   group_by(species) %>%
-  filter(n() > 1) %>%
+  #filter(n() > 1) %>%
   summarise(across(c(height, mass, birth_year), ~ mean(.x, na.rm = TRUE)))
 
 # Selección variables por tipo
 starwars %>%
   group_by(species) %>%
-  filter(n() > 1) %>%
+  #filter(n() > 1) %>%
   summarise(across(where(is.numeric), ~ mean(.x, na.rm = TRUE)))
 
 # ¿Cuántos sexos, géneros y orígenes hay para cada especie?
@@ -780,13 +784,13 @@ starwars %>%
 
 starwars %>% 
   group_by(species) %>% 
-  filter(n() > 1) %>% 
+  filter(n() > 5) %>% 
   summarise(across(c(sex, gender, homeworld), ~ length(unique(.x))))
 
 # Altura, peso y año de nacimiento promedio según lugar de origen desde el promedio más viejo al más joven
 starwars %>% 
   group_by(homeworld) %>% 
-  filter(n() > 1) %>% 
+  #filter(n() > 1) %>% 
   summarise(across(where(is.numeric), ~ mean(.x, na.rm = TRUE))) %>% 
   arrange(desc(birth_year)) 
 
@@ -877,6 +881,7 @@ Mean_Galapagos <- read_csv(file = "INPUT/DATA/Galapagos_summary.csv",
 Mean_Galapagos
 levels(Mean_Galapagos$Island)
 levels(Mean_Galapagos$Station)
+levels(Mean_Galapagos$distance)
 
 # Loading the "Species_Richness_PerSite.csv" file
 Species <- read_csv("INPUT/DATA/Species_Richness_PerSite.csv", col_types = cols(
@@ -932,7 +937,7 @@ left_join(x = Mean_Galapagos, y = Species, by = c("Island"))
 # Detalle en: https://datosabiertos.jcyl.es/web/jcyl/binarios/582/267/%C3%8Dndices_de_accidentalidad.pdf?blobheader=application%2Fpdf%3Bcharset%3DUTF-8&blobnocache=true
 # Índice de Peligrosidad “IP” / Índice de Mortalidad “IM” / Índice de Accidentalidad Total “IAT” / Índice de Lesividad “IL” / Índice de Gravedad “IG”
 # library(readr)
- Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv", 
+Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv", 
                        delim = ";", escape_double = FALSE, trim_ws = TRUE)
 
 Acc_Car
@@ -988,7 +993,7 @@ ggplot(data = Accidentes_total, mapping = aes(x = `ANCHURA\nASF\n(m.)`, y = IM))
   geom_point(na.rm = TRUE)
 
 # Análisis sin ceros
-x11()
+#x11()
 Accidentes_total %>% 
   filter(IM > 0) %>% 
   ggplot(data = ., mapping = aes(x = `ANCHURA\nASF\n(m.)`, y = IM)) +
@@ -1033,7 +1038,7 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) +
 
 # Controlando el color -- Fijo
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
-  geom_point(colour = "palevioletred2")
+  geom_point(colour = "deeppink")
 
 # Controlando el color -- Dependiente de otra variable
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
@@ -1043,6 +1048,7 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) +
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(colour = cyl))
 
+# HASTA AQUI Lunes 20 Noviembre #
 # Agregamos una línea de ajuste
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_point() +
@@ -1368,7 +1374,7 @@ lobstr::obj_size(Acc_Car_TJson)
 Acc_Car
 lobstr::obj_size(Acc_Car)
 
-# HASTA AQUI LUNES 23 #
+
 # Revisando que no existan arrays --> sino: https://github.com/colearendt/tidyjson#examples
 spread_all(Acc_Car_Json) %>% View()
 
@@ -1742,6 +1748,8 @@ iris3
 
 
 # ** Consulta Usando dbpedia ----------------------------------------------
+#install.packages("https://cran.r-project.org/src/contrib/Archive/SPARQL/SPARQL_1.16.tar.gz", repo=NULL, type="source")
+
 library(SPARQL)
 library(tidyverse)
 
