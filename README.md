@@ -7,9 +7,11 @@ Más información en la [página del curso](https://ubuvirtual.ubu.es/course/vie
 ***
 
 ## Seminarios
-A modo de ejemplo, os dejo unos enlaces a algunos seminarios previos que han sido bien (o muy bien) evaluados. 
+La idea detrás de los seminarios busca fortalecer el uso de fuentes biomédicas y su acceso, preprocesamiento y visualización usando herramientas analísticas como R para dilucidar el efecto de estresores ambientales sobre la salud humana (__Biometereología Humana__). Puedes ver más ejemplos en el [MCC Collaborative Research Network](https://mccstudy.lshtm.ac.uk/).
 
-Deberéis fijaros en: 
+A modo de ejemplo, os dejo unos enlaces a algunos seminarios previos que han sido bien (o muy bien) evaluados.
+
+Para la entrega, deberéis fijaros en: 
 
 *  __i)__ como luce el repositorio,
 *  __ii)__ cómo luce el readme o "*landing page*",
@@ -98,6 +100,7 @@ Deberéis fijaros en:
 *  [R-Project](https://www.r-project.org/)
 *  [R-Bloggers](https://www.r-bloggers.com/)
 *  [Revolutions](https://blog.revolutionanalytics.com/)
+*  [II Congreso de R en España-Barcelona, 2023](https://eventum.upf.edu/101896/programme/ii-conference-of-r-and-xiii-workshop-for-r-users.html)
 
 ### Publicaciones científicas sobre este lenguaje
 *  [R generation](https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2018.01169.x)
