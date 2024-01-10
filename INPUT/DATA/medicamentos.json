@@ -1,0 +1,7 @@
+[
+    {"id_paciente": 1, "medicamento": "Metformina", "dosis_mg": 500},
+    {"id_paciente": 2, "medicamento": "Losartan", "dosis_mg": 50},
+    {"id_paciente": 3, "medicamento": "Salbutamol", "dosis_mg": 100},
+    {"id_paciente": 4, "medicamento": "Ferrous sulfate", "dosis_mg": 325},
+    {"id_paciente": 5, "medicamento": "Ibuprofen", "dosis_mg": 200}
+]
