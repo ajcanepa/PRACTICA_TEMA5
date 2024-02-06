@@ -104,6 +104,7 @@ Para la entrega, deberéis fijaros en:
 *  [II Congreso de R en España-Barcelona, 2023](https://eventum.upf.edu/101896/programme/ii-conference-of-r-and-xiii-workshop-for-r-users.html)
 
 ### Publicaciones científicas sobre este lenguaje
+*  [Ten simple rules for teaching yourself R](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010372)
 *  [R generation](https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2018.01169.x)
 *  [Expansion and evolution of the R programming language](https://royalsocietypublishing.org/doi/10.1098/rsos.221550)
 *  [The Evolution of the R Software Ecosystem](https://ieeexplore.ieee.org/document/6498472)
