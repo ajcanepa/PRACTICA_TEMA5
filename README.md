@@ -24,6 +24,8 @@ Para la entrega, deberéis fijaros en:
 
 ##### Edición 2023-2024
 *  [Necesidad de Atención Psicológica (NAT) en España](https://github.com/Lorenacalvoperez/PRACTICAS_FUENTES_C)
+*  [Análisis estadístico sobre relación entre sedentarismo y uso de audífonos/gafas](https://github.com/jbs1009/Seminario_Daniel_Jorge_Antonia)
+
 
 ##### Edición 2022-2023
 *  [Suicidios, desigualdad económica e inaccesibilidad a servicios sanitarios](https://github.com/Mps1013/SeminarioFuentes)
