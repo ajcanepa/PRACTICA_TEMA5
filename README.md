@@ -61,6 +61,7 @@ Para la entrega, deberéis fijaros en:
 *  [The R Graph Gallery](https://r-graph-gallery.com/)
 *  [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/)
 *  [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/)
+*  [awesome-r-dataviz](https://krzjoa.github.io/awesome-r-dataviz/)
 
 ##### Documentos
 *  [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
@@ -84,6 +85,7 @@ Para la entrega, deberéis fijaros en:
 *  [R for Health Data Science](https://argoshare.is.ed.ac.uk/healthyr_book/)
 *  [Sequence Analysis in R and Bioconductor](https://girke.bioinformatics.ucr.edu/GEN242/tutorials/rsequences/rsequences/)
 *  [Little Book of R for Bioinformatics](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/)
+*  [CRAN Task View: Genomics, Proteomics, Metabolomics, Transcriptomics, and Other Omics](https://cran.r-project.org/web/views/Omics.html)
 
 ### Machine Learning & R
 *  [The caret Package](https://topepo.github.io/caret/index.html)
