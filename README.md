@@ -93,6 +93,9 @@ Para la entrega, deberéis fijaros en:
 *  [Building Reproducible Analytical Pipelines](https://rap4mads.eu/)
 *  [Applied Machine Learning Using mlr3 in R](https://mlr3book.mlr-org.com/)
 
+### Formación
+*  [Máster en Data Science & Business Analytics (con R software)](https://blog.uclm.es/tp-mbsba/)
+
 ### Comunidades
 *  [R Consortium](https://www.r-consortium.org/)
 *  [R Ladies](https://rladies.org/)
