@@ -1,21 +1,23 @@
 ---
 title:    | 
- | Fuentes de datos biomédicas 
- | y web semántica #8230
+ | Fuentes de datos biomédicos 
+ | y web semántica #8235
  | Gº Ingeniería de la Salud
  
-author:    | 
- | **Antonio Canepa, Ph.D.**
- | *[email](mailto:ajcanepa@ubu.es)* // [twitter](https://twitter.com/OMDataScience)
+author: | 
+ | <br>
+ | **Antonio Canepa Oneto, Ph.D.**
+ | *[E-mail](mailto:ajcanepa@ubu.es)* // [LinkedIn](https://www.linkedin.com/in/antonio-canepa-oneto-56b7b633/) // [ResearchGate](https://www.researchgate.net/profile/Antonio-Canepa-Oneto) // [X(Twitter)](https://twitter.com/OMDataScience)
 
-date: "5º Semestre / Curso 2023-2024"
+date: |
+ | <br>
+ | "5º Semestre / Curso 2024-2025"
 output:
   html_document:
     df_print: paged
     toc: yes
-    toc_depth: 6
     toc_float: no
-    number_sections: true
+    toc_depth: 6
   pdf_document:
     toc: yes
 ---
