@@ -665,6 +665,54 @@ for (paciente in names(programacion_examenes)) {
 }
 
 
+
+# * Funciones Propias en R ------------------------------------------------
+# Trabajo con secuencias genéticas
+
+
+# ** Conteo de nucleótidos ------------------------------------------------
+# definimos la cadena de DNA
+seq_dna <- c("ATGTCACCACAAACAGAGACT")
+seq_dna
+
+# Crear una función `contar_nucleotidos()`, que nos permitirá contar el número de cada uno de los nucleótidos que tenemos en nuestra secuencia.
+contar_nucleotidos <- function(secuencia_dna = seq_dna){
+  conteo_nucleotidos = unlist(strsplit(x = secuencia_dna, split = "", fixed = TRUE))
+  print(table(conteo_nucleotidos))
+}
+
+# Usamos la función
+contar_nucleotidos(secuencia_dna = seq_dna)
+
+
+# ** Cadena complementaria ------------------------------------------------
+# Cada vez que un nucleótido de nuestra cadena sea `A`, en la cadena complementaria correspondiente, el nucleótido que le tocaría sería el `T`.
+# Crear una función que realice esta acción a la que llamaremos `Complementaria()`.
+Complementaria <- function(secuencia_dna = seq_dna){
+  complementaria_adn = chartr("ATGC","TACG", secuencia_dna)
+  complementaria_adn = paste(complementaria_adn, collapse = "")
+  return(complementaria_adn)
+}
+
+# Usando la función
+seq_dna
+Complementaria(seq_dna)
+
+
+# ** Transcripción --------------------------------------------------------
+# Necesitamos *transcribir* la información desde la cadena de ADN a una cadena de ARN.
+# Las correspondencias en este caso cambian y tenemos que la *Timina* es reemplazada por el *Uracilo*
+Transcripcion <- function(secuencia_dna = seq_dna){
+  seq_arn = chartr("T","U", secuencia_dna)
+  seq_arn = paste(seq_arn, collapse = "")
+  return(seq_arn)
+}
+
+# Usando la función
+print(seq_dna)
+Transcripcion(seq_dna)
+
+
 # Importación de Datos ----------------------------------------------------
 # * Importar *.xls y *.xlsx -----------------------------------------------
 library(readxl)
