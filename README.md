@@ -7,7 +7,7 @@ Más información en la [página del curso](https://ubuvirtual.ubu.es/course/vie
 ***
 
 ## Seminarios
-La idea detrás de los seminarios busca fortalecer el uso de fuentes biomédicas y su acceso, preprocesamiento y visualización usando herramientas analísticas como R para dilucidar el efecto de estresores ambientales sobre la salud humana (__Biometereología Humana__). Puedes ver más ejemplos en el [MCC Collaborative Research Network](https://mccstudy.lshtm.ac.uk/).
+La idea detrás de los seminarios busca fortalecer el uso de fuentes biomédicas y su acceso, preprocesamiento y visualización usando herramientas analíticas, como R, para dilucidar el efecto de estresores ambientales sobre la salud humana (__Biometereología Humana__). Puedes ver más ejemplos en el [MCC Collaborative Research Network](https://mccstudy.lshtm.ac.uk/).
 
 A modo de ejemplo, os dejo unos enlaces a algunos seminarios previos que han sido bien (o muy bien) evaluados.
 
