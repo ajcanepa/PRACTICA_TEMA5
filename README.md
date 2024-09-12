@@ -92,6 +92,7 @@ Para la entrega, deberéis fijaros en:
 *  [Tidy Modeling with R](https://www.tmwr.org/)
 *  [Building Reproducible Analytical Pipelines](https://rap4mads.eu/)
 *  [Applied Machine Learning Using mlr3 in R](https://mlr3book.mlr-org.com/)
+*  [Models Demystified](https://m-clark.github.io/book-of-models/)
 
 ### Formación
 *  [Máster en Data Science & Business Analytics (con R software)](https://blog.uclm.es/tp-mbsba/)
