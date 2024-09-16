@@ -38,7 +38,7 @@ Para la entrega, deberéis fijaros en:
 *  [Inaccesibilidad-sanitaria-y-efectos-en-salud](https://github.com/albamiguel/Inaccesibilidad-sanitaria-y-efectos-en-salud)
 
 ***
-## Recursos para `R` y `Tidyverse`
+## Recursos para `R` , `Tidyverse` y `Fuentes de Datos`
 
 ### Repositorios 
 *  [The Comprehensive R Archive Network](https://cran.r-project.org/)
@@ -118,5 +118,17 @@ Para la entrega, deberéis fijaros en:
 *  [The Evolution of the R Software Ecosystem](https://ieeexplore.ieee.org/document/6498472)
 *  [Evolution of the R software ecosystem](https://www.sciencedirect.com/science/article/pii/S0164121217301371)
 *  [Programming tools: Adventures with R](https://www.nature.com/articles/517109a)
+
+***
+
+### Fuentes de Datos Abiertos
+* [Datos abiertos Gob. España](https://datos.gob.es/es/catalogo) / [`opendataes`](https://github.com/rOpenSpain/opendataes)
+* [Datos abiertos CyL](https://datosabiertos.jcyl.es/web/es/datos-abiertos-castilla-leon.html) / [`opendataes`](https://github.com/rOpenSpain/opendataes)
+* [Datos espaciales de hospitales](https://opendata.esri.es/datasets/ComunidadSIG::hospitales-de-espa%C3%B1a/about)
+* [INE (Instituto Nacional de Estadística) package](https://inebaser.wordpress.com/)
+* [rOpenSpain community](https://ropenspain.es/) / [GitHub-Repo](https://github.com/rOpenSpain)
+* [European Health Information Initiative (EHII)](https://www.euro.who.int/en/data-and-evidence/european-health-information-initiative-ehii)
+* [World Health Organization (WHO)](https://www.who.int/data)
+* [rOpenHealth](https://github.com/rOpenHealth)
 
 ***
