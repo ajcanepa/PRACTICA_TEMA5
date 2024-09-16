@@ -124,6 +124,7 @@ Para la entrega, deberéis fijaros en:
 ### Fuentes de Datos Abiertos
 * [Datos abiertos Gob. España](https://datos.gob.es/es/catalogo) / [`opendataes`](https://github.com/rOpenSpain/opendataes)
 * [Datos abiertos CyL](https://datosabiertos.jcyl.es/web/es/datos-abiertos-castilla-leon.html) / [`opendataes`](https://github.com/rOpenSpain/opendataes)
+* [Calidad de Aire - JCyL](https://servicios.jcyl.es/esco/index.action)
 * [Datos espaciales de hospitales](https://opendata.esri.es/datasets/ComunidadSIG::hospitales-de-espa%C3%B1a/about)
 * [INE (Instituto Nacional de Estadística) package](https://inebaser.wordpress.com/)
 * [rOpenSpain community](https://ropenspain.es/) / [GitHub-Repo](https://github.com/rOpenSpain)
