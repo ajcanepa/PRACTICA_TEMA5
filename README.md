@@ -130,6 +130,7 @@ Para la entrega, deberéis fijaros en:
 * [rOpenSpain community](https://ropenspain.es/) / [GitHub-Repo](https://github.com/rOpenSpain)
 * [European Health Information Initiative (EHII)](https://www.euro.who.int/en/data-and-evidence/european-health-information-initiative-ehii)
 * [World Health Organization (WHO)](https://www.who.int/data)
+* [World Health Organization - Health Observatory](https://www.who.int/data/gho)
 * [rOpenHealth](https://github.com/rOpenHealth)
 * [European Environment Agency](https://www.eea.europa.eu/en)
 * [European Environment Agency - Datahub](https://www.eea.europa.eu/en/datahub?size=n_10_n&filters%5B0%5D%5Bfield%5D=issued.date&filters%5B0%5D%5Btype%5D=any&filters%5B0%5D%5Bvalues%5D%5B0%5D=All%20time)
