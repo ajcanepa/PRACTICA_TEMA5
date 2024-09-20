@@ -1,4 +1,4 @@
-# PRACTICA TEMA5 <img src='INPUT/IMAGES/Logo_Curso_Fuente_Datos_Biomedicas_Web_Semantica.png' align="right" height="120" />
+# PRACTICAS "Fuentes de Datos Biomédicos" <img src='INPUT/IMAGES/Logo_Curso_Fuente_Datos_Biomedicas_Web_Semantica.png' align="right" height="120" />
 
 Repositorio en el que se desarrollará el código de las prácticas de la asignatura "Fuentes de Datos Biomédicos y Web Semánticas", del grado de [Ingeniería de la Salud](https://www.ubu.es/grado-en-ingenieria-de-la-salud), de la [Universidad de Burgos](https://www.ubu.es).
 
@@ -7,9 +7,11 @@ Más información en la [página del curso](https://ubuvirtual.ubu.es/course/vie
 ***
 
 ## Seminarios
-A modo de ejemplo, os dejo unos enlaces a algunos seminarios previos que han sido bien (o muy bien) evaluados. 
+La idea detrás de los seminarios busca fortalecer el uso de fuentes biomédicas y su acceso, preprocesamiento y visualización usando herramientas analíticas, como R, para dilucidar el efecto de estresores ambientales sobre la salud humana (__Biometereología Humana__). Puedes ver más ejemplos en el [MCC Collaborative Research Network](https://mccstudy.lshtm.ac.uk/).
 
-Deberéis fijaros en: 
+A modo de ejemplo, os dejo unos enlaces a algunos seminarios previos que han sido bien (o muy bien) evaluados.
+
+Para la entrega, deberéis fijaros en: 
 
 *  __i)__ como luce el repositorio,
 *  __ii)__ cómo luce el readme o "*landing page*",
@@ -20,11 +22,14 @@ Deberéis fijaros en:
 
 ### Hall of Fame - Seminarios
 
+##### Edición 2023-2024
+*  [Necesidad de Atención Psicológica (NAT) en España](https://github.com/Lorenacalvoperez/PRACTICAS_FUENTES_C)
+*  [Análisis estadístico sobre relación entre sedentarismo y uso de audífonos/gafas](https://github.com/jbs1009/Seminario_Daniel_Jorge_Antonia)
+
+
 ##### Edición 2022-2023
 *  [Suicidios, desigualdad económica e inaccesibilidad a servicios sanitarios](https://github.com/Mps1013/SeminarioFuentes)
 *  [Relación entre Paro y Suicidio](https://github.com/paulamart/SeminarioFuentes)
-
-
 
 ##### Edición 2021-2022
 *  [Actividad Fisica, Zonas Verdes y Salud Mental](https://github.com/VeraGD/Actividad_Fisica)
@@ -33,7 +38,7 @@ Deberéis fijaros en:
 *  [Inaccesibilidad-sanitaria-y-efectos-en-salud](https://github.com/albamiguel/Inaccesibilidad-sanitaria-y-efectos-en-salud)
 
 ***
-## Recursos para `R` y `Tidyverse`
+## Recursos para `R` , `Tidyverse` y `Fuentes de Datos`
 
 ### Repositorios 
 *  [The Comprehensive R Archive Network](https://cran.r-project.org/)
@@ -44,6 +49,7 @@ Deberéis fijaros en:
 ### Programación
 *  [R for Data Science](https://r4ds.hadley.nz/)
 *  [R Para Ciencia de Datos](https://es.r4ds.hadley.nz/)
+*  [Fundamentos de ciencia de datos con R](https://cdr-book.github.io/index.html)
 *  [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
 *  [Advanced R](https://adv-r.hadley.nz/)
 *  [fasteR: Fast Lane to Learning R!](https://github.com/matloff/fasteR)
@@ -55,6 +61,7 @@ Deberéis fijaros en:
 *  [The R Graph Gallery](https://r-graph-gallery.com/)
 *  [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/)
 *  [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/)
+*  [awesome-r-dataviz](https://krzjoa.github.io/awesome-r-dataviz/)
 
 ##### Documentos
 *  [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
@@ -78,12 +85,17 @@ Deberéis fijaros en:
 *  [R for Health Data Science](https://argoshare.is.ed.ac.uk/healthyr_book/)
 *  [Sequence Analysis in R and Bioconductor](https://girke.bioinformatics.ucr.edu/GEN242/tutorials/rsequences/rsequences/)
 *  [Little Book of R for Bioinformatics](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/)
+*  [CRAN Task View: Genomics, Proteomics, Metabolomics, Transcriptomics, and Other Omics](https://cran.r-project.org/web/views/Omics.html)
 
 ### Machine Learning & R
 *  [The caret Package](https://topepo.github.io/caret/index.html)
 *  [Tidy Modeling with R](https://www.tmwr.org/)
 *  [Building Reproducible Analytical Pipelines](https://rap4mads.eu/)
 *  [Applied Machine Learning Using mlr3 in R](https://mlr3book.mlr-org.com/)
+*  [Models Demystified](https://m-clark.github.io/book-of-models/)
+
+### Formación
+*  [Máster en Data Science & Business Analytics (con R software)](https://blog.uclm.es/tp-mbsba/)
 
 ### Comunidades
 *  [R Consortium](https://www.r-consortium.org/)
@@ -97,12 +109,36 @@ Deberéis fijaros en:
 *  [R-Project](https://www.r-project.org/)
 *  [R-Bloggers](https://www.r-bloggers.com/)
 *  [Revolutions](https://blog.revolutionanalytics.com/)
+*  [II Congreso de R en España-Barcelona, 2023](https://eventum.upf.edu/101896/programme/ii-conference-of-r-and-xiii-workshop-for-r-users.html)
 
 ### Publicaciones científicas sobre este lenguaje
+*  [Ten simple rules for teaching yourself R](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010372)
 *  [R generation](https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2018.01169.x)
 *  [Expansion and evolution of the R programming language](https://royalsocietypublishing.org/doi/10.1098/rsos.221550)
 *  [The Evolution of the R Software Ecosystem](https://ieeexplore.ieee.org/document/6498472)
 *  [Evolution of the R software ecosystem](https://www.sciencedirect.com/science/article/pii/S0164121217301371)
 *  [Programming tools: Adventures with R](https://www.nature.com/articles/517109a)
+
+***
+
+### Fuentes de Datos Abiertos
+* [Datos abiertos Gob. España](https://datos.gob.es/es/catalogo) / [`opendataes`](https://github.com/rOpenSpain/opendataes)
+* [Datos abiertos CyL](https://datosabiertos.jcyl.es/web/es/datos-abiertos-castilla-leon.html) / [`opendataes`](https://github.com/rOpenSpain/opendataes)
+* [Calidad de Aire - JCyL](https://servicios.jcyl.es/esco/index.action)
+* [Datos espaciales de hospitales](https://opendata.esri.es/datasets/ComunidadSIG::hospitales-de-espa%C3%B1a/about)
+* [INE (Instituto Nacional de Estadística) package](https://inebaser.wordpress.com/)
+* [INE - Encuesta de morbilidad hospitalaria](https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176778&menu=resultados&idp=1254735573175#_tabs-1254736194704)
+* [INE - Lista completa](https://www.ine.es/dyngs/INEbase/es/listaoperaciones.htm)
+* [rOpenSpain community](https://ropenspain.es/) / [GitHub-Repo](https://github.com/rOpenSpain)
+* [European Health Information Initiative (EHII)](https://www.euro.who.int/en/data-and-evidence/european-health-information-initiative-ehii)
+* [World Health Organization (WHO)](https://www.who.int/data)
+* [World Health Organization - Health Observatory](https://www.who.int/data/gho)
+* [rOpenHealth](https://github.com/rOpenHealth)
+* [European Environment Agency](https://www.eea.europa.eu/en)
+* [European Environment Agency - Datahub](https://www.eea.europa.eu/en/datahub?size=n_10_n&filters%5B0%5D%5Bfield%5D=issued.date&filters%5B0%5D%5Btype%5D=any&filters%5B0%5D%5Bvalues%5D%5B0%5D=All%20time)
+* [greenR: An R Package for Quantifying Urban Greenness](https://github.com/sachit27/greenR)
+* [CAMS European air quality reanalyses](https://ads.atmosphere.copernicus.eu/cdsapp#!/dataset/cams-europe-air-quality-reanalyses?tab=overview)
+* [Water Quality ICM](https://www.eea.europa.eu/en/datahub/datahubitem-view/fbf3717c-cd7b-4785-933a-d0cf510542e1)
+* [World Bank Water Data](https://wbwaterdata.org/dataset/)
 
 ***
