@@ -1,0 +1,7 @@
+[
+    {"id": 1, "nombre": "Juan", "apellido": "Perez", "edad": 45, "enfermedad": "Diabetes", "sexo": "Hombre"},
+    {"id": 2, "nombre": "Maria", "apellido": "Gomez", "edad": 50, "enfermedad": "Hipertensión", "sexo": "Mujer"},
+    {"id": 3, "nombre": "Carlos", "apellido": "Rodriguez", "edad": 60, "enfermedad": "Asma", "sexo": "Hombre"},
+    {"id": 4, "nombre": "Ana", "apellido": "Martinez", "edad": 30, "enfermedad": "Anemia", "sexo": "Mujer"},
+    {"id": 5, "nombre": "Pedro", "apellido": "Garcia", "edad": 55, "enfermedad": "Artritis", "sexo": "Hombre"}
+]
