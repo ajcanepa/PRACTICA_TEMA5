@@ -88,6 +88,7 @@ names(x)
 x <- c(1:5)
 x
 attributes(x)
+length(x)
 
 names(x) <- c("a", "b", "c")
 names(x)
@@ -137,7 +138,7 @@ attributes(df1)
 
 # LISTAS
 l1 <- list(
-  Enteros = 1:3, 
+  Enteros = 1:50, 
   Letra = "a", 
   Logico = c(TRUE, FALSE, TRUE), 
   Numeros = c(2.3, 5.9)
@@ -1142,7 +1143,7 @@ mean(a2$height, na.rm=TRUE)
 starwars %>% 
   select(.data = ., name, species)
 
-  
+
 
 # Argumento data puede estar ausente, pero en un pipe se asume "(.)"
 starwars %>% 
@@ -1181,7 +1182,7 @@ starwars %>%
     height_m = height / 100,
     BMI = mass / (height_m^2)
   ) %>%
-select(BMI, everything()) %>% 
+  select(BMI, everything()) %>% 
   slice_max(., order_by = BMI, n = 3)
 
 # More on BMI
@@ -1309,13 +1310,13 @@ Long_Starwars %>%
 library(readr)
 Mean_Galapagos <- read_csv(file = "INPUT/DATA/Galapagos_summary.csv", 
                            col_types = cols(
-  Island = readr::col_factor(levels = NULL),
-  Station = readr::col_factor(levels = NULL),
-  distance = readr::col_factor(levels = NULL),
-  Av_Temp = col_double(),
-  Av_Salinity = col_double(),
-  Av_Chla = col_double()
-))
+                             Island = readr::col_factor(levels = NULL),
+                             Station = readr::col_factor(levels = NULL),
+                             distance = readr::col_factor(levels = NULL),
+                             Av_Temp = col_double(),
+                             Av_Salinity = col_double(),
+                             Av_Chla = col_double()
+                           ))
 
 Mean_Galapagos
 levels(Mean_Galapagos$Island)
@@ -1377,7 +1378,7 @@ left_join(x = Mean_Galapagos, y = Species, by = c("Island"))
 # Índice de Peligrosidad “IP” / Índice de Mortalidad “IM” / Índice de Accidentalidad Total “IAT” / Índice de Lesividad “IL” / Índice de Gravedad “IG”
 # library(readr)
 Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv", 
-                       delim = ";", escape_double = FALSE, trim_ws = TRUE)
+                      delim = ";", escape_double = FALSE, trim_ws = TRUE)
 
 Acc_Car
 str(Acc_Car)
@@ -1392,7 +1393,7 @@ Acc_Car %>%
 # https://datosabiertos.jcyl.es/web/jcyl/set/es/urbanismo-infraestructuras/anchura-carreteras/1284967627462
 # library(readr)
 Ancho_Car <- read_delim("INPUT/DATA/anchura-de-carreteras.csv", 
-                         delim = ";", escape_double = FALSE, trim_ws = TRUE)
+                        delim = ";", escape_double = FALSE, trim_ws = TRUE)
 
 Ancho_Car
 str(Ancho_Car)
@@ -1590,8 +1591,8 @@ ggplot(data = mpg, aes(x = displ, y = hwy)) +
 # Podemos tener 5 variables en un gráfico!
 ggplot(data = mpg, aes(x = displ, y = hwy)) +
   geom_point(aes(colour = factor(cyl))) +
- #facet_wrap(class ~ drv)
-facet_grid(class ~ drv, scales = "free", margins = TRUE) # Muestra la grilla con toda la combinación
+  #facet_wrap(class ~ drv)
+  facet_grid(class ~ drv, scales = "free", margins = TRUE) # Muestra la grilla con toda la combinación
 
 # * Etiquetas --------------------------------------------------------
 # Permiten mejorar los "nombres" de ejes, títulos, subtítulos, etc.
