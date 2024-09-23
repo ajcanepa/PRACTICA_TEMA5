@@ -88,6 +88,7 @@ names(x)
 x <- c(1:5)
 x
 attributes(x)
+length(x)
 
 names(x) <- c("a", "b", "c")
 names(x)
@@ -137,7 +138,7 @@ attributes(df1)
 
 # LISTAS
 l1 <- list(
-  Enteros = 1:3, 
+  Enteros = 1:50, 
   Letra = "a", 
   Logico = c(TRUE, FALSE, TRUE), 
   Numeros = c(2.3, 5.9)
