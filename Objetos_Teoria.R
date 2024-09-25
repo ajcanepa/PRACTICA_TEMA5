@@ -121,4 +121,61 @@ print(imc)
 
 # FUNCIONES ---------------------------------------------------------------
 
+sumar <- function(x, y){
+  
+  x + y
+  
+}
 
+# llamar a la funcion (desde entorno de trabajo)
+sumar
+
+# ejecutar
+sumar(x = 5, y = 5)
+
+sumar(x = c(1,2,3,4), y = 5)
+
+
+# Definiendo un tipo de operación
+calcular <- function(x, y, type) {
+  if (type == "sumar") {
+    x + y
+  } else if (type == "restar") {
+    x - y
+  } else if (type == "multiplicar") {
+    x * y
+  } else if (type == "dividir") {
+    x / y
+  } else {
+    stop("Tipo de operación desconocida")
+  }
+}
+
+
+calcular
+
+calcular(x = 23, y = 14, type = "ecualizar")
+
+# Argumentos por defecto
+calcular <- function(x, y, type = "sumar") {
+  if (type == "sumar") {
+    x + y
+  } else if (type == "restar") {
+    x - y
+  } else if (type == "multiplicar") {
+    x * y
+  } else if (type == "dividir") {
+    x / y
+  } else {
+    stop("Tipo de operación desconocida")
+  }
+}
+
+
+calcular(7,3)
+
+
+# Importando/argando una función
+source("calcular.R")
+
+calcular(7,3)
