@@ -107,6 +107,7 @@ com$allTags
 # La función biblioAnalysis calcula las principales medidas bibliométricas.
 results <- biblioAnalysis(M1, sep = ";")
 
+length(results)
 # summary resume los principales resultados del análisis bibliométrico
 # Muestra la producción científica anual, los principales manuscritos por número de citas, los autores más productivos, los países más productivos, el total de citas por país, las fuentes más relevantes (revistas) y las palabras clave más relevantes.
 
