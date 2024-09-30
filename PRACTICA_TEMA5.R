@@ -740,7 +740,7 @@ View(Acc_Car)
 
 table(Acc_Car$T.RED)
 
-# HASTA AQUI CLASE 30/09/2024
+# HASTA AQUI CLASE 30/09/2024 (G101 y G102)
 # Modificando el tipo (clase) de cada Columna
 Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv",
                       delim = ";", escape_double = FALSE, trim_ws = TRUE,
