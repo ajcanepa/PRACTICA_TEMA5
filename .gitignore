@@ -37,3 +37,9 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+<<<<<<< HEAD
+=======
+
+
+Practica_PubMed_Query/Ejemplo_Consulta_PubMed_pubmedR.RData
+>>>>>>> bdf1daf3d6a79177dcd12e61bd32629b662729c2

@@ -68,6 +68,11 @@ Para la entrega, deberéis fijaros en:
 *  [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
 *  [R Graphics Cookbook](https://r-graphics.org/)
 *  [The bookdown package](https://bookdown.org/)
+<<<<<<< HEAD
+=======
+*  [Introducción al uso de RMarkdown](https://bookdown.org/gboccardo/manual-ED-UCH/introduccion-al-uso-de-rmarkdown-para-la-compilacion-de-resultados-de-rstudio-en-diferentes-formatos.html)
+*  [Cómo crear Tablas de información en R Markdown](http://destio.us.es/calvo/Qficheros/ComoCrearTablasRMarkdown_PedroLuque_2019Sep_librodigital.pdf)
+>>>>>>> bdf1daf3d6a79177dcd12e61bd32629b662729c2
 
 ##### Aplicaciones (APPs)
 *  [Shiny](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html)
@@ -141,5 +146,10 @@ Para la entrega, deberéis fijaros en:
 * [Water Quality ICM](https://www.eea.europa.eu/en/datahub/datahubitem-view/fbf3717c-cd7b-4785-933a-d0cf510542e1)
 * [World Bank Water Data](https://wbwaterdata.org/dataset/)
 * [Datos Kaggle](https://www.kaggle.com/datasets).
+<<<<<<< HEAD
+=======
+* [Google Environmental Insights Explorer](https://insights.sustainability.google/?hl=en-US).
+* [ European Cancer Information System](https://ecis.jrc.ec.europa.eu/en)
+>>>>>>> bdf1daf3d6a79177dcd12e61bd32629b662729c2
 
 ***
