@@ -713,6 +713,10 @@ Transcripcion <- function(secuencia_dna = seq_dna){
 print(seq_dna)
 Transcripcion(seq_dna)
 
+# Importando la función
+source("INPUT/FUNCTIONS/Transcripcion.R")
+print(seq_dna)
+Transcripcion(seq_dna)
 
 # Importación de Datos ----------------------------------------------------
 # * Importar *.xls y *.xlsx -----------------------------------------------
@@ -736,6 +740,7 @@ View(Acc_Car)
 
 table(Acc_Car$T.RED)
 
+# HASTA AQUI CLASE 30/09/2024
 # Modificando el tipo (clase) de cada Columna
 Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv",
                       delim = ";", escape_double = FALSE, trim_ws = TRUE,
