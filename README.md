@@ -112,6 +112,7 @@ Para la entrega, deberéis fijaros en:
 *  [R-Bloggers](https://www.r-bloggers.com/)
 *  [Revolutions](https://blog.revolutionanalytics.com/)
 *  [II Congreso de R en España-Barcelona, 2023](https://eventum.upf.edu/101896/programme/ii-conference-of-r-and-xiii-workshop-for-r-users.html)
+* [III Congreso & XIV Jornadas de Usuarios de R, Sevilla - 2024](https://www.imus.us.es/congresos/IIIRqueR/)
 
 ### Publicaciones científicas sobre este lenguaje
 *  [Ten simple rules for teaching yourself R](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010372)
