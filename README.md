@@ -56,7 +56,7 @@ Para la entrega, deberéis fijaros en:
 *  [Big Book of R](https://www.bigbookofr.com/)
 *  [The tidyverse style guide](https://style.tidyverse.org/index.html)
 
-### Control de Verisones (R/RStudio and Git/Github)
+### Control de Versiones (R/RStudio and Git/Github)
 * [Cómo usar Git/GitHub con R](http://destio.us.es/calvo/asignaturas/ge_esco/tutorialusargitgithubrstudio/UsarGitGithubconRStudio.html)
 * [Chapter 4 Git, in:Reproducible Analytical Pipelines ](https://b-rodrigues.github.io/rap4mads/git.html)
 * [Connect RStudio to Git and GitHub](https://happygitwithr.com/rstudio-git-github)
