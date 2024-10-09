@@ -59,7 +59,7 @@ A modo de ejemplo, os dejo unos enlaces a algunos seminarios previos que han sid
 ***
 ## Recursos para `R` , `Tidyverse` y `Fuentes de Datos`
 
-### Repositorios 
+### Repositorios oficiales de R
 *  [The Comprehensive R Archive Network](https://cran.r-project.org/)
 *  [Bioconductor](https://www.bioconductor.org/)
 *  [ROpenScience](https://ropensci.org/)
@@ -74,6 +74,14 @@ A modo de ejemplo, os dejo unos enlaces a algunos seminarios previos que han sid
 *  [fasteR: Fast Lane to Learning R!](https://github.com/matloff/fasteR)
 *  [Big Book of R](https://www.bigbookofr.com/)
 *  [The tidyverse style guide](https://style.tidyverse.org/index.html)
+
+### Control de Versiones (R/RStudio and Git/Github)
+* [Cómo usar Git/GitHub con R](http://destio.us.es/calvo/asignaturas/ge_esco/tutorialusargitgithubrstudio/UsarGitGithubconRStudio.html)
+* [Chapter 4 Git, in:Reproducible Analytical Pipelines ](https://b-rodrigues.github.io/rap4mads/git.html)
+* [Connect RStudio to Git and GitHub](https://happygitwithr.com/rstudio-git-github)
+* [Happy Git and GitHub for the useR](https://happygitwithr.com/)
+* [Cómo vincular y usar Git con RStudio](https://anderfernandez.com/blog/como-vincular-y-usar-git-con-rstudio/)
+* [Git y GitHub con R](https://rpubs.com/RonaldoAnticona/818156)
 
 ### Communicación
 ##### Gráficos
