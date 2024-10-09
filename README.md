@@ -12,9 +12,9 @@ La idea detrás de los seminarios busca fortalecer el uso de fuentes biomédicas
 ### Estructura del Seminario
 La entrega se basa en dos archivos y un repostorio que se solicitarán como mecanismo de evaluación del tercer control parcial (evaluación contínua). Los archivos que tendréis que entregar son: 
 
-* __*i)*__ archivo RMarkdown (Cuaderno de R) que contendrá tanto el texto como el código empleado en el seminario. Es de extensión `.Rmd`, 
-* __*ii*__) un archivo de extensión `.html` que contendrá el seminario *renderizado*, es decir se unirá tanto el texto como el código y sus resultados (*i.e.* tablas, figuras, etc.) y 
-* __*iii*__ la `url` del repositorio en github.
+* __*i)*__ Archivo RMarkdown (Cuaderno de R) que contendrá tanto el texto como el código empleado en el seminario. Es de extensión `.Rmd`, 
+* __*ii*__) Archivo *HyperText Markup Language (__HTML__)*, de extensión `.html` que contendrá el seminario *renderizado*, es decir se unirá tanto el texto como el código y sus resultados (*i.e.* tablas, figuras, etc.) y 
+* __*iii*__) La dirección `url` del repositorio en github donde habéis desarrollado el seminario.
 
 La estructura del seminario contará con los identificadores básicos del seminario como es el `título`, los `autores` y `curso` al que corresponde y con los siguientes apartados específicos:
 
