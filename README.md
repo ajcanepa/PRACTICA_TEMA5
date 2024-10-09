@@ -9,14 +9,33 @@ Más información en la [página del curso](https://ubuvirtual.ubu.es/course/vie
 ## Seminarios
 La idea detrás de los seminarios busca fortalecer el uso de fuentes biomédicas y su acceso, preprocesamiento y visualización usando herramientas analíticas, como R, para dilucidar el efecto de estresores ambientales sobre la salud humana (__Biometereología Humana__). Puedes ver más ejemplos en el [MCC Collaborative Research Network](https://mccstudy.lshtm.ac.uk/).
 
-A modo de ejemplo, os dejo unos enlaces a algunos seminarios previos que han sido bien (o muy bien) evaluados.
+### Estructura del Seminario
+La entrega se basa en dos archivos y un repostorio que se solicitarán como mecanismo de evaluación del tercer control parcial (evaluación contínua). Los archivos que tendréis que entregar son: 
 
+* __*i)*__ archivo RMarkdown (Cuaderno de R) que contendrá tanto el texto como el código empleado en el seminario. Es de extensión `.Rmd`, 
+* __*ii*__) un archivo de extensión `.html` que contendrá el seminario *renderizado*, es decir se unirá tanto el texto como el código y sus resultados (*i.e.* tablas, figuras, etc.) y 
+* __*iii*__ la `url` del repositorio en github.
+
+La estructura del seminario contará con los identificadores básicos del seminario como es el `título`, los `autores` y `curso` al que corresponde y con los siguientes apartados específicos:
+
+* __Introducción__: contextualiza la idea del seminario, entrega una idea general de la temática, de lo que se sabe y sobre todo de lo que no se sabe y queréis abordar en vuestro trabajo.
+* __Objetivo general__: en una frase un objetivo claro y general que muestre muy claramente la relación entre variables que váis a buscar/relacionar.
+* __Objetivos específicos__: tres o cuatro preguntas específicas que permiten responder el objetivo general. Normalmente, se corresponden con la descripción y caracterización (espacial, temporal, etc.) de las variables de interés con las que se trabaja en el seminario y por una o dos preguntas en las que la relación y/o correlación entre estas variables se llevará a cabo (ojo la falta de relación y/o correlación también es un resultado admisible en este seminario).
+* __Metodología y Resultados__: para cada objetivo específico se entregará el código y las representaciones necesarias (tablas, figuras, etc) que permitan responder al objetivo específico en cuestión.
+* __Conclusiones generales__: podréis generar conocimiento nuevo con vuestro seminario y es en este apartado donde váis a detallarlo de manera concisa y reconiendo sus limitaciones.
+* __Referencias__: listado de las referencias utilizadas en el seminario (intentad que sean en formato APA) que os permitirán escribir la introducción y ver lo importante o no de vuestras conclusiones generales.
+
+
+### Baremo de Calificación
 Para la entrega, deberéis fijaros en: 
 
 *  __i)__ como luce el repositorio,
 *  __ii)__ cómo luce el readme o "*landing page*",
 *  __iii)__ cómo luce la estructura de archivos y carpetas dentro del repositorio y
 *  __iv)__ descargar y abrir (por fuera de github) el documento __*.html__ que han desarrollado para ver bien cómo han resuelto este seminario.
+
+
+A modo de ejemplo, os dejo unos enlaces a algunos seminarios previos que han sido bien (o muy bien) evaluados en la siguiente sección [Hall of Fame - Seminarios](#hall-of-fame---seminarios)
 
 ***
 
