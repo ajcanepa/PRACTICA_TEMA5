@@ -9,6 +9,8 @@ Más información en la [página del curso](https://ubuvirtual.ubu.es/course/vie
 ## Seminarios
 La idea detrás de los seminarios busca fortalecer el uso de fuentes biomédicas y su acceso, preprocesamiento y visualización usando herramientas analíticas, como R, para dilucidar el efecto de estresores ambientales sobre la salud humana (__Biometereología Humana__). Puedes ver más ejemplos en el [MCC Collaborative Research Network](https://mccstudy.lshtm.ac.uk/).
 
+A modo de ejemplo, os dejo unos enlaces a algunos seminarios previos que han sido bien (o muy bien) evaluados en la siguiente sección [Hall of Fame - Seminarios](#hall-of-fame---seminarios)
+
 ### Estructura del Seminario
 La entrega se basa en dos archivos y un repostorio que se solicitarán como mecanismo de evaluación del tercer control parcial (evaluación contínua). Los archivos que tendréis que entregar son: 
 
@@ -35,7 +37,6 @@ Para la entrega, deberéis fijaros en:
 *  __iv)__ descargar y abrir (por fuera de github) el documento __*.html__ que han desarrollado para ver bien cómo han resuelto este seminario.
 
 
-A modo de ejemplo, os dejo unos enlaces a algunos seminarios previos que han sido bien (o muy bien) evaluados en la siguiente sección [Hall of Fame - Seminarios](#hall-of-fame---seminarios)
 
 ***
 
