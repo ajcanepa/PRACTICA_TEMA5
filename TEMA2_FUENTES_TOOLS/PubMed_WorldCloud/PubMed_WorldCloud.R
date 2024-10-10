@@ -6,10 +6,10 @@ library(PubMedWordcloud)
 
 
 # Obtener PubMed Reference Numbers (PMIDs) --------------------------------
-pmid1 <- getPMIDs(author = "Yan-Hui Fan", dFrom = 2007, dTo = 2014, n = 10)
+pmid1 <- getPMIDs(author = "Yan-Hui Fan", dFrom = 2007, dTo = 2020, n = 10)
 pmid1
 
-pmid2 <- getPMIDs(author="Yanhui Fan",dFrom=2007,dTo=2014,n=10)
+pmid2 <- getPMIDs(author="Yanhui Fan",dFrom=2007,dTo=2020,n=10)
 pmid2
 
 
@@ -39,7 +39,7 @@ cleanAbs <- cleanAbstracts(abstracts)
 plotWordCloud(cleanAbs,min.freq = 2, scale = c(2, 0.3))
 
 # Sin rotar las palabras
-plotWordCloud(cleanAbs,min.freq = 2, scale = c(2, 0.3),rot.per=0)
+plotWordCloud(cleanAbs,min.freq = 10, scale = c(2, 0.3),rot.per=0)
 
 # Usando otra paleta de colores
 colors <- colSets(type="Paired")
