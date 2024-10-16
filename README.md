@@ -90,11 +90,11 @@ Para la entrega, deberéis fijaros en:
 *  [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/)
 *  [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/)
 *  [awesome-r-dataviz](https://krzjoa.github.io/awesome-r-dataviz/)
+*  [R Graphics Cookbook](https://r-graphics.org/)
 
 ##### Documentos
 *  [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
 *  [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
-*  [R Graphics Cookbook](https://r-graphics.org/)
 *  [The bookdown package](https://bookdown.org/)
 *  [Introducción al uso de RMarkdown](https://bookdown.org/gboccardo/manual-ED-UCH/introduccion-al-uso-de-rmarkdown-para-la-compilacion-de-resultados-de-rstudio-en-diferentes-formatos.html)
 *  [Cómo crear Tablas de información en R Markdown](http://destio.us.es/calvo/Qficheros/ComoCrearTablasRMarkdown_PedroLuque_2019Sep_librodigital.pdf)
@@ -140,7 +140,7 @@ Para la entrega, deberéis fijaros en:
 *  [R-Bloggers](https://www.r-bloggers.com/)
 *  [Revolutions](https://blog.revolutionanalytics.com/)
 *  [II Congreso de R en España-Barcelona, 2023](https://eventum.upf.edu/101896/programme/ii-conference-of-r-and-xiii-workshop-for-r-users.html)
-* [III Congreso & XIV Jornadas de Usuarios de R, Sevilla - 2024](https://www.imus.us.es/congresos/IIIRqueR/)
+*  [III Congreso & XIV Jornadas de Usuarios de R, Sevilla - 2024](https://www.imus.us.es/congresos/IIIRqueR/)
 
 ### Publicaciones científicas sobre este lenguaje
 *  [Ten simple rules for teaching yourself R](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010372)
