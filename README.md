@@ -71,6 +71,7 @@ Para la entrega, deberéis fijaros en:
 *  [R Para Ciencia de Datos](https://es.r4ds.hadley.nz/)
 *  [Fundamentos de ciencia de datos con R](https://cdr-book.github.io/index.html)
 *  [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
+*  [R Avanzado](https://davidrsch.github.io/adv-res/)
 *  [Advanced R](https://adv-r.hadley.nz/)
 *  [fasteR: Fast Lane to Learning R!](https://github.com/matloff/fasteR)
 *  [Big Book of R](https://www.bigbookofr.com/)
