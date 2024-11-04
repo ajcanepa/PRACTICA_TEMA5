@@ -956,6 +956,77 @@ DF_xml %>%
   theme_classic() +
   theme(axis.text.x = element_text(angle = 60, vjust = 1, hjust = 1))
 
+
+# Exportación de Datos  ---------------------------------------------------
+
+
+# * Exportar environment --------------------------------------------------
+
+# ** Exportar objetos de R ------------------------------------------------
+?saveRDS
+
+# Carga de datos
+data("worldbank")
+
+# Tabulación sin crear objeto (a modo de prueba)
+worldbank %>% 
+  spread_all() 
+
+# Creación de un objeto con los datos tabulados
+Data_WorldBank <-
+  worldbank %>%
+  spread_all() 
+
+Data_WorldBank
+
+# Guardamos el objeto creado
+saveRDS(object = Data_WorldBank, file = "OUTPUT/DATA/WorldBankData.rds")
+
+# Cargamos el objeto de R guardado como rds.
+rm(Data_WorldBank)
+
+Data_WorldBank <- readRDS(file = "OUTPUT/DATA/WorldBankData.rds")
+
+
+# ** Exportar Environment de R --------------------------------------------
+# Como guardar TODOS los objetos que hemos creado.
+# Para guardar los objetos del "Environment", usamos save.image()
+
+# * Exportar a excel/csv --------------------------------------------------
+write_csv(x = Data_WorldBank, file = "OUTPUT/DATA/WorldBankData.csv")
+write_delim(x = Data_WorldBank, file = "OUTPUT/DATA/WorldBankData.txt", delim = ",") # probar con delim = ";"
+
+# * Exportar a JSON -------------------------------------------------------
+# La función toJSON vive tanto en el paquete jsonlite como rjson
+
+# rjson
+x <- list( alpha = 1:5, beta = "Bravo", 
+           gamma = list(a=1:3, b=NULL), 
+           delta = c(TRUE, FALSE) )
+
+x
+
+JSON_x <- rjson::toJSON(x)
+fromJSON(JSON_x)
+
+write(x = JSON_x, file = "OUTPUT/DATA/JSON_x.json")
+
+
+# Usando el conjunto de datos starwars
+jsonstarwars <- rjson::toJSON(starwars)
+cat(jsonstarwars)
+fromJSON(jsonstarwars)
+
+write(x = jsonstarwars, file = "OUTPUT/DATA/StarWars.json")
+
+
+# * Exportar a xml --------------------------------------------------------
+# file_url <- "https://www.w3schools.com/xml/simple.xml"  # ya estaba ejecutado
+# Data <- read_xml(file_url)                              # ya estaba ejecutado
+Data
+write_xml(x = Data, file = "OUTPUT/DATA/Data.xml")
+
+
 # INTRO DPLYR -------------------------------------------------------------
 # paquete dplyr
 library("dplyr")
@@ -1463,11 +1534,6 @@ Accidentes_total %>%
   theme_classic()
 
 # ** Guardando / Exportando datos -----------------------------------------
-# Como guardar los objetos que hemos creado.
-# Para guardar los objetos del "Environment" es save.image()
-
-starwars
-
 # Body Mass Index (BMI) 
 starwars %>%
   mutate(
