@@ -740,7 +740,6 @@ View(Acc_Car)
 
 table(Acc_Car$T.RED)
 
-# HASTA AQUI CLASE 30/09/2024 (G101 y G102)
 # Modificando el tipo (clase) de cada Columna
 Acc_Car <- read_delim("INPUT/DATA/accidentalidad-por-carreteras.csv",
                       delim = ";", escape_double = FALSE, trim_ws = TRUE,
@@ -1109,6 +1108,21 @@ transmute(.data = starwars, Altura_m = height / 100)
 starwars
 relocate(.data = starwars, sex:homeworld, .before = height)
 
+# *** Case_When -----------------------------------------------------------
+# Permite recodificar valores de acuerdo a algún criterio de agrupación
+
+mutate(.data = starwars, Altura = case_when(height > 200 ~ 'Altísimo'))
+
+mutate(.data = starwars, Altura = case_when(height > 200 ~ 'Altísimo', .default = 'Normales'))
+
+starwars %>%
+  select(name:mass, gender, species) %>%
+  mutate(type = case_when(
+    height > 200 | mass > 200 ~ "large",
+    species == "Droid" ~ "robot",
+    .default = "other"
+  ))
+
 # ** Operaciones combinadas -----------------------------------------------
 # Usaremos dos funciones %>% y group_by
 
@@ -1448,6 +1462,36 @@ Accidentes_total %>%
        subtitle = "Relación entre ancho de carretera y el I.M.") +
   theme_classic()
 
+# ** Guardando / Exportando datos -----------------------------------------
+# Como guardar los objetos que hemos creado.
+# Para guardar los objetos del "Environment" es save.image()
+
+starwars
+
+# Body Mass Index (BMI) 
+starwars %>%
+  mutate(
+    height_m = height / 100,
+    BMI = mass / (height_m^2)
+  ) %>%
+  select(BMI, everything()) %>% 
+  slice_max(., order_by = BMI, n = 3)
+
+# Objeto  que contiene este cálculo
+
+Mayores_BMI <- 
+  starwars %>%
+  mutate(
+    height_m = height / 100,
+    BMI = mass / (height_m^2)
+  ) %>%
+  select(BMI, everything()) %>% 
+  slice_max(., order_by = BMI, n = 3)
+
+Mayores_BMI
+
+# Guardamos el tibble
+write_csv(x = Mayores_BMI, file = "OUTPUT/DATA/Mayores_BMI.csv", col_names = TRUE)
 
 # Introducción  ggplot2 ---------------------------------------------------
 #library(ggplot2)
