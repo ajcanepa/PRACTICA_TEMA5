@@ -162,7 +162,8 @@ Para la entrega, deberéis fijaros en:
 * [INE - Encuesta de morbilidad hospitalaria](https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176778&menu=resultados&idp=1254735573175#_tabs-1254736194704)
 * [INE - Lista completa](https://www.ine.es/dyngs/INEbase/es/listaoperaciones.htm)
 * [rOpenSpain community](https://ropenspain.es/) / [GitHub-Repo](https://github.com/rOpenSpain)
-* [Eurostat Portal](https://ec.europa.eu/eurostat/)
+* [Eurostat Portal](https://ec.europa.eu/eurostat/).
+* [Eurostat R-Package](https://cloud.r-project.org/web/packages/eurostat/index.html).
 * [European Health Information Initiative (EHII)](https://www.euro.who.int/en/data-and-evidence/european-health-information-initiative-ehii)
 * [World Health Organization (WHO)](https://www.who.int/data)
 * [World Health Organization - Health Observatory](https://www.who.int/data/gho)
