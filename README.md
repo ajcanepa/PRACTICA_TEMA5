@@ -42,6 +42,11 @@ Para la entrega, deberéis fijaros en:
 
 ### Hall of Fame - Seminarios
 
+##### Edición 2024-2025
+*  [Contaminación y muerte prenatal](https://github.com/ivanmr200/seminario_fuentes)
+*  [Relación de las tempertatura con la diabetes](https://github.com/Pindulfo/Seminario_A/tree/main)
+
+
 ##### Edición 2023-2024
 *  [Necesidad de Atención Psicológica (NAT) en España](https://github.com/Lorenacalvoperez/PRACTICAS_FUENTES_C)
 *  [Análisis estadístico sobre relación entre sedentarismo y uso de audífonos/gafas](https://github.com/jbs1009/Seminario_Daniel_Jorge_Antonia)
