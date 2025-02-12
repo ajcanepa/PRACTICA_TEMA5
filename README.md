@@ -102,6 +102,7 @@ Para la entrega, deberéis fijaros en:
 ##### Documentos
 *  [Introducción al uso de RMarkdown](https://bookdown.org/gboccardo/manual-ED-UCH/introduccion-al-uso-de-rmarkdown-para-la-compilacion-de-resultados-de-rstudio-en-diferentes-formatos.html)
 *  [Informes con R Markdown - Capítulo](https://epirhandbook.com/es/new_pages/rmarkdown.es.html)
+*  [Introducción a RMarkdown - PPT](https://mpaulacaldas.github.io/r-ladies-rmarkdown/#1)
 *  [R markdown para abogados](https://bookdown.org/marcoyel21/r_markdown_abogados/)
 *  [Cómo crear Tablas de información en R Markdown](http://destio.us.es/calvo/Qficheros/ComoCrearTablasRMarkdown_PedroLuque_2019Sep_librodigital.pdf)
 *  [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
