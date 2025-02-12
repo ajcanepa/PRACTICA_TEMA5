@@ -74,6 +74,7 @@ Para la entrega, deberéis fijaros en:
 ### Programación
 *  [R for Data Science](https://r4ds.hadley.nz/)
 *  [R Para Ciencia de Datos](https://es.r4ds.hadley.nz/)
+*  [R4ULPGC: Introducción a R](https://estadistica-dma.ulpgc.es/cursoR4ULPGC/index.html)
 *  [Fundamentos de ciencia de datos con R](https://cdr-book.github.io/index.html)
 *  [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
 *  [R Avanzado](https://davidrsch.github.io/adv-res/)
@@ -99,11 +100,13 @@ Para la entrega, deberéis fijaros en:
 *  [R Graphics Cookbook](https://r-graphics.org/)
 
 ##### Documentos
+*  [Introducción al uso de RMarkdown](https://bookdown.org/gboccardo/manual-ED-UCH/introduccion-al-uso-de-rmarkdown-para-la-compilacion-de-resultados-de-rstudio-en-diferentes-formatos.html)
+*  [Informes con R Markdown - Capítulo](https://epirhandbook.com/es/new_pages/rmarkdown.es.html)
+*  [R markdown para abogados](https://bookdown.org/marcoyel21/r_markdown_abogados/)
+*  [Cómo crear Tablas de información en R Markdown](http://destio.us.es/calvo/Qficheros/ComoCrearTablasRMarkdown_PedroLuque_2019Sep_librodigital.pdf)
 *  [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
 *  [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
 *  [The bookdown package](https://bookdown.org/)
-*  [Introducción al uso de RMarkdown](https://bookdown.org/gboccardo/manual-ED-UCH/introduccion-al-uso-de-rmarkdown-para-la-compilacion-de-resultados-de-rstudio-en-diferentes-formatos.html)
-*  [Cómo crear Tablas de información en R Markdown](http://destio.us.es/calvo/Qficheros/ComoCrearTablasRMarkdown_PedroLuque_2019Sep_librodigital.pdf)
 
 ##### Aplicaciones (APPs)
 *  [Shiny](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html)
