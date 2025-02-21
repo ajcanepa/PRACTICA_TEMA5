@@ -188,3 +188,8 @@ Para la entrega, deberéis fijaros en:
 * [ European Cancer Information System](https://ecis.jrc.ec.europa.eu/en)
 
 ***
+
+### Concursos
+* [Concurso de Visualización de Datos con R - 2025](https://github.com/grupoRasturias/dataviz-contest-2025)
+
+***
