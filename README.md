@@ -140,9 +140,10 @@ Para la entrega, deberéis fijaros en:
 ### Comunidades
 *  [R Consortium](https://www.r-consortium.org/)
 *  [R Ladies](https://rladies.org/)
-*  [R-Ladies Madrid (X)](https://twitter.com/RLadiesMAD)
-*  [R-Ladies Barcelona (X)](https://twitter.com/RLadiesBCN)
-*  [R-Ladies Bilbao (X)](https://twitter.com/RLadiesBIO)
+*  [R Ladies - GitHub](https://github.com/rladies)
+*  [R-Ladies Madrid](https://github.com/rladies/meetup-presentations_madrid)
+*  [R-Ladies Barcelona](https://github.com/rladies/meetup-presentations_barcelona)
+*  [R-Ladies Bilbao (X.com)](https://twitter.com/RLadiesBIO)
 *  [Comunidad R-Hispano](http://r-es.org/)
 
 ### Noticias 
