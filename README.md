@@ -169,6 +169,8 @@ Para la entrega, deberéis fijaros en:
 * [Datos abiertos CyL](https://datosabiertos.jcyl.es/web/es/datos-abiertos-castilla-leon.html) / [`opendataes`](https://github.com/rOpenSpain/opendataes)
 * [Redes de calidad del aire autonómicas y locales](https://www.miteco.gob.es/es/calidad-y-evaluacion-ambiental/temas/atmosfera-y-calidad-del-aire/calidad-del-aire/evaluacion-datos/redes.html)
 * [Calidad de Aire - JCyL](https://servicios.jcyl.es/esco/index.action)
+* [Estaciones de control de la calidad del aire - JCyL](https://datosabiertos.jcyl.es/web/jcyl/set/es/medio-ambiente/calidad_aire_estaciones/1284212701893)
+* [Calidad del aire (por horas) - JCyL](https://datosabiertos.jcyl.es/web/jcyl/set/es/medio-ambiente/calidad-aire-historico-horario/1284808467480)
 * [Datos espaciales de hospitales](https://opendata.esri.es/datasets/ComunidadSIG::hospitales-de-espa%C3%B1a/about)
 * [INE (Instituto Nacional de Estadística) package](https://inebaser.wordpress.com/)
 * [INE - Encuesta de morbilidad hospitalaria](https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176778&menu=resultados&idp=1254735573175#_tabs-1254736194704)
