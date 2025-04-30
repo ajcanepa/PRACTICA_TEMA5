@@ -165,6 +165,8 @@ Para la entrega, deberéis fijaros en:
 ***
 
 ### Fuentes de Datos Abiertos
+* [DATOS SINTÉTICOS: ¿QUÉ SON Y PARA QUÉ SE USAN?](https://datos.gob.es/sites/default/files/doc/file/informe-datos-sinteticos-es.pdf)
+* [Datos sintéticos y protección de datos](https://www.aepd.es/prensa-y-comunicacion/blog/datos-sinteticos-y-proteccion-de-datos)
 * [Datos abiertos Gob. España](https://datos.gob.es/es/catalogo) / [`opendataes`](https://github.com/rOpenSpain/opendataes)
 * [Datos abiertos CyL](https://datosabiertos.jcyl.es/web/es/datos-abiertos-castilla-leon.html) / [`opendataes`](https://github.com/rOpenSpain/opendataes)
 * [Redes de calidad del aire autonómicas y locales](https://www.miteco.gob.es/es/calidad-y-evaluacion-ambiental/temas/atmosfera-y-calidad-del-aire/calidad-del-aire/evaluacion-datos/redes.html)
