@@ -147,6 +147,7 @@ Para la entrega, deberéis fijaros en:
 *  [R-Ladies Barcelona](https://github.com/rladies/meetup-presentations_barcelona)
 *  [R-Ladies Bilbao (X.com)](https://twitter.com/RLadiesBIO)
 *  [Comunidad R-Hispano](http://r-es.org/)
+*  [NHS-R](https://nhsrcommunity.com/)
 
 ### Noticias 
 *  [R-Project](https://www.r-project.org/)
@@ -181,6 +182,8 @@ Para la entrega, deberéis fijaros en:
 * [INE - Lista completa](https://www.ine.es/dyngs/INEbase/es/listaoperaciones.htm)
 * [rOpenSpain community](https://ropenspain.es/) / [GitHub-Repo](https://github.com/rOpenSpain)
 * [MedDataSets](https://lightbluetitan.github.io/meddatasets/index.html)
+* [medicaldata](https://higgi13425.github.io/medicaldata/index.html)
+* [NHS-R Community Datasets](https://nhs-r-community.github.io/NHSRdatasets/)
 * [Eurostat Portal](https://ec.europa.eu/eurostat/).
 * [Eurostat R-Package](https://cloud.r-project.org/web/packages/eurostat/index.html).
 * [European Health Information Initiative (EHII)](https://www.euro.who.int/en/data-and-evidence/european-health-information-initiative-ehii)
