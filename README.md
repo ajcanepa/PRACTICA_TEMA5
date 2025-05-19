@@ -161,6 +161,7 @@ Para la entrega, deberéis fijaros en:
 *  [The Evolution of the R Software Ecosystem](https://ieeexplore.ieee.org/document/6498472)
 *  [Evolution of the R software ecosystem](https://www.sciencedirect.com/science/article/pii/S0164121217301371)
 *  [Programming tools: Adventures with R](https://www.nature.com/articles/517109a)
+*  [Which programming language should I use? A guide for early-career researchers](https://www.nature.com/articles/d41586-025-01241-6)
 
 ***
 
