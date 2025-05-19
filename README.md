@@ -98,6 +98,7 @@ Para la entrega, deberéis fijaros en:
 *  [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/)
 *  [awesome-r-dataviz](https://krzjoa.github.io/awesome-r-dataviz/)
 *  [R Graphics Cookbook](https://r-graphics.org/)
+*  [FlowChart. Tidy Flowchart Generator](https://bruigtp.github.io/flowchart/index.html)
 
 ##### Documentos
 *  [Introducción al uso de RMarkdown](https://bookdown.org/gboccardo/manual-ED-UCH/introduccion-al-uso-de-rmarkdown-para-la-compilacion-de-resultados-de-rstudio-en-diferentes-formatos.html)
