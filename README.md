@@ -159,13 +159,13 @@ Para la entrega, deberéis fijaros en:
 *  [III Congreso & XIV Jornadas de Usuarios de R, Sevilla - 2024](https://www.imus.us.es/congresos/IIIRqueR/)
 
 ### Publicaciones científicas sobre este lenguaje
-*  [Ten simple rules for teaching yourself R](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010372)
-*  [R generation](https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2018.01169.x)
-*  [Expansion and evolution of the R programming language](https://royalsocietypublishing.org/doi/10.1098/rsos.221550)
-*  [The Evolution of the R Software Ecosystem](https://ieeexplore.ieee.org/document/6498472)
-*  [Evolution of the R software ecosystem: Metrics, relationships, and their impact on qualities](https://www.sciencedirect.com/science/article/pii/S0164121217301371)
-*  [Programming tools: Adventures with R](https://www.nature.com/articles/517109a)
-*  [Which programming language should I use? A guide for early-career researchers](https://www.nature.com/articles/d41586-025-01241-6)
+*  2025 [Which programming language should I use? A guide for early-career researchers](https://www.nature.com/articles/d41586-025-01241-6)
+*  2023 [Expansion and evolution of the R programming language](https://royalsocietypublishing.org/doi/10.1098/rsos.221550)
+*  2022 [Ten simple rules for teaching yourself R](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010372)
+*  2018 [R generation](https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2018.01169.x)
+*  2017 [Evolution of the R software ecosystem: Metrics, relationships, and their impact on qualities](https://www.sciencedirect.com/science/article/pii/S0164121217301371)
+*  2014 [Programming tools: Adventures with R](https://www.nature.com/articles/517109a)
+*  2013 [The Evolution of the R Software Ecosystem](https://ieeexplore.ieee.org/document/6498472)
 
 ***
 
