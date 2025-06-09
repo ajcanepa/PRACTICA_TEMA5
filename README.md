@@ -126,6 +126,7 @@ Para la entrega, deberéis fijaros en:
 ### Ómicas y Salud
 *  [The Epidemiologist R Handbook](https://epirhandbook.com/en/)
 *  [R for Epidemiology](https://www.r4epi.com/)
+*  [Reproducible Medical Research with R](https://bookdown.org/pdr_higgins/rmrwr/)
 *  [R for Health Data Science](https://argoshare.is.ed.ac.uk/healthyr_book/)
 *  [Sequence Analysis in R and Bioconductor](https://girke.bioinformatics.ucr.edu/GEN242/tutorials/rsequences/rsequences/)
 *  [Little Book of R for Bioinformatics](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/)
@@ -183,6 +184,7 @@ Para la entrega, deberéis fijaros en:
 * [INE - Encuesta de morbilidad hospitalaria](https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176778&menu=resultados&idp=1254735573175#_tabs-1254736194704)
 * [INE - Lista completa](https://www.ine.es/dyngs/INEbase/es/listaoperaciones.htm)
 * [rOpenSpain community](https://ropenspain.es/) / [GitHub-Repo](https://github.com/rOpenSpain)
+* [Global Health Data Exchange](https://ghdx.healthdata.org/) / [`ihme`: an R package](https://github.com/ShadeWilson/ihme)
 * [MedDataSets](https://lightbluetitan.github.io/meddatasets/index.html)
 * [medicaldata](https://higgi13425.github.io/medicaldata/index.html)
 * [NHS-R Community Datasets](https://nhs-r-community.github.io/NHSRdatasets/)
