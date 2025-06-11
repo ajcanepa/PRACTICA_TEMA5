@@ -85,11 +85,14 @@ Para la entrega, deberéis fijaros en:
 
 ### Control de Versiones (R/RStudio and Git/Github)
 * [Cómo usar Git/GitHub con R](http://destio.us.es/calvo/asignaturas/ge_esco/tutorialusargitgithubrstudio/UsarGitGithubconRStudio.html)
+* [¡Se puede aprender cómo funciona Git y GitHub!](https://www.revistaecosistemas.net/index.php/ecosistemas/article/view/2332/1505)
+* [git - la guía sencilla](https://rogerdudler.github.io/git-guide/index.es.html)
 * [Chapter 4 Git, in:Reproducible Analytical Pipelines ](https://b-rodrigues.github.io/rap4mads/git.html)
 * [Connect RStudio to Git and GitHub](https://happygitwithr.com/rstudio-git-github)
 * [Happy Git and GitHub for the useR](https://happygitwithr.com/)
 * [Cómo vincular y usar Git con RStudio](https://anderfernandez.com/blog/como-vincular-y-usar-git-con-rstudio/)
 * [Git y GitHub con R](https://rpubs.com/RonaldoAnticona/818156)
+* [Ciencia reproducible: qué, por qué, cómo](https://www.revistaecosistemas.net/index.php/ecosistemas/article/view/1178/973)
 
 ### Communicación
 ##### Gráficos
