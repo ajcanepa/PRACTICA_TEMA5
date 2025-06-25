@@ -205,7 +205,19 @@ Para la entrega, deberéis fijaros en:
 * [World Bank Water Data](https://wbwaterdata.org/dataset/)
 * [Datos Kaggle](https://www.kaggle.com/datasets).
 * [Google Environmental Insights Explorer](https://insights.sustainability.google/?hl=en-US).
-* [ European Cancer Information System](https://ecis.jrc.ec.europa.eu/en)
+* [European Cancer Information System](https://ecis.jrc.ec.europa.eu/en)
+* [infectiousR](https://lightbluetitan.github.io/infectiousr/index.html)
+* [medicaldata: Data Package for Medical Datasets](https://higgi13425.github.io/medicaldata/)
+* [MedDataSets: Comprehensive Medical, Disease, Treatment, and Drug Datasets](https://cran.r-project.org/web/packages/MedDataSets/index.html)
+* [NHS-R Community Datasets](https://nhs-r-community.github.io/NHSRdatasets/)
+* [gigs - Guidance for International Growth Standards project](https://docs.ropensci.org/gigs/)
+* [OncoDataSets](https://lightbluetitan.github.io/oncodatasets/)
+* [crimedatasets](https://lightbluetitan.github.io/crimedatasets/)
+* [DigestiveDataSets](https://github.com/lightbluetitan/digestivedatasets/tree/main)
+* [PulmoDataSets](https://github.com/lightbluetitan/pulmodatasets)
+* [NeuroDataSets](https://github.com/lightbluetitan/neurodatasets)
+* [CardioDataSets](https://github.com/lightbluetitan/cardiodatasets)
+* [DataSetsVerse](https://lightbluetitan.github.io/datasetsverse/)
 
 ***
 
