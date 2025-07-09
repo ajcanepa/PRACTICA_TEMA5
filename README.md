@@ -69,6 +69,7 @@ Para la entrega, deberéis fijaros en:
 *  [The Comprehensive R Archive Network](https://cran.r-project.org/)
 *  [Bioconductor](https://www.bioconductor.org/)
 *  [ROpenScience](https://ropensci.org/)
+*  [R-universe](https://r-universe.dev)
 *  [ROpenSpain](https://ropenspain.es/)
 
 ### Programación
