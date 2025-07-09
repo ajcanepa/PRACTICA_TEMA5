@@ -116,7 +116,7 @@ Para la entrega, deberéis fijaros en:
 
 ##### Aplicaciones (APPs)
 *  [Shiny](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html)
-*  [`bslib` R package]([https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html](https://rstudio.github.io/bslib/index.html))
+*  [`bslib` R package](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html](https://rstudio.github.io/bslib/index.html)
 *  [Mastering Shiny](https://mastering-shiny.org/)
 *  [shinydashboard](https://rstudio.github.io/shinydashboard/index.html)
 
