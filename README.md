@@ -88,7 +88,8 @@ Para la entrega, deberéis fijaros en:
 
 #### Recursos para R
 *  [Herramientas para usar modelos de lenguaje de gran escala (LLM) en R](https://luisdva.github.io/llmsr-book/es/index.es.html)
-*  
+
+  
 #### Artículos Científicos
 *  2024  [The use of generative AI for coding in academia](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14454)
 *  2024  [Harnessing LLM for coding, teaching and inclusion to empower research](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14325)
