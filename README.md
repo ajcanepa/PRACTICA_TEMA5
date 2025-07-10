@@ -88,6 +88,8 @@ Para la entrega, deberéis fijaros en:
 
 #### Recursos para R
 *  [Herramientas para usar modelos de lenguaje de gran escala (LLM) en R](https://luisdva.github.io/llmsr-book/es/index.es.html)
+*  [Ingeniería de prompt con ChatGPT](https://www.promptingguide.ai/es/models/chatgpt)
+*  [Biblioteca de prompts educativos](https://eduprompts.tiddlyhost.com)
 
   
 #### Artículos Científicos
