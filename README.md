@@ -85,6 +85,7 @@ Para la entrega, deberéis fijaros en:
 *  [The tidyverse style guide](https://style.tidyverse.org/index.html)
 
 ### Control de Versiones (R/RStudio and Git/Github)
+* [Map-of-Github](https://anvaka.github.io/map-of-github/#2/0/0)
 * [Cómo usar Git/GitHub con R](http://destio.us.es/calvo/asignaturas/ge_esco/tutorialusargitgithubrstudio/UsarGitGithubconRStudio.html)
 * [¡Se puede aprender cómo funciona Git y GitHub!](https://www.revistaecosistemas.net/index.php/ecosistemas/article/view/2332/1505)
 * [git - la guía sencilla](https://rogerdudler.github.io/git-guide/index.es.html)
