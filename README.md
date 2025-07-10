@@ -84,6 +84,15 @@ Para la entrega, deberéis fijaros en:
 *  [Big Book of R](https://www.bigbookofr.com/)
 *  [The tidyverse style guide](https://style.tidyverse.org/index.html)
 
+### Large Language Models (LLM - Generative AI)
+
+#### Recursos para R
+*  [Herramientas para usar modelos de lenguaje de gran escala (LLM) en R](https://luisdva.github.io/llmsr-book/es/index.es.html)
+*  
+#### Artículos Científicos
+*  2024  [The use of generative AI for coding in academia](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14454)
+*  2024  [Harnessing LLM for coding, teaching and inclusion to empower research](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14325)
+
 ### Control de Versiones (R/RStudio and Git/Github)
 * [Map-of-Github](https://anvaka.github.io/map-of-github/#2/0/0)
 * [Cómo usar Git/GitHub con R](http://destio.us.es/calvo/asignaturas/ge_esco/tutorialusargitgithubrstudio/UsarGitGithubconRStudio.html)
@@ -121,6 +130,12 @@ Para la entrega, deberéis fijaros en:
 *  [`bslib` R package](https://rstudio.github.io/bslib/)
 *  [Mastering Shiny](https://mastering-shiny.org/)
 *  [shinydashboard](https://rstudio.github.io/shinydashboard/index.html)
+
+###### Despliegue APPs/Dashboards/Docs.
+*  [Deploy a Shiny Application with R](https://docs.posit.co/connect-cloud/how-to/r/shiny-r.html)
+*  [Publish a Quarto Document with R ](https://docs.posit.co/connect-cloud/how-to/r/quarto-r.html)
+*  [Deploy a LLM-powered Shiny for R](https://docs.posit.co/connect-cloud/how-to/r/llm-shiny-r.html)
+*  [Create a manifest.json file for Connect Cloud](https://docs.posit.co/connect-cloud/how-to/r/dependencies.html)
 
 ### Estadística y meta-análisis
 *  [An Introduction to Statistical Learning](https://www.statlearning.com/)
