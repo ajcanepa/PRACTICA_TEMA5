@@ -201,6 +201,7 @@ Para la entrega, deberéis fijaros en:
 * [Redes de calidad del aire autonómicas y locales](https://www.miteco.gob.es/es/calidad-y-evaluacion-ambiental/temas/atmosfera-y-calidad-del-aire/calidad-del-aire/evaluacion-datos/redes.html)
 * [Calidad del Aire - Spain](https://www.miteco.gob.es/es/calidad-y-evaluacion-ambiental/temas/atmosfera-y-calidad-del-aire/evaluacion-y-datos-de-calidad-del-aire/datos.html)
 * [Calidad de Aire - JCyL](https://servicios.jcyl.es/esco/index.action)
+* [Red Calidad Aire - JCyL](https://medioambiente.jcyl.es/web/es/calidad-ambiental/red-calidad-aire.html)
 * [Estaciones de control de la calidad del aire - JCyL](https://datosabiertos.jcyl.es/web/jcyl/set/es/medio-ambiente/calidad_aire_estaciones/1284212701893)
 * [Calidad del aire (por horas) - JCyL](https://datosabiertos.jcyl.es/web/jcyl/set/es/medio-ambiente/calidad-aire-historico-horario/1284808467480)
 * [Datos espaciales de hospitales](https://opendata.esri.es/datasets/ComunidadSIG::hospitales-de-espa%C3%B1a/about)
