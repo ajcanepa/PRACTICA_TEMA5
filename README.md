@@ -90,6 +90,7 @@ Para la entrega, deberéis fijaros en:
 *  [Herramientas para usar modelos de lenguaje de gran escala (LLM) en R](https://luisdva.github.io/llmsr-book/es/index.es.html)
 *  [Ingeniería de prompt con ChatGPT](https://www.promptingguide.ai/es/models/chatgpt)
 *  [Biblioteca de prompts educativos](https://eduprompts.tiddlyhost.com)
+*  [Claude - AI](https://claude.ai/new)
 
   
 #### Artículos Científicos
@@ -111,6 +112,7 @@ Para la entrega, deberéis fijaros en:
 ### Communicación
 ##### Gráficos
 *  [The R Graph Gallery](https://r-graph-gallery.com/)
+*  [Colores en R](https://r-charts.com/es/colores/)
 *  [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/)
 *  [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/)
 *  [awesome-r-dataviz](https://krzjoa.github.io/awesome-r-dataviz/)
