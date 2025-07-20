@@ -148,6 +148,10 @@ Para la entrega, deberéis fijaros en:
 *  [Modern Statistics with R](https://www.modernstatisticswithr.com/)
 *  [Little Book of R for Biomedical Statistics!](https://a-little-book-of-r-for-biomedical-statistics.readthedocs.io/en/latest/)
 
+### Investigación Reproducible `Pipelines`
+*  [Building reproducible analytical pipelines with R]([https://www.statlearning.com/](https://raps-with-r.dev/))
+*  [Data Pipelines with {targets}](https://ramhunte.github.io/blogs/targets_wflow/)
+
 ### Ómicas y Salud
 *  [The Epidemiologist R Handbook](https://epirhandbook.com/en/)
 *  [R for Epidemiology](https://www.r4epi.com/)
