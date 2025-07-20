@@ -147,6 +147,7 @@ Para la entrega, deberéis fijaros en:
 *  [Doing Meta-Analysis with R](https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/)
 *  [Modern Statistics with R](https://www.modernstatisticswithr.com/)
 *  [Little Book of R for Biomedical Statistics!](https://a-little-book-of-r-for-biomedical-statistics.readthedocs.io/en/latest/)
+*  [Modern Statistics for Modern Biology](https://web.stanford.edu/class/bios221/book/)
 
 ### Investigación Reproducible `Pipelines`
 *  [Building reproducible analytical pipelines with R](https://raps-with-r.dev/)
