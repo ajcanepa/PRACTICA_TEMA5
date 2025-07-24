@@ -151,7 +151,9 @@ Para la entrega, deberéis fijaros en:
 
 ### Investigación Reproducible `Pipelines`
 *  [Building reproducible analytical pipelines with R](https://raps-with-r.dev/)
+*  [Building Reproducible Analytical Pipelines - Course](https://rap4mads.eu/)
 *  [Data Pipelines with {targets}](https://ramhunte.github.io/blogs/targets_wflow/)
+*  [Genomic reproducibility in the bioinformatics era](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-024-03343-2)
 
 ### Ómicas y Salud
 *  [The Epidemiologist R Handbook](https://epirhandbook.com/en/)
@@ -165,7 +167,6 @@ Para la entrega, deberéis fijaros en:
 ### Machine Learning & R
 *  [The caret Package](https://topepo.github.io/caret/index.html)
 *  [Tidy Modeling with R](https://www.tmwr.org/)
-*  [Building Reproducible Analytical Pipelines](https://rap4mads.eu/)
 *  [Applied Machine Learning Using mlr3 in R](https://mlr3book.mlr-org.com/)
 *  [Models Demystified](https://m-clark.github.io/book-of-models/)
 
